@@ -1,32 +1,91 @@
-.App {
-  text-align: center;
-}
+    .App {
+      text-align: center;
+    }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+      height: 40vmin;
+    }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    .App-header {
+      background-color: #282c34;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+      color: white;
+    }
 
-.App-link {
-  color: #61dafb;
-}
+    .App-link {
+      color: #61dafb;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    @keyframes App-logo-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .same {
+      font-size: 20px;
+      height: 100%; /*왜안될까............. 100%녀석이 */
+    }
+    .typing {
+      text-align: right;
+      height: 16%;
+      margin: 5px;
+      border: 2px solid #bbbbbb;
+    }`
+    .main {
+      margin: 5px;
+      height: 84%;
+      background-color: #eeeeee
+    }
+    .flex {
+      display: flex;
+      height: 20%;
+    }
+
+    .flex > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex > div:hover {
+      background-color: antiquewhite;
+      cursor: pointer;
+    }
+
+    .first_three {
+      width: 75%;
+      text-align: center;
+      text-color: #ffffff;
+      border: 0.2px solid #eeeeee;
+      background-color: #dddddd
+    }
+    .first_one {
+      width: 25%;
+      border: 0.2px solid #dddddd;
+      text-align: center;
+    }
+    .rest_one {
+      width: 25%;
+      border: 0.2px solid #dddddd;
+      text-align: center;
+    }
+    .rest_two {
+      width: 50%;
+      border: 0.2px solid #dddddd;
+      text-align: center;
+    }
