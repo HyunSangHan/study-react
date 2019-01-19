@@ -19,6 +19,8 @@ class App extends Component {
     let tmp_value_2 = this.state.tmp_value_2;
     let tmp_oper = this.state.tmp_oper;
 
+
+
     if(tmp_oper === false) {
       if (value < Math.pow(2, 49)) {
         value = value * 10 + num;
@@ -51,19 +53,18 @@ class App extends Component {
   clickOper = (oper) => () => {
     let tmp_oper = oper;
     console.log(1)
-    this.calculateOper(tmp_oper)();
+    this.calculateOper()();
 
     this.setState({
       tmp_value_1: this.state.value,
-      tmp_value_2: 0,
       tmp_oper: tmp_oper
     });
     console.log(2)
 
   }
 
-  calculateOper = (oper) => () => {
-    let tmp_oper = oper;
+  calculateOper = () => () => {
+    let tmp_oper = this.state.tmp_oper;
     let value = this.state.value;
     let tmp_value_1 = this.state.tmp_value_1;
     let tmp_value_2 = this.state.tmp_value_2;
@@ -82,7 +83,6 @@ class App extends Component {
     // }
     this.setState({
       value: value,
-      tmp_value_1: value,
       tmp_value_2: 0
     });
   }
