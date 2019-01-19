@@ -15,67 +15,75 @@ class App extends Component {
   }
 
   clickNum = (num) => () => {
-    if(this.state.tmp_oper === false) {
-      if (this.state.value < Math.pow(2, 49)) {
-        this.setState({
-          value: this.state.value * 10 + num
-        });
-      } else {
-        this.setState({
-          value: this.state.value
-        });
+    let value = this.state.value;
+    let tmp_value_2 = this.state.tmp_value_2;
+    let tmp_oper = this.state.tmp_oper;
+
+    if(tmp_oper === false) {
+      if (value < Math.pow(2, 49)) {
+        value = value * 10 + num;
+        tmp_value_2 = value;
+      }
+      else {
+        value = value;
       }
     } else {
-        this.setState({
-          value: this.state.tmp_value_2 * 10 + num,
-          tmp_value_2: this.state.tmp_value_2 * 10 + num
-        });
-      }
+      value = tmp_value_2 * 10 + num;
+      tmp_value_2 = value;
+    }
+
+    this.setState({
+      value: value,
+      tmp_value_2: tmp_value_2
+    });
+
     }
 
   refreshValue = () => () => {
     this.setState({
       value: 0,
       tmp_value_1: 0,
-      tmp_value_2: 0
+      tmp_value_2: 0,
+      tmp_oper: false
     });
   }
 
   clickOper = (oper) => () => {
+    let tmp_oper = oper;
+    console.log(1)
+    this.calculateOper(tmp_oper)();
+
     this.setState({
       tmp_value_1: this.state.value,
       tmp_value_2: 0,
-      tmp_oper: oper
+      tmp_oper: tmp_oper
     });
-    this.calculateOper();
+    console.log(2)
+
   }
 
-  calculateOper = () => () => {
-    if(this.state.tmp_oper === '+') {
-      this.setState({
-        value: this.state.tmp_value_1 + this.state.value
-      });
-    } else if(this.state.tmp_oper === '*') {
-      this.setState({
-        value: this.state.tmp_value_1 * this.state.value
-      });
-    } else if(this.state.tmp_oper === '-') {
-      this.setState({
-        value: this.state.tmp_value_1 - this.state.value
-      });
-    } else if(this.state.tmp_oper === '/') {
-      this.setState({
-        value: this.state.tmp_value_1 / this.state.value
-      });
+  calculateOper = (oper) => () => {
+    let tmp_oper = oper;
+    let value = this.state.value;
+    let tmp_value_1 = this.state.tmp_value_1;
+    let tmp_value_2 = this.state.tmp_value_2;
+    console.log(3)
+    if(tmp_oper === '+') {
+        value = tmp_value_1 + tmp_value_2;
+    } else if(tmp_oper === '*') {
+        value = tmp_value_1 * tmp_value_2;
+    } else if(tmp_oper === '-') {
+        value = tmp_value_1 - tmp_value_2;
+    } else if(tmp_oper === '/') {
+        value = tmp_value_1 / tmp_value_2;
     }
-    // else if(this.state.tmp_oper === '.') {
-    //   this.setState({
+    // else if(tmp_oper === '.') {
     //    ////////////have to write
-    //   });
     // }
     this.setState({
-      tmp_value_1: this.state.tmp_value_2
-//      tmp_oper: oper
+      value: value,
+      tmp_value_1: value,
+      tmp_value_2: 0
     });
   }
 
@@ -85,7 +93,7 @@ class App extends Component {
 
           <div className="same">
             <div className="typing"> {this.state.value}</div>
-            <div className="main">
+            <div className="caltool">
               <div className="flex">
                 <div onClick={this.refreshValue()} className="first_three">AC</div>
                 <div onClick={this.clickOper("/")} className="first_one">/</div>

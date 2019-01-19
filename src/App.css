@@ -1,5 +1,6 @@
     .App {
       text-align: center;
+        height: 600px; /*have to edit*/
     }
 
     .App-logo {
@@ -32,24 +33,25 @@
     }
 
     html, body {
-      width: 100%;
-      height: 100%;
+        width: 100%;
+        height: 100%;
+
     }
 
     .same {
-      font-size: 20px;
-      height: 100%; /*왜안될까............. 100%녀석이 */
+        font-size: 20px;
+        height: 100%;
     }
     .typing {
-      text-align: right;
-      height: 16%;
-      margin: 5px;
-      border: 2px solid #bbbbbb;
-    }`
-    .main {
-      margin: 5px;
-      height: 84%;
-      background-color: #eeeeee
+        text-align: right;
+        height: 20%;
+        margin: 5px;
+        border: 2px solid #bbbbbb;
+    }
+    .caltool {
+        height: 80%;
+        margin: 5px;
+        background-color: #eeeeee
     }
     .flex {
       display: flex;
