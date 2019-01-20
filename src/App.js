@@ -25,8 +25,8 @@ class App extends Component {
 
     if(operator === false) {
       if(is_first_num === true) { // [CASE 1] 연산자: 없음, 첫번째 숫자타이핑: Y
-        displayed = num; //***** 수정 여지 있음
         is_first_num = false;
+        displayed = num;
       } else { // [CASE 2] 연산자: 없음, 첫번째 숫자: N
         displayed = displayed * 10 + num;
       }
@@ -94,55 +94,12 @@ class App extends Component {
     }
 
     is_first_num = true;
-    operator = oper;
     overlap = true;
 
-    this.setState({
-      overlap: overlap,
-      operator: operator,
-      saved: saved,
-      displayed: displayed,
-      total: total,
-      is_first_num: is_first_num
-    });
-
-
-  }
-
-  clickOper_without = () => () => { //는은 따로 짜야겠네. 기존꺼가 레거시가 되니
-    //기존 오퍼 가져오는 게 차이점.
-    let overlap = this.state.overlap;
-    let operator = this.state.operator;
-    let saved = this.state.saved;
-    let displayed = this.state.displayed;
-    let total = this.state.total;
-    let is_first_num = this.state.is_first_num;
-
-    if(overlap === false) { //중복이 아닌, 첫번째 연산자 입력일 경우
-      if(operator === '+') {
-        total = saved + displayed;
-        displayed = total;
-        saved = total;
-      } else if(operator === '-') {
-        total = saved - displayed;
-        displayed = total;
-        saved = total;
-      } else if(operator === '*') {
-        total = saved * displayed;
-        displayed = total;
-        saved = total;
-      } else if(operator === '/') {
-        total = saved / displayed;
-        displayed = total;
-        saved = total;
-      } /* else if(oper === '.') {
-
-      }*/
+    if(oper != '=') {
+      operator = oper;
     }
 
-    is_first_num = true;
-    overlap = true;
-
     this.setState({
       overlap: overlap,
       operator: operator,
@@ -152,8 +109,8 @@ class App extends Component {
       is_first_num: is_first_num
     });
 
-  }
 
+  }
 
 
   render() {
@@ -192,7 +149,7 @@ class App extends Component {
               <div className="flex">
                 <div onClick={this.clickNum(0)} className="rest_two">0</div>
                 <div className="rest_one">.</div>
-                <div onClick={this.clickOper_without()} className="rest_one">=</div>
+                <div onClick={this.clickOper("=")} className="rest_one">=</div>
               </div>
             </div>
           </div>
