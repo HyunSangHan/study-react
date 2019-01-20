@@ -8,6 +8,7 @@ class App extends Component {
     super(props);
     this.state = {
       value : 0,
+      is_first_num: true,
       tmp_value_1 : 0,
       tmp_value_2 : 0,
       tmp_oper : false
@@ -16,27 +17,48 @@ class App extends Component {
 
   clickNum = (num) => () => {
     let value = this.state.value;
+    let tmp_value_1 = this.state.tmp_value_1;
     let tmp_value_2 = this.state.tmp_value_2;
     let tmp_oper = this.state.tmp_oper;
+    let is_first_num = this.state.is_first_num;
 
 
+      if (tmp_oper === false) {
+        if(is_first_num === true) {
+          value = num;
+          tmp_value_1 = value;
+          is_first_num = false;
+        }
 
-    if(tmp_oper === false) {
-      if (value < Math.pow(2, 49)) {
-        value = value * 10 + num;
-        tmp_value_2 = value;
+        else {
+          if (value < Math.pow(2, 49)) {
+            value = value * 10 + num;
+            tmp_value_2 = value;
+          } else {
+            value = value;
+          }
+        }
+
+      } else {
+        if(is_first_num === true) {
+          value = num;
+          tmp_value_1 = value;
+          tmp_value_2 = value;
+          is_first_num = false;
+        } else {
+
+
+          value = tmp_value_2 * 10 + num;
+          tmp_value_2 = value;
+        }
       }
-      else {
-        value = value;
-      }
-    } else {
-      value = tmp_value_2 * 10 + num;
-      tmp_value_2 = value;
-    }
+
 
     this.setState({
       value: value,
-      tmp_value_2: tmp_value_2
+      tmp_value_1: tmp_value_1,
+      tmp_value_2: tmp_value_2,
+      is_first_num: is_first_num
     });
 
     }
@@ -46,18 +68,22 @@ class App extends Component {
       value: 0,
       tmp_value_1: 0,
       tmp_value_2: 0,
-      tmp_oper: false
+      tmp_oper: false,
+      is_first_num: true
     });
   }
 
   clickOper = (oper) => () => {
     let tmp_oper = oper;
+    let is_first_num = this.state.is_first_num;
     console.log(1)
     this.calculateOper()();
 
     this.setState({
       tmp_value_1: this.state.value,
-      tmp_oper: tmp_oper
+      tmp_oper: tmp_oper,
+      is_first_num: true
+
     });
     console.log(2)
 
@@ -68,6 +94,8 @@ class App extends Component {
     let value = this.state.value;
     let tmp_value_1 = this.state.tmp_value_1;
     let tmp_value_2 = this.state.tmp_value_2;
+    let is_first_num = this.state.is_first_num;
+    is_first_num = true;
     console.log(3)
     if(tmp_oper === '+') {
         value = tmp_value_1 + tmp_value_2;
@@ -83,7 +111,8 @@ class App extends Component {
     // }
     this.setState({
       value: value,
-      tmp_value_2: 0
+      tmp_value_2: 0,
+      is_first_num: is_first_num
     });
   }
 
