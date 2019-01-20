@@ -7,121 +7,161 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      value : 0,
+      operator: false,
+      overlap: false,
       is_first_num: true,
-      tmp_value_1 : 0,
-      tmp_value_2 : 0,
-      tmp_oper : false
+      saved: 0, // (1)
+      displayed: 0, // (2)
+      total: 0 // (3)
     }
   }
 
   clickNum = (num) => () => {
-    let value = this.state.value;
-    let tmp_value_1 = this.state.tmp_value_1;
-    let tmp_value_2 = this.state.tmp_value_2;
-    let tmp_oper = this.state.tmp_oper;
+    let overlap = this.state.overlap;
+    let operator = this.state.operator;
+    let displayed = this.state.displayed;
     let is_first_num = this.state.is_first_num;
+    let saved = this.state.saved;
 
-
-      if (tmp_oper === false) {
-        if(is_first_num === true) {
-          value = num;
-          tmp_value_1 = value;
-          is_first_num = false;
-        }
-
-        else {
-          if (value < Math.pow(2, 49)) {
-            value = value * 10 + num;
-            tmp_value_2 = value;
-          } else {
-            value = value;
-          }
-        }
-
-      } else {
-        if(is_first_num === true) {
-          value = num;
-          tmp_value_1 = value;
-          tmp_value_2 = value;
-          is_first_num = false;
-        } else {
-
-
-          value = tmp_value_2 * 10 + num;
-          tmp_value_2 = value;
-        }
+    if(operator === false) {
+      if(is_first_num === true) { // [CASE 1] 연산자: 없음, 첫번째 숫자타이핑: Y
+        displayed = num; //***** 수정 여지 있음
+        is_first_num = false;
+      } else { // [CASE 2] 연산자: 없음, 첫번째 숫자: N
+        displayed = displayed * 10 + num;
       }
+    } else {
+      if(is_first_num === true) { // [CASE 3] 연산자: 있음, 첫번째 숫자타이핑: Y
+        overlap = false;
+        saved = displayed;
+        displayed = num;
+        is_first_num = false;
+      } else { // [CASE 4] 연산자: 있음, 첫번째 숫자타이핑: N
+        displayed = displayed * 10 + num;
+      }
+    }
+
 
 
     this.setState({
-      value: value,
-      tmp_value_1: tmp_value_1,
-      tmp_value_2: tmp_value_2,
-      is_first_num: is_first_num
-    });
-
+      overlap: overlap,
+      operator: operator,
+      displayed: displayed,
+      is_first_num: is_first_num,
+      saved: saved
+      });
     }
 
   refreshValue = () => () => {
     this.setState({
-      value: 0,
-      tmp_value_1: 0,
-      tmp_value_2: 0,
-      tmp_oper: false,
-      is_first_num: true
+      operator: false,
+      overlap: false,
+      is_first_num: true,
+      saved: 0,
+      displayed: 0,
+      total: 0
     });
   }
 
   clickOper = (oper) => () => {
-    let tmp_oper = oper;
+    let overlap = this.state.overlap;
+    let operator = this.state.operator;
+    let saved = this.state.saved;
+    let displayed = this.state.displayed;
+    let total = this.state.total;
     let is_first_num = this.state.is_first_num;
-    console.log(1)
-    this.calculateOper()();
 
-    this.setState({
-      tmp_value_1: this.state.value,
-      tmp_oper: tmp_oper,
-      is_first_num: true
+    if(overlap === false) { //중복이 아닌, 첫번째 연산자 입력일 경우
+      if(operator === '+') {
+        total = saved + displayed;
+        displayed = total;
+        saved = total;
+      } else if(operator === '-') {
+        total = saved - displayed;
+        displayed = total;
+        saved = total;
+      } else if(operator === '*') {
+        total = saved * displayed;
+        displayed = total;
+        saved = total;
+      } else if(operator === '/') {
+        total = saved / displayed;
+        displayed = total;
+        saved = total;
+      } /* else if(oper === '.') {
 
-    });
-    console.log(2)
-
-  }
-
-  calculateOper = () => () => {
-    let tmp_oper = this.state.tmp_oper;
-    let value = this.state.value;
-    let tmp_value_1 = this.state.tmp_value_1;
-    let tmp_value_2 = this.state.tmp_value_2;
-    let is_first_num = this.state.is_first_num;
-    is_first_num = true;
-    console.log(3)
-    if(tmp_oper === '+') {
-        value = tmp_value_1 + tmp_value_2;
-    } else if(tmp_oper === '*') {
-        value = tmp_value_1 * tmp_value_2;
-    } else if(tmp_oper === '-') {
-        value = tmp_value_1 - tmp_value_2;
-    } else if(tmp_oper === '/') {
-        value = tmp_value_1 / tmp_value_2;
+      }*/
     }
-    // else if(tmp_oper === '.') {
-    //    ////////////have to write
-    // }
+
+    is_first_num = true;
+    operator = oper;
+    overlap = true;
+
     this.setState({
-      value: value,
-      tmp_value_2: 0,
+      overlap: overlap,
+      operator: operator,
+      saved: saved,
+      displayed: displayed,
+      total: total,
       is_first_num: is_first_num
     });
+
+
   }
+
+  clickOper_without = () => () => { //는은 따로 짜야겠네. 기존꺼가 레거시가 되니
+    //기존 오퍼 가져오는 게 차이점.
+    let overlap = this.state.overlap;
+    let operator = this.state.operator;
+    let saved = this.state.saved;
+    let displayed = this.state.displayed;
+    let total = this.state.total;
+    let is_first_num = this.state.is_first_num;
+
+    if(overlap === false) { //중복이 아닌, 첫번째 연산자 입력일 경우
+      if(operator === '+') {
+        total = saved + displayed;
+        displayed = total;
+        saved = total;
+      } else if(operator === '-') {
+        total = saved - displayed;
+        displayed = total;
+        saved = total;
+      } else if(operator === '*') {
+        total = saved * displayed;
+        displayed = total;
+        saved = total;
+      } else if(operator === '/') {
+        total = saved / displayed;
+        displayed = total;
+        saved = total;
+      } /* else if(oper === '.') {
+
+      }*/
+    }
+
+    is_first_num = true;
+    overlap = true;
+
+    this.setState({
+      overlap: overlap,
+      operator: operator,
+      saved: saved,
+      displayed: displayed,
+      total: total,
+      is_first_num: is_first_num
+    });
+
+  }
+
+
 
   render() {
     return (
         <div className="App">
 
           <div className="same">
-            <div className="typing"> {this.state.value}</div>
+            <div className="typing"> {this.state.displayed}</div>
             <div className="caltool">
               <div className="flex">
                 <div onClick={this.refreshValue()} className="first_three">AC</div>
@@ -152,7 +192,7 @@ class App extends Component {
               <div className="flex">
                 <div onClick={this.clickNum(0)} className="rest_two">0</div>
                 <div className="rest_one">.</div>
-                <div onClick={this.calculateOper()} className="rest_one">=</div>
+                <div onClick={this.clickOper_without()} className="rest_one">=</div>
               </div>
             </div>
           </div>
