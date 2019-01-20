@@ -10,9 +10,8 @@ class App extends Component {
       operator: false,
       overlap: false,
       is_first_num: true,
-      saved: 0, // (1)
-      displayed: 0, // (2)
-      total: 0 // (3)
+      saved: 0, // (1st number or total number)
+      displayed: 0, // (2st number)
     }
   }
 
@@ -58,8 +57,7 @@ class App extends Component {
       overlap: false,
       is_first_num: true,
       saved: 0,
-      displayed: 0,
-      total: 0
+      displayed: 0
     });
   }
 
@@ -68,26 +66,21 @@ class App extends Component {
     let operator = this.state.operator;
     let saved = this.state.saved;
     let displayed = this.state.displayed;
-    let total = this.state.total;
     let is_first_num = this.state.is_first_num;
 
     if(overlap === false) { //중복이 아닌, 첫번째 연산자 입력일 경우
       if(operator === '+') {
-        total = saved + displayed;
-        displayed = total;
-        saved = total;
+        saved = saved + displayed;
+        displayed = saved;
       } else if(operator === '-') {
-        total = saved - displayed;
-        displayed = total;
-        saved = total;
+        saved = saved - displayed;
+        displayed = saved;
       } else if(operator === '*') {
-        total = saved * displayed;
-        displayed = total;
-        saved = total;
+        saved = saved * displayed;
+        displayed = saved;
       } else if(operator === '/') {
-        total = saved / displayed;
-        displayed = total;
-        saved = total;
+        saved = saved / displayed;
+        displayed = saved;
       } /* else if(oper === '.') {
 
       }*/
@@ -96,7 +89,7 @@ class App extends Component {
     is_first_num = true;
     overlap = true;
 
-    if(oper != '=') {
+    if(oper !== '=') {
       operator = oper;
     }
 
@@ -105,7 +98,6 @@ class App extends Component {
       operator: operator,
       saved: saved,
       displayed: displayed,
-      total: total,
       is_first_num: is_first_num
     });
 
