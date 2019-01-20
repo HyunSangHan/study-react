@@ -1,6 +1,6 @@
     .App {
       text-align: center;
-        height: 600px; /*have to edit*/
+        height: 500px; /*have to edit*/
     }
 
     .App-logo {
@@ -35,36 +35,58 @@
     html, body {
         width: 100%;
         height: 100%;
-
     }
 
     .same {
-        font-size: 20px;
         height: 100%;
     }
-    .typing {
+    .typingtool {
         text-align: right;
         height: 20%;
         margin: 5px;
         border: 2px solid #bbbbbb;
     }
+    .flex_typingtool {
+        height: 50%;
+        width: 100%;
+        padding: 2px;
+    }
+    .flex_typingtool > div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .typing {
+        font-size: 25px;
+        width: 95%;
+        height: 70%;
+        margin: 5px;
+    }
+    .shadow_typing {
+        font-size: 15px;
+        color: #bbbbbb;
+        width: 90%;
+        height: 30%;
+        margin: 5px;
+    }
     .caltool {
+        font-size: 20px;
         height: 80%;
         margin: 5px;
-        background-color: #eeeeee
+        background-color: #eeeeee;
     }
-    .flex {
-      display: flex;
-      height: 20%;
+    .flex_cartool {
+        display: flex;
+        height: 20%;
     }
 
-    .flex > div {
+    .flex_cartool > div {
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .flex > div:hover {
+    .flex_cartool > div:hover {
       background-color: antiquewhite;
       cursor: pointer;
     }
