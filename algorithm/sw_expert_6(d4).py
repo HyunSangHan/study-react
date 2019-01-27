@@ -28,4 +28,4 @@ for test_case in test_cases:
 
     miro(array, is_visited, 1, 1)
     print("#{} {}".format(test_case + 1, ans))
-    ans = -1 #it in not the answer if ans == -1. 
+    ans = -1 #it is not the answer if ans == -1. 
