@@ -31,9 +31,211 @@
   }
 }
 
-.my-header {
-  background-color: cornflowerblue;
+.header-common {
+  background-color: black;
+  width: 100%;
   height: 60px;
   display: flex;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
+  font-family: "Apple SD Gothic Neo";
+  color: white;
+  position: fixed;
+  top: 0;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+.header-menus > div:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+.footer-common {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /*relative로 수정 요망*/
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  color: grey;
+  font-family: "Apple SD Gothic Neo";
+  font-size: small;
+}
+
+.body-common {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.gate {
+  height: 300px;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rest {
+  width: 100%;
+  height: 300px; /*not necessary in future*/
+  border: 0.5px dotted grey;
+  background-color: floralwhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media(min-width: 751px){ /*PC*/
+  .header-menus {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+  }
+
+  .header-hamburger {
+    display: none;
+  }
+
+  .about {
+    width: 100%;
+    height: 300px; /*not necessary in future*/
+    display: flex;
+  }
+
+  .about-left {
+    width: 40%;
+    height: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-right {
+    width: 60%;
+    height: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media(max-width: 750px){ /*Mobile*/
+  .header-menus{
+    display: none;
+  }
+
+  .header-hamburger {
+    display: flex;
+    text-align: right;
+    justify-content: right; /*why???*/
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    color: white;
+  }
+
+  .about {
+    width: 100%;
+    display: block;
+  }
+
+  .about-left {
+    height: 300px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-right {
+    height: 300px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.mt-1 {
+  margin-top: 8px;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.mt-3 {
+  margin-top: 24px;
+}
+
+.mt-4 {
+  margin-top: 32px;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+.ml-1 {
+  margin-left: 8px;
+}
+
+.ml-2 {
+  margin-left: 16px;
+}
+
+.ml-3 {
+  margin-left: 24px;
+}
+
+.ml-4 {
+  margin-left: 32px;
+}
+
+.mr-1 {
+  margin-right: 8px;
+}
+
+.mr-2 {
+  margin-right: 16px;
+}
+
+.mr-3 {
+  margin-right: 24px;
+}
+
+.mr-4 {
+  margin-right: 32px;
+}
+
+.pt-2 {
+  padding-top: 16px;
+}
+
+.pb-2 {
+  padding-bottom: 16px;
 }
