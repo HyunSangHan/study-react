@@ -80,6 +80,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .rest {
@@ -93,7 +94,7 @@
 }
 
 
-@media(min-width: 751px){ /*PC*/
+@media(min-width: 641px){ /*PC*/
   .header-menus {
     display: flex;
     justify-content: space-around;
@@ -131,7 +132,7 @@
   }
 }
 
-@media(max-width: 750px){ /*Mobile*/
+@media(max-width: 640px){ /*Mobile*/
   .header-menus{
     display: none;
   }
