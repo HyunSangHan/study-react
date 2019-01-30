@@ -35,6 +35,10 @@ class Main extends Component {
                                         <h2>한현상</h2>
                                         <h3 className="upper mt-3 mb-5">hyunsang han</h3>
                                         <h4><p>가나다라 마바사아 자차카타 파하 가 나다라 마바사아 자차 카타파하~ 간장 공장 공장장 가나다라 마바사아 자차카타 파하 가 나다라 마바사아 자차 카타파하~ 간장 공장 공장장 가나다라 마바사아 자차카타 파하 가 나다라 마바사아 자차 카타파하~ 간장 공장 공장장 </p><p>블라블라</p></h4>
+                                        <img className ="link-icon" src="../../images/Me.jpg" />
+                                        <img className ="link-icon" src="../../images/Me.jpg" />
+                                        <img className ="link-icon" src="../../images/Me.jpg" />
+                                        <img className ="link-icon" src="../../images/Me.jpg" />
                                     </div>
                                 </Col>
                             </Row>
