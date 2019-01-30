@@ -16,8 +16,8 @@ class Main extends Component {
                 </div>
                 <div className="body-on font-2 z-3">
                     <div className="bg-white font-4">
-                        <div className="title-out1 pt-3">
-                            <div className="title-in1">
+                        <div className="title-out pt-3">
+                            <div className="title-in">
                                 <h1>ABOUT</h1>
                             </div>
                         </div>
