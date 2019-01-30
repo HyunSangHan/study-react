@@ -31,89 +31,16 @@
   }
 }
 
-.header-common {
-  background-color: black;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  color: white;
+.fix {
   position: fixed;
-  top: 0;
 }
 
-.header-logo {
-  display: flex;
-  align-items: center;
-  width: 20%;
-  height: 100%;
-}
-
-.header-menus > div:hover {
-  cursor: pointer;
-  background-color: grey;
-}
-
-.footer-common {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  color: grey;
-}
-
-.body-common {
-  margin-top: 60px;
-  margin-bottom: 40px;
-}
-
-.body-on {
-  margin-top: 360px;
-  background-color: white;
-  position: relative;
-}
-
-.body-under {
-  width: 100%;
-  height: 300px;
-  background-color: #282c34;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  position: fixed;
-  margin-top: -300px;
-}
-
-.timeline {
-  height: 300px; /*not necessary in future*/
-  border: 0.5px dotted grey;  /*not necessary in future*/
-  background-color: lavender;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rest {
-  height: 300px; /*not necessary in future*/
-  border: 0.5px dotted grey;  /*not necessary in future*/
-  background-color: floralwhite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.upper {
+  text-transform: uppercase;
 }
 
 .h100percent {
   height: 100%;
-}
-
-.photo {
-  width: 90%;
-  max-width: 300px;
-  border-radius: 50%;
 }
 
 .align-left {
@@ -124,44 +51,22 @@
   text-align: right;
 }
 
-.upper {
-  text-transform: uppercase;
+
+h1 {
+  font-weight: black !important;
 }
 
-@media(min-width: 768px){ /*PC*/
-  .header-menus {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    height: 100%;
-  }
-
-  .header-hamburger {
-    display: none;
-  }
-}
-
-
-@media(max-width: 767px){ /*Mobile*/
-  .header-menus{
-    display: none;
-  }
-
-  .header-hamburger {
-    display: flex;
-    text-align: right;
-    justify-content: flex-end;
-    align-items: center;
-    width: 80%;
-    height: 100%;
-    color: white;
-  }
+h2 {
+  font-weight: bold !important;
 }
 
 h3 {
-  /*why not???*/
-  color: Red;
+  font-weight: light !important;
+  color: grey !important;
+}
+
+h4 {
+  font-weight: medium !important;
 }
 
 .mt-1 {
@@ -232,8 +137,32 @@ h3 {
   padding-top: 16px;
 }
 
+.pt-3 {
+  padding-top: 24px;
+}
+
+.pt-4 {
+  padding-top: 32px;
+}
+
+.pt-5 {
+  padding-top: 40px;
+}
+
 .pb-2 {
   padding-bottom: 16px;
+}
+
+.pb-3 {
+  padding-bottom: 24px;
+}
+
+.pb-4 {
+  padding-bottom: 32px;
+}
+
+.pb-5 {
+  padding-bottom: 40px;
 }
 
 .z-0 {
