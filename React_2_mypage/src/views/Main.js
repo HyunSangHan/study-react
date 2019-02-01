@@ -119,14 +119,15 @@ class Main extends Component {
                                     <h1 className="font-5 upper">timeline</h1>
                                 </div>
                             </div>
-                            <div className="key-timeline">
+                            <div className="key-timeline font-1">
                                 <Grid>
-
-                                    <Row className="for-line mt-9">
-                                        <div className="vertical-line"></div>
-                                        <Col className="top-timeline mb-5" xs={12} md={12}>
+                                    <Row className="skin mt-9">
+                                        <div className="for-line">
+                                            <div className="vertical-line"></div>
+                                        </div>
+                                       <Col className="top-timeline mb-5" xs={12} md={12}>
                                             <div className="img-timeline">
-                                                이미지
+                                                APR 2018<br/>-<br/>PRESENT
                                             </div>
                                             <div className="left-timeline">
                                                 왼쪽
