@@ -1,6 +1,6 @@
 .body-common {
     margin-top: 60px;
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
 }
 
 .body-on {
@@ -71,17 +71,37 @@
     bottom: 0;
 }
 
-.bg-grey {
-    background-color: whitesmoke;
-    padding-top: 40px;
-    padding-bottom: 40px;
+.flex-gallery {
+    display: flex;
+    width: 100%;
 }
 
-.bg-white {
-    background-color: white;
-    padding-top: 40px;
-    padding-bottom: 40px;
+.flex-last {
+    display: none;
 }
+
+.flex-gallery > div:hover {
+    cursor: pointer;
+}
+
+.flex-last > div:hover {
+    cursor: pointer;
+}
+
+.more {
+    cursor: pointer;
+    margin-top: 32px;
+}
+
+.invisible {
+    display: none;
+}
+
+.each-gallery {
+    padding: 4px;
+    width: 100%;
+}
+
 
 @media(min-width: 768px){ /*PC*/
     .photo {
@@ -90,6 +110,33 @@
 
     .mb-more {
         margin-bottom: 50px;
+    }
+
+    .bg-white {
+        background-color: white;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .bg-grey {
+        background-color: whitesmoke;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .skill {
+        /*padding: 24px;*/
+        width: 100%;
+        height: 100%;
+    }
+
+    .top_gallery {
+        display: flex;
+        margin-top: 72px;
+    }
+
+    .flex-last {
+        display: none;
     }
 }
 
@@ -102,5 +149,33 @@
 
     .mb-more {
         margin-bottom: 64px;
+    }
+
+    .bg-white {
+        background-color: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .bg-grey {
+        background-color: whitesmoke;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .skill {
+        padding: 20px;
+        width: 60%;
+        height: 60%;
+    }
+
+    .top_gallery {
+        display: block;
+        margin-top: 72px;
+    }
+
+    .flex-last {
+        display: flex;
+        width: 100%;
     }
 }
