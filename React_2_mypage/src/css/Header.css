@@ -20,22 +20,6 @@
     background-color: grey;
 }
 
-
-@media(min-width: 768px){ /*PC*/
-    .header-menus {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 80%;
-        height: 100%;
-    }
-
-    .header-hamburger {
-        display: none;
-    }
-}
-
-
 @media(max-width: 767px){ /*Mobile*/
     .header-menus{
         display: none;
@@ -57,3 +41,18 @@
         color: black;
     }
 }
+
+@media(min-width: 768px){ /*PC*/
+    .header-menus {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+    }
+
+    .header-hamburger {
+        display: none;
+    }
+}
+

@@ -17,6 +17,13 @@
     color: white;
 }
 
+.body-under-black {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+}
+
 .gate {
     position: absolute;
     margin-top: -170px;
@@ -42,7 +49,8 @@
 }
 
 .rest {
-    height: 300px; /*not necessary in future*/
+    height: 100px; /*not necessary in future*/
+    width: 50%;
     border: 0.5px dotted grey;  /*not necessary in future*/
     background-color: floralwhite;
     display: flex;
@@ -57,7 +65,7 @@
 }
 
 .title-in {
-    border-bottom: solid 4px black;
+    border-bottom: solid 6px black;
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
@@ -72,15 +80,6 @@
     bottom: 0;
 }
 
-.flex-gallery {
-    display: flex;
-    width: 100%;
-}
-
-.flex-last {
-    display: none;
-}
-
 .flex-gallery > div:hover {
     cursor: pointer;
 }
@@ -89,9 +88,10 @@
     cursor: pointer;
 }
 
-.more {
+.link-more {
     cursor: pointer;
     margin-top: 32px;
+    display: inline-block;
 }
 
 .invisible {
@@ -105,43 +105,10 @@
     max-width: 150px;
 }
 
-
-@media(min-width: 768px){ /*PC*/
-    .photo {
-        width: 300px;
-    }
-
-    .mb-more {
-        margin-bottom: 50px;
-    }
-
-    .bg-white {
-        background-color: white;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .bg-grey {
-        background-color: whitesmoke;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .skill {
-        /*padding: 24px;*/
-        width: 100%;
-        height: 100%;
-    }
-
-    .top_gallery {
-        display: flex;
-        margin-top: 72px;
-    }
-
-    .flex-last {
-        display: none;
-    }
+.for-line {
+    position: relative;
 }
+
 
 @media(max-width: 767px){ /*Mobile*/
     .photo {
@@ -177,8 +144,170 @@
         margin-top: 72px;
     }
 
-    .flex-last {
+    .flex-gallery-left {
         display: flex;
         width: 100%;
     }
+
+    .flex-gallery-right {
+        display: flex;
+        width: 100%;
+    }
+
+    .flex-gallery-last {
+        display: flex;
+        width: 100%;
+    }
+
+    .top-timeline {
+        display: flex;
+        height: 100px; /*have to be edited*/
+    }
+
+    .img-timeline {
+        width: 30%;
+        height: 100%;
+        border: 0.5px dotted grey;  /*not necessary in future*/
+        background-color: floralwhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-timeline {
+        width: 70%;
+        height: 100%;
+        border: 0.5px dotted grey;  /*not necessary in future*/
+        background-color: floralwhite;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 20px;
+    }
+
+    .right-timeline {
+        width: 70%;
+        height: 100%;
+        border: 0.5px dotted grey;  /*not necessary in future*/
+        background-color: floralwhite;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 20px;
+    }
+
+    .vertical-line {
+        height: 100%;
+        width: 1.5px;
+        background-color: lightgrey;
+        position: absolute;
+        left: 16.8%;
+    }
 }
+
+@media(min-width: 768px){ /*PC*/
+    .photo {
+        width: 300px;
+    }
+
+    .mb-more {
+        margin-bottom: 50px;
+    }
+
+    .bg-white {
+        background-color: white;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .bg-grey {
+        background-color: #fafafa;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .skill {
+        /*padding: 24px;*/
+        width: 100%;
+        height: 100%;
+    }
+
+    .top_gallery {
+        display: flex;
+        margin-top: 72px;
+    }
+
+    .flex-gallery-left {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .flex-gallery-right {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .flex-gallery-last {
+        display: none;
+    }
+
+    .key-timeline {
+        margin-bottom: 80px;
+        width: 100%;
+    }
+
+    .top-timeline {
+        position: relative;
+        height: 100px; /*need to edit*/
+    }
+
+    .img-timeline {
+        width: 20%;
+        height: 100%;
+        border: 0.5px dotted grey;  /*not necessary in future*/
+        background-color: floralwhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 40%;
+        z-index: 3;
+    }
+
+    .left-timeline {
+        width: 40%;
+        height: 100%;
+        border: 0.5px dotted grey;  /*not necessary in future*/
+        background-color: floralwhite;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        float: left;
+        padding: 0px 20px;
+    }
+
+    .right-timeline {
+        width: 40%;
+        height: 100%;
+        border: 0.5px dotted grey;  /*not necessary in future*/
+        background-color: floralwhite;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        float: right;
+        padding: 0px 20px;
+    }
+
+    .vertical-line {
+        height: 100%;
+        width: 1.5px;
+        background-color: lightgrey;
+        position: absolute;
+        left: 49.9%;
+    }
+}
+
