@@ -14,12 +14,12 @@ class Header extends Component {
                     <img src ={logo} alt = "home" height={"40px;"}/>
                 </div>
                 <div className="header-menus mr-3">
-                    <div>ABOUT</div>
-                    <div>SKILL SET</div>
-                    <div>TIMELINE</div>
-                    <div>GALLERY</div>
-                    <div>PRODUCT</div>
-                    <div>CONTACT</div>
+                    <div className="upper">about</div>
+                    <div className="upper">gallery</div>
+                    <div className="upper">timeline</div>
+                    <div className="upper">skill set</div>
+                    <div className="upper">products</div>
+                    <div className="upper">contact</div>
                 </div>
 
                 <div className="header-hamburger mr-3">
