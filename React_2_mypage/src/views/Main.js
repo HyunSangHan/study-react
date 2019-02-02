@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
-import '../css/Main.css'
+import '../css/Main.css';
+import '../css/Timeline.css';
+import Timeline from '../views/Timeline.js';
 import {Grid, Row, Col, Button} from 'react-bootstrap';
 import MaterialIcon, {colorPalette} from 'material-icons-react';
 import ButtonToolbar from "react-bootstrap/es/ButtonToolbar";
@@ -34,9 +36,9 @@ class Main extends Component {
                                     </Col>
                                     <Col className="skin" xs={12} md={6}>
                                         <div className="mt-5 align-left ml-5 mr-5 mb-more">
-                                            <h2>한현상</h2>
-                                            <h3 className="upper mt-3 mb-5">hyunsang han</h3>
-                                            <h4><p>가나다라 마바사아 자차카타 파하 가 나다라 마바사아 자차 카타파하~ 간장 공장 공장장 가나다라 마바사아 자차카타 파하 가 나다라 마바사아 자차 카타파하~ 간장 공장 공장장 가나다라 마바사아 자차카타 파하 가 나다라 마바사아 자차 카타파하~ 간장 공장 공장장 </p><p>블라블라</p></h4>
+                                            <h2 className="upper">hyunsang han</h2>
+                                            <h3 className="mt-3 mb-5">Web Developer</h3>
+                                            <h4><p>Learn Git and GitHub without any code!</p><p>Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open a pull request.</p></h4>
                                             <div className="bottom">
                                                 <a href = "https://github.com/HyunSangHan" target = "_blank">
                                                     <img className ="link-icon" src="../../images/github.png" alt="github"/>
@@ -110,58 +112,7 @@ class Main extends Component {
                         </div>
                     </div>
 
-
-
-                    <div className="bg-white pb-9">
-                        <div className="bg-white">
-                            <div className="title-out pt-4 pb-4">
-                                <div className="title-in">
-                                    <h1 className="font-5 upper">timeline</h1>
-                                </div>
-                            </div>
-                            <div className="key-timeline font-1">
-                                <Grid>
-                                    <Row className="skin mt-9">
-                                        <div className="for-line">
-                                            <div className="vertical-line"></div>
-                                        </div>
-                                       <Col className="top-timeline timeline-margin" xs={12} md={12}>
-                                            <div className="img-timeline">
-                                                APR 2018<br/>-<br/>PRESENT
-                                            </div>
-                                            <div className="left-timeline">
-                                                왼쪽
-                                            </div>
-                                        </Col>
-                                        <Col className="top-timeline timeline-margin" xs={12} md={12}>
-                                            <div className="img-timeline">
-                                                이미지
-                                            </div>
-                                            <div className="right-timeline">
-                                                오른쪽
-                                            </div>
-                                        </Col>
-                                        <Col className="top-timeline timeline-margin" xs={12} md={12}>
-                                            <div className="img-timeline">
-                                                이미지
-                                            </div>
-                                            <div className="left-timeline">
-                                                왼쪽
-                                            </div>
-                                        </Col>
-                                        <Col className="top-timeline" xs={12} md={12}>
-                                            <div className="img-timeline">
-                                                이미지
-                                            </div>
-                                            <div className="right-timeline">
-                                                오른쪽
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </Grid>
-                            </div>
-                        </div>
-                    </div>
+                    <Timeline/>
 
                     <div className="bg-grey pb-9">
                         <div className="bg-grey">
