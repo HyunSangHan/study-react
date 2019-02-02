@@ -125,7 +125,7 @@ class Main extends Component {
                                         <div className="for-line">
                                             <div className="vertical-line"></div>
                                         </div>
-                                       <Col className="top-timeline mb-5" xs={12} md={12}>
+                                       <Col className="top-timeline timeline-margin" xs={12} md={12}>
                                             <div className="img-timeline">
                                                 APR 2018<br/>-<br/>PRESENT
                                             </div>
@@ -133,7 +133,7 @@ class Main extends Component {
                                                 왼쪽
                                             </div>
                                         </Col>
-                                        <Col className="top-timeline mb-5" xs={12} md={12}>
+                                        <Col className="top-timeline timeline-margin" xs={12} md={12}>
                                             <div className="img-timeline">
                                                 이미지
                                             </div>
@@ -141,7 +141,7 @@ class Main extends Component {
                                                 오른쪽
                                             </div>
                                         </Col>
-                                        <Col className="top-timeline mb-5" xs={12} md={12}>
+                                        <Col className="top-timeline timeline-margin" xs={12} md={12}>
                                             <div className="img-timeline">
                                                 이미지
                                             </div>

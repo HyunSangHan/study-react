@@ -117,6 +117,10 @@
     left: 49.9%;
 }
 
+.timeline-margin {
+    margin-bottom: 40px;
+}
+
 
 @media(max-width: 767px){ /*Mobile*/
     .photo {
@@ -194,7 +198,7 @@
     .left-timeline {
         width: 70%;
         height: 100%;
-        background-color: floralwhite;
+        background-color: whitesmoke;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -205,7 +209,7 @@
     .right-timeline {
         width: 70%;
         height: 100%;
-        background-color: floralwhite;
+        background-color: whitesmoke;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -221,7 +225,7 @@
     }
 }
 
-@media(min-width: 768px){ /*PC*/
+@media(min-width: 768px){ /*tablet*/
     .photo {
         width: 300px;
     }
@@ -300,7 +304,7 @@
     .left-timeline {
         width: 40%;
         height: 100%;
-        background-color: floralwhite;
+        background-color: whitesmoke;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -311,7 +315,7 @@
     .right-timeline {
         width: 40%;
         height: 100%;
-        background-color: floralwhite;
+        background-color: whitesmoke;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -327,29 +331,96 @@
     }
 }
 
-@media(min-width: 992px) {  /*desktop*/
+@media(min-width: 992px) {  /*laptop*/
     .img-timeline {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         background-color: #444444;
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        left: 45%;
+        left: 42.5%;
         z-index: 3;
         color: white;
         line-height: 15px;
         font-family: "Apple SD Gothic Neo";
-        font-size: medium;
+        font-size: large;
         font-weight: bold;
     }
 
     .for-line {
         height: 100%;
-        width: 100px;
+        width: 150px;
         position: absolute;
-        left: 45%;
+        left: 42.5%;
+    }
+
+    .top-timeline {
+        height: 150px;
+    }
+
+
+    .left-timeline {
+        width: 40%;
+        height: 100%;
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        float: left;
+        padding: 0px 40px 0px 20px;
+    }
+
+    .right-timeline {
+        width: 40%;
+        height: 100%;
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        float: right;
+        padding: 0px 20px 0px 40px;
+    }
+
+    .timeline-margin {
+        margin-bottom: 90px;
+    }
+}
+
+@media(min-width: 1200px) {  /*desktop*/
+    .img-timeline {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #444444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 43.5%;
+        z-index: 3;
+        color: white;
+        line-height: 15px;
+        font-family: "Apple SD Gothic Neo";
+        font-size: large;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    .for-line {
+        height: 100%;
+        width: 150px;
+        position: absolute;
+        left: 43.5%;
+    }
+
+    .top-timeline {
+        height: 150px;
+    }
+
+    .timeline-margin {
+        margin-bottom: 90px;
     }
 }
