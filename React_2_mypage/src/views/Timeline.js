@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../App.css';
 import '../css/Main.css';
 import '../css/Timeline.css';
 import {Grid, Row, Col, Button} from 'react-bootstrap';
 import MaterialIcon, {colorPalette} from 'material-icons-react';
-import ButtonToolbar from "react-bootstrap/es/ButtonToolbar";
 
 
 class Timeline extends Component {
@@ -46,7 +44,7 @@ class Timeline extends Component {
                                             <h3 className="h3 mt-4">Shopping Search&Display (APR 2018 - PRESENT)</h3>
                                             <h4 className="h4 mb-5">Service planning&Strategy for Naver shopping search</h4>
                                             <h3 className="h3 mt-4">Service Support (MAR 2016 - MAR 2018)</h3>
-                                            <h4 className="h4">Managing HR(compensation, recruiting) of Service Committe<br/>Supporting CEO and growth</h4>
+                                            <h4 className="h4">Managing HR(compensation, recruiting) of Service Committee<br/>Supporting CEO and growth</h4>
                                         </div>
                                     </div>
                                 </Col>
@@ -73,7 +71,7 @@ class Timeline extends Component {
                                             <h4 className="h4 mb-5">Bachelor of Engineering</h4>
                                             <h3 className="h3 mt-4">SNU American Football Team, Green Terrors</h3>
                                             <h4 className="h4 mb-5">Tight end, Defensive end</h4>
-                                            <h3 className="h3 mt-4">101ROTC</h3>
+                                            <h3 className="h3 mt-4">101 ROTC</h3>
                                             <h4 className="h4">Military cadet</h4>
                                         </div>
                                     </div>
