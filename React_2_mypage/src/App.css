@@ -66,7 +66,7 @@ h3 {
 }
 
 h4 {
-  font-weight: medium !important;
+  font-weight: 400 !important;
 }
 
 .mt-1 {
@@ -83,6 +83,22 @@ h4 {
 
 .mt-4 {
   margin-top: 32px;
+}
+
+.mt-5 {
+  margin-top: 40px;
+}
+
+.mt-6 {
+  margin-top: 48px;
+}
+
+.mt-7 {
+  margin-top: 56px;
+}
+
+.mt-8 {
+  margin-top: 64px;
 }
 
 .mt-9 {
@@ -102,6 +118,14 @@ h4 {
 }
 
 .mb-4 {
+  margin-bottom: 32px;
+}
+
+.mb-5 {
+  margin-bottom: 32px;
+}
+
+.mb-6 {
   margin-bottom: 32px;
 }
 
