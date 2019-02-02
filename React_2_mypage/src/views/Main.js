@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../App.css';
 import '../css/Main.css';
 import '../css/Timeline.css';
 import Timeline from '../views/Timeline.js';
-import {Grid, Row, Col, Button} from 'react-bootstrap';
 import MaterialIcon, {colorPalette} from 'material-icons-react';
-import ButtonToolbar from "react-bootstrap/es/ButtonToolbar";
+import {Grid, Row, Col} from 'react-bootstrap';
+import { Button, Form, FormGroup, Label, Input, Card, CardImg, CardText, CardBody, CardLink, CardTitle, CardSubtitle} from 'reactstrap';
+
 
 class Main extends Component {
     render() {
@@ -145,20 +145,181 @@ class Main extends Component {
 
 
 
-                    <div className="bg-white pb-9">
-                        <div className="bg-white">
+                    <div className="mt-9 pb-9">
+                        <div>
                             <div className="title-out pt-4 pb-4">
-                                <div className="title-in">
-                                    <h1 className="font-5 upper">products</h1>
+                                <div className="title-except">
+                                    <h1 className="font-5 font-white upper">products</h1>
                                 </div>
                             </div>
                             <Grid>
                                 <Row className="h100percent mt-9">
-                                    <Col xs={12} md={12}>
-                                        <div>
-                                            여기에 들어감
+                                    <Col xs={12} md={6} lg={4} xl={3}>
+                                        <div className="mb-5">
+                                            <Card>
+                                                <CardBody>
+                                                    <CardTitle>
+                                                        <h2 className="h2">My Profile Page</h2>
+                                                    </CardTitle>
+                                                    <CardSubtitle>
+                                                        <h3 className="h3">JAN - FEB 2019</h3>
+                                                        <h4 className="h4">ReactJS / React-Bootstrap / Reactstrap</h4>
+                                                    </CardSubtitle>
+                                                </CardBody>
+                                                <img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="mypage" />
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            This is my own profile page for introducing myself especially about web development. I designed and developed it by myself.
+                                                        </h4>
+                                                    </CardText>
+                                                    <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
+                                                    <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
+                                                </CardBody>
+                                            </Card>
                                         </div>
                                     </Col>
+
+                                    <Col xs={12} md={6} lg={4} xl={3}>
+                                        <div className="mb-5">
+                                            <Card>
+                                                <CardBody>
+                                                    <CardTitle>
+                                                        <h2 className="h2">Web Calculator</h2>
+                                                    </CardTitle>
+                                                    <CardSubtitle>
+                                                        <h3 className="h3">JAN 2019</h3>
+                                                        <h4 className="h4">ReactJS</h4>
+                                                    </CardSubtitle>
+                                                </CardBody>
+                                                <img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="calculator" />
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            I made web calculator for studying Javascript and React. It supports responsive web. Maybe you will be better to use on mobile.
+                                                        </h4>
+                                                    </CardText>
+                                                    <CardLink className="font-3" href="http://calculator.dothome.co.kr/" target="_blank">Link</CardLink>
+                                                    <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
+                                                </CardBody>
+                                            </Card>
+                                        </div>
+                                    </Col>
+
+                                    <Col xs={12} md={6} lg={4} xl={3}>
+                                        <div className="mb-5">
+                                            <Card>
+                                                <CardBody>
+                                                    <CardTitle>
+                                                        <h2 className="h2">Meeting Time</h2>
+                                                    </CardTitle>
+                                                    <CardSubtitle>
+                                                        <h3 className="h3">DEC 2018 - PRESENT</h3>
+                                                        <h4 className="h4">Ruby on Sinatra</h4>
+                                                    </CardSubtitle>
+                                                </CardBody>
+                                                <img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="meeting" />
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            I made web calculator for studying Javascript and React. It supports responsive web. Maybe you will be better to use on mobile.
+                                                        </h4>
+                                                    </CardText>
+                                                    <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
+                                                    <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
+                                                </CardBody>
+                                            </Card>
+                                        </div>
+                                    </Col>
+
+                                    <Col xs={12} md={6} lg={4} xl={3}>
+                                        <div className="mb-5">
+                                            <Card>
+                                                <CardBody>
+                                                    <CardTitle>
+                                                        <h2 className="h2">
+                                                            GoGo Fish
+                                                        </h2>
+                                                    </CardTitle>
+                                                    <CardSubtitle>
+                                                        <h3 className="h3">SEP 2018 - PRESENT</h3>
+                                                        <h4 className="h4">Ruby on Sinatra / Fuse</h4>
+                                                    </CardSubtitle>
+                                                </CardBody>
+                                                <img width="100%" src="../images/fish.png" alt="fish" />
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            Education App for kids
+                                                        </h4>
+                                                    </CardText>
+                                                    <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
+                                                    <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
+                                                </CardBody>
+                                            </Card>
+                                        </div>
+                                    </Col>
+
+                                    <Col xs={12} md={6} lg={4} xl={3}>
+                                        <div className="mb-5">
+                                            <Card>
+                                                <CardBody>
+                                                    <CardTitle>
+                                                        <h2 className="h2">
+                                                            Fine dust Bot
+                                                        </h2>
+                                                    </CardTitle>
+                                                    <CardSubtitle>
+                                                        <h3 className="h3">AUG 2018</h3>
+                                                        <h4 className="h4">Ruby on Sinatra / Kakao Chatbot / API of KMA</h4>
+                                                    </CardSubtitle>
+                                                </CardBody>
+                                                <img width="100%" src="../images/dustbot.jpeg" alt="dustbot" />
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            Using API of Korea Meteorological Administration, it gave information of fine dust to kakao users.
+                                                        </h4>
+                                                    </CardText>
+                                                    <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
+                                                    <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
+                                                </CardBody>
+                                            </Card>
+                                        </div>
+                                    </Col>
+
+                                    <Col xs={12} md={6} lg={4} xl={3}>
+                                        <div className="mb-5">
+                                            <Card>
+                                                <CardBody>
+                                                    <CardTitle>
+                                                        <h2 className="font-blue h2">STH NEW</h2>
+                                                    </CardTitle>
+                                                    <CardSubtitle>
+                                                        <h3 className="h3">FUTURE</h3>
+                                                        <h4 className="h4">?</h4>
+                                                    </CardSubtitle>
+                                                </CardBody>
+                                                <img width="100%" src="../images/Me.jpg" alt="question-mark" />
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            I want to challenge more with several projects! Please contact me if you have any good idea.
+                                                        </h4>
+                                                    </CardText>
+                                                </CardBody>
+                                            </Card>
+                                        </div>
+                                    </Col>
+
+
+
+
+
+
+
+
+
                                 </Row>
                             </Grid>
                         </div>
@@ -167,25 +328,68 @@ class Main extends Component {
 
                     <div className="bg-grey pb-9">
                         <div className="bg-grey">
-                            <div className="title-out pt-4 pb-4">
-                                <div className="title-in">
-                                    <h1 className="font-5 upper">contact</h1>
-                                </div>
-                            </div>
+
                             <Grid>
-                                <Row className="h100percent mt-9">
-                                    <Col xs={12} md={5}>
-                                        <div>
-                                            왼쪽부분
+                                <Row className="h100percent mt-4">
+                                    <Col className="pb-5" xs={12} md={5}>
+                                        <div className="title-out pb-4">
+                                            <div className="test">
+                                                <div className="title-in">
+                                                    <h1 className="font-5 upper">contact</h1>
+                                                </div>
+                                                {/*<div className="font-2 mt-6">*/}
+                                                    {/*<div className="mt-3">*/}
+                                                        {/*<MaterialIcon icon="place" color="black"/>*/}
+                                                        {/*<a href = "https://goo.gl/maps/AVxk24wM6P92" target = "_blank">*/}
+                                                            {/*<div className="ml-3">*/}
+                                                                {/*NAVER Green Factory*/}
+                                                            {/*</div>*/}
+                                                        {/*</a>*/}
+                                                    {/*</div>*/}
+                                                    {/*<div className="mt-3">*/}
+                                                        {/*<MaterialIcon icon="phone_iphone" color="black"/>*/}
+                                                        {/*<div className="ml-3">*/}
+                                                            {/*+82)10-4377-6423*/}
+                                                        {/*</div>*/}
+                                                    {/*</div>*/}
+                                                    {/*<div className="mt-3">*/}
+                                                        {/*<MaterialIcon icon="email" color="black"/>*/}
+                                                        {/*<div className="ml-3">*/}
+                                                            {/*gustkd3@gmail.com*/}
+                                                        {/*</div>*/}
+                                                    {/*</div>*/}
+                                                {/*</div>*/}
+                                            </div>
                                         </div>
+
                                     </Col>
-                                    <Col xs={12} md={7}>
-                                        <div>
-                                            오른쪽부분
+                                    <Col xs={10} md={5}>
+                                        <div className="align-left">
+                                            <Form className="font-3 ml-4 mr-4">
+                                                <FormGroup className="mb-$">
+                                                    <Label for="Name">Name</Label>
+                                                    <Input className="contact-line" type="text" name="name" id="name" bsSize="lg" placeholder="Your Name" />
+                                                </FormGroup>
+                                                <FormGroup className="mb-4">
+                                                    <Label for="Email">Email</Label>
+                                                    <Input className="contact-line" type="email" name="email" id="email" bsSize="lg" placeholder="Your Email Address" />
+                                                </FormGroup>
+                                                <FormGroup className="mb-4">
+                                                    <Label for="Phone">Phone</Label>
+                                                    <Input className="contact-line" type="text" name="phone" id="phone" bsSize="lg" placeholder="Your Phone Number" />
+                                                </FormGroup>
+                                                <FormGroup className="mb-4">
+                                                    <Label for="message">Message</Label>
+                                                    <Input className="contact-line" type="textarea" name="text" id="exampleText" bsSize="lg" placeholder="Your Message" />
+                                                </FormGroup>
+                                                <Button className="font-2" color="primary" size="lg">Submit</Button>
+                                            </Form>
                                         </div>
                                     </Col>
                                 </Row>
+
                             </Grid>
+
                         </div>
                     </div>
 

@@ -122,11 +122,23 @@ h4 {
 }
 
 .mb-5 {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .mb-6 {
-  margin-bottom: 32px;
+  margin-bottom: 48px;
+}
+
+.mb-7 {
+  margin-bottom: 56px;
+}
+
+.mb-8 {
+  margin-bottom: 64px;
+}
+
+.mb-9 {
+  margin-bottom: 72px;
 }
 
 .ml-1 {
@@ -279,4 +291,14 @@ h4 {
 .font-6 {
   font-family: "Apple SD Gothic Neo";
   font-size: larger !important;
+}
+
+.font-white {
+  color: white !important;
+  font-weight: bolder !important;
+}
+
+.font-blue {
+  color: #40c5ef !important;
+  font-weight: bolder !important;
 }
