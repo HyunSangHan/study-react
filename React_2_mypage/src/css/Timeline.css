@@ -24,12 +24,12 @@
     .top-timeline {
         display: flex;
         height: 100%;
-        min-height: 80px;
+        min-height: 90px;
     }
 
     .img-timeline {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
         background-color: #40c5ef;
         display: flex;
@@ -70,7 +70,7 @@
 
     .for-line {
         height: 100%;
-        width: 80px;
+        width: 90px;
         position: absolute;
         left: 5%;
     }
@@ -257,7 +257,7 @@
         font-size: 1.5rem !important;
     }
 
-    
+
 }
 
 @media(min-width: 1200px) {  /*desktop*/
@@ -304,8 +304,6 @@
         text-align: left;
     }
 
-
-
     .h2 {
         font-size: 4rem !important;;
     }
@@ -317,4 +315,5 @@
     .h4 {
         font-size: 1.5rem !important;
     }
+
 }

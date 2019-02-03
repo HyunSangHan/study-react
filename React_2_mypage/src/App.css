@@ -105,6 +105,10 @@ h4 {
   margin-top: 72px;
 }
 
+.mt-more {
+  margin-top: 100px;
+}
+
 .mb-1 {
   margin-bottom: 8px;
 }
@@ -237,6 +241,10 @@ h4 {
   padding-bottom: 72px;
 }
 
+.pb-more {
+  padding-bottom: 100px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -280,12 +288,6 @@ h4 {
 .font-5 {
   font-family: "Apple SD Gothic Neo";
   font-size: xx-large !important;
-}
-
-.font-51 {
-  font-family: "Apple SD Gothic Neo";
-  font-size: xx-large !important;
-  font-weight: 700;
 }
 
 .font-6 {

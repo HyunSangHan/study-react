@@ -1,7 +1,7 @@
 .header-common {
     background-color: black;
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     color: white;
     position: fixed;
@@ -40,6 +40,38 @@
         background-color: grey;
         color: black;
     }
+
+    .header-hamburger-open {
+        width: 188px;
+        height: 100%;
+        background-color: #111111;
+        position: fixed;
+        margin-top: 70px;
+        right: 0;
+        opacity: 1;
+    }
+
+    .header-hamburger-limit {
+        height: 350px;
+        margin-top: 30px;
+        margin-right: 50px;
+    }
+
+    .header-hamburger-menus {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+    }
+
+    .for-hamburger {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
 }
 
 @media(min-width: 768px){ /*PC*/
@@ -52,6 +84,10 @@
     }
 
     .header-hamburger {
+        display: none;
+    }
+
+    .header-hamburger-menus {
         display: none;
     }
 }
