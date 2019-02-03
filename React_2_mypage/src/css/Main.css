@@ -1,20 +1,10 @@
 .body-common {
     margin-top: 60px;
-    /*margin-bottom: 40px;*/
+    height: 100%;
 }
 
 .body-on {
     position: relative;
-}
-
-.body-under {
-    width: 100%;
-    height: 300px;
-    background-color: #282c34;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
 }
 
 .body-under-black {
@@ -24,19 +14,18 @@
     opacity: 0.8;
 }
 
-.gate {
-    position: absolute;
-    margin-top: -170px;
-    color: white;
-    width: 100%;
-}
-
 .link-icon {
     display: inline-block;
     margin: 6px 12px 0px 0px;
     width: 40px;
     height: 40px;
     border-radius: 25%;
+}
+
+.link-more {
+    cursor: pointer;
+    margin-top: 32px;
+    display: inline-block;
 }
 
 .rest {
@@ -86,12 +75,6 @@
     cursor: pointer;
 }
 
-.link-more {
-    cursor: pointer;
-    margin-top: 32px;
-    display: inline-block;
-}
-
 .invisible {
     display: none;
 }
@@ -122,13 +105,13 @@
     .bg-white {
         background-color: white;
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
     }
 
     .bg-grey {
         background-color: whitesmoke;
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
     }
 
     .skill {
@@ -156,6 +139,38 @@
         display: flex;
         width: 100%;
     }
+
+
+    .body-under {
+        width: 100%;
+        height: 720px;
+        background-color: #282c34;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .gate {
+        position: absolute;
+        margin-top: -450px;
+        color: white;
+        width: 100%;
+    }
+
+    .font-51 {
+        font-family: "Apple SD Gothic Neo";
+        font-size: 3rem !important;
+        font-weight: 500;
+    }
+
+    .bg-large {
+        display: none;
+    }
+
+    .for-mobile {
+        margin-top: 40px;
+    }
 }
 
 @media(min-width: 768px){ /*PC*/
@@ -170,13 +185,13 @@
     .bg-white {
         background-color: white;
         padding-top: 40px;
-        padding-bottom: 40px;
+        padding-bottom: 60px;
     }
 
     .bg-grey {
         background-color: #fafafa;
         padding-top: 40px;
-        padding-bottom: 40px;
+        padding-bottom: 60px;
     }
 
     .skill {
@@ -209,4 +224,37 @@
     .contact-line {
         min-width: 350px;
     }
+
+    .body-under {
+        width: 100%;
+        height: 650px;
+        background-color: #282c34;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .gate {
+        position: absolute;
+        margin-top: -370px;
+        color: white;
+        width: 100%;
+    }
+
+    .font-51 {
+        font-family: "Apple SD Gothic Neo";
+        font-size: 6rem !important;
+        font-weight: 500;
+    }
+
+    .profile-right {
+        text-align: right;
+        margin-right: 30px;
+    }
+
+    .bg-small {
+        display: none;
+    }
+
 }

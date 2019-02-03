@@ -3,9 +3,9 @@ import '../App.css';
 import '../css/Main.css';
 import '../css/Timeline.css';
 import Timeline from '../views/Timeline.js';
-import MaterialIcon, {colorPalette} from 'material-icons-react';
+import MaterialIcon from 'material-icons-react';
 import {Grid, Row, Col} from 'react-bootstrap';
-import { Button, Form, FormGroup, Label, Input, Card, CardImg, CardText, CardBody, CardLink, CardTitle, CardSubtitle} from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Card, CardText, CardBody, CardLink, CardTitle, CardSubtitle} from 'reactstrap';
 
 
 class Main extends Component {
@@ -13,7 +13,8 @@ class Main extends Component {
         return (
             <div className="body-common z-0">
                 <div className="body-under">
-                    <img className="fix" src="../images/Me.jpg" alt="my_photo" width="100%"/>
+                    <img className="fix bg-large" src="../images/sea.jpg" alt="my_photo" width="100%"/>
+                    <img className="fix bg-small" src="../images/sea2.jpg" alt="my_photo" width="100%"/>
                     <div className="body-under-black fix"/>
                 </div>
                 <div className="gate font-51">This page is still under construction!
@@ -30,15 +31,15 @@ class Main extends Component {
                             <Grid>
                                 <Row className="h100percent mt-9">
                                     <Col xs={12} md={6}>
-                                        <div>
-                                            <img className="photo" src="../images/Me.jpg" alt="my_photo"/>
+                                        <div className="profile-right">
+                                            <img className="photo" src="../images/hal.jpg" alt="my_photo"/>
                                         </div>
                                     </Col>
                                     <Col className="skin" xs={12} md={6}>
-                                        <div className="mt-5 align-left ml-5 mr-5 mb-more">
+                                        <div className="align-left ml-5 mr-5 mb-more for-mobile">
                                             <h2 className="upper">hyunsang han</h2>
                                             <h3 className="mt-3 mb-5">Web Developer</h3>
-                                            <h4><p>Learn Git and GitHub without any code!</p><p>Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open a pull request.</p></h4>
+                                            <h4>I always try to move forward with new learning, not settle down to the present. I work as a service planner, but I take my own personal time to work on toy projects. If you have a good idea for a new try, feel free to contact me anytime.</h4>
                                             <div className="bottom">
                                                 <a href = "https://github.com/HyunSangHan" target = "_blank">
                                                     <img className ="link-icon" src="../../images/github.png" alt="github"/>
@@ -72,35 +73,35 @@ class Main extends Component {
                                     <div className="top_gallery">
                                         <div className="flex-gallery-left">
                                             <div>
-                                                <img className="each-gallery" src="../images/Me.jpg" alt="gal"/>
+                                                <img className="each-gallery" src="../images/2hifive.jpg" alt="gal1"/>
                                             </div>
                                             <div>
-                                                <img className="each-gallery" src="../images/Me.jpg" alt="gal"/>
+                                                <img className="each-gallery" src="../images/3positano.jpg" alt="gal2"/>
                                             </div>
                                             <div>
-                                                <img className="each-gallery" src="../images/Me.jpg" alt="gal"/>
+                                                <img className="each-gallery" src="../images/6airplane.jpg" alt="gal3"/>
                                             </div>
                                         </div>
                                         <div className="flex-gallery-right">
                                             <div>
-                                                <img className="each-gallery" src="../images/Me.jpg" alt="gal"/>
+                                                <img className="each-gallery" src="../images/5soba.jpg" alt="gal4"/>
                                             </div>
                                             <div>
-                                                <img className="each-gallery" src="../images/Me.jpg" alt="gal"/>
+                                                <img className="each-gallery" src="../images/jongro.jpg" alt="gal5"/>
                                             </div>
                                             <div>
-                                                <img className="each-gallery" src="../images/Me.jpg" alt="gal"/>
+                                                <img className="each-gallery" src="../images/1niko.jpg" alt="gal6"/>
                                             </div>
                                         </div>
-                                        <div className="flex-gallery-last">
+                                        <div className="flex-gallery-right">
                                             <div>
-                                                <img className="each-gallery" src="../images/Me.jpg" alt="gal"/>
+                                                <img className="each-gallery" src="../images/spain.jpg" alt="gal7"/>
                                             </div>
                                             <div>
-                                                <img className="each-gallery" src="../images/Me.jpg" alt="gal"/>
+                                                <img className="each-gallery" src="../images/dq.jpg" alt="gal8"/>
                                             </div>
                                             <div>
-                                                <img className="each-gallery" src="../images/Me.jpg" alt="gal"/>
+                                                <img className="each-gallery" src="../images/5young.jpg" alt="gal9"/>
                                             </div>
                                         </div>
                                     </div>
@@ -143,13 +144,11 @@ class Main extends Component {
                         </div>
                     </div>
 
-
-
-                    <div className="mt-9 pb-9">
-                        <div>
+                    <div className="bg-white pb-9">
+                        <div className="bg-white">
                             <div className="title-out pt-4 pb-4">
                                 <div className="title-except">
-                                    <h1 className="font-5 font-white upper">products</h1>
+                                    <h1 className="font-5 upper">products</h1>
                                 </div>
                             </div>
                             <Grid>
@@ -166,7 +165,7 @@ class Main extends Component {
                                                         <h4 className="h4">ReactJS / React-Bootstrap / Reactstrap</h4>
                                                     </CardSubtitle>
                                                 </CardBody>
-                                                <img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="mypage" />
+                                                <img width="100%" src="../images/mypage.png" alt="mypage" />
                                                 <CardBody>
                                                     <CardText>
                                                         <h4 className="h4">
@@ -192,7 +191,7 @@ class Main extends Component {
                                                         <h4 className="h4">ReactJS</h4>
                                                     </CardSubtitle>
                                                 </CardBody>
-                                                <img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="calculator" />
+                                                <img width="100%" src="../images/calculator.png" alt="calculator" />
                                                 <CardBody>
                                                     <CardText>
                                                         <h4 className="h4">
@@ -218,7 +217,7 @@ class Main extends Component {
                                                         <h4 className="h4">Ruby on Sinatra</h4>
                                                     </CardSubtitle>
                                                 </CardBody>
-                                                <img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="meeting" />
+                                                <img width="100%" src="../images/meeting.png" alt="meeting" />
                                                 <CardBody>
                                                     <CardText>
                                                         <h4 className="h4">
@@ -293,32 +292,24 @@ class Main extends Component {
                                             <Card>
                                                 <CardBody>
                                                     <CardTitle>
-                                                        <h2 className="font-blue h2">STH NEW</h2>
+                                                        <h2 className="h2">BlackJack</h2>
                                                     </CardTitle>
                                                     <CardSubtitle>
-                                                        <h3 className="h3">FUTURE</h3>
-                                                        <h4 className="h4">?</h4>
+                                                        <h3 className="h3">NOV - DEC 2011</h3>
+                                                        <h4 className="h4">Java</h4>
                                                     </CardSubtitle>
                                                 </CardBody>
-                                                <img width="100%" src="../images/Me.jpg" alt="question-mark" />
+                                                <img width="100%" src="../images/blackjack.jpg" alt="blackjack" />
                                                 <CardBody>
                                                     <CardText>
                                                         <h4 className="h4">
-                                                            I want to challenge more with several projects! Please contact me if you have any good idea.
+                                                            I made BlackJack for an assignment when I was in the university.
                                                         </h4>
                                                     </CardText>
                                                 </CardBody>
                                             </Card>
                                         </div>
                                     </Col>
-
-
-
-
-
-
-
-
 
                                 </Row>
                             </Grid>
