@@ -66,6 +66,10 @@
         height: 100%;
     }
 
+    .header-hamburger-menus >div:hover {
+        cursor: pointer;
+    }
+
     .for-hamburger {
         z-index: 2;
         width: 100%;
