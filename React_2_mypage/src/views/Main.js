@@ -17,7 +17,7 @@ class Main extends Component {
                     <img className="fix bg-small" src="../images/sea2.jpg" alt="my_photo" width="100%"/>
                     <div className="body-under-black fix"/>
                 </div>
-                <div className="gate font-51">This page is still under construction!
+                <div className="gate font-51">Welcome to my page!
                 </div>
                 <div className="body-on z-2">
 
@@ -221,7 +221,7 @@ class Main extends Component {
                                                 <CardBody>
                                                     <CardText>
                                                         <h4 className="h4">
-                                                            I made web calculator for studying Javascript and React. It supports responsive web. Maybe you will be better to use on mobile.
+                                                            I made web based calculator for studying Javascript and React. It supports responsive web. Maybe you will be better to use on mobile.
                                                         </h4>
                                                     </CardText>
                                                     <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
