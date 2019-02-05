@@ -4,6 +4,8 @@ import '../App.css';
 import '../css/Header.css'
 import '../css/Main.css'
 import MaterialIcon from 'material-icons-react';
+import {Link} from "react-router-dom";
+import {Col} from "react-bootstrap";
 
 class Header extends Component {
     constructor(props){
@@ -22,7 +24,9 @@ class Header extends Component {
         return (
             <div className="header-common font-3 z-4">
                 <div className="header-logo ml-3 z-4">
-                    <img src ={logo} alt = "home" height={"40px;"}/>
+                    <a href = "/" target="_self">
+                        <img src ={logo} alt = "home" height={"40px;"}/>
+                    </a>
                 </div>
                 <div className="header-menus mr-3">
                     <div className="upper">about</div>

@@ -82,7 +82,7 @@ class Timeline extends Component {
                                     </div>
                                     <div className="left-timeline">
                                         <div className="align-right">
-                                            <h2 className="h2 mb-5">In public education</h2>
+                                            <h2 className="h2 mb-5">Public education</h2>
                                             <h3 className="h3 mt-4">Pungmu High School (MAR 2007 - FEB 2010)</h3>
                                             <h4 className="h4 mb-5">Student body president</h4>
                                             <h3 className="h3 mt-4">Pungmu Middle School (MAR 2004 - FEB 2007)</h3>
