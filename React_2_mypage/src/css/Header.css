@@ -18,6 +18,20 @@
 .header-menus > div:hover {
     cursor: pointer;
     background-color: grey;
+    text-decoration: none;
+    color: black !important;
+}
+
+.none > div:hover {
+    cursor: pointer;
+    background-color: grey;
+    text-decoration: none;
+    color: black !important;
+}
+
+.none {
+    text-decoration: none;
+    color: white;
 }
 
 @media(max-width: 767px){ /*Mobile*/

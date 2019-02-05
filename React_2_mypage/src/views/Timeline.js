@@ -4,6 +4,7 @@ import '../css/Main.css';
 import '../css/Timeline.css';
 import {Grid, Row, Col, Button} from 'react-bootstrap';
 import MaterialIcon, {colorPalette} from 'material-icons-react';
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 
 class Timeline extends Component {
@@ -13,7 +14,9 @@ class Timeline extends Component {
                 <div className="bg-white">
                     <div className="title-out pt-4 pb-4">
                         <div className="title-in">
-                            <h1 className="font-5 upper">timeline</h1>
+                            <ScrollableAnchor id={'Timeline'}>
+                                <h1 className="font-5 upper">timeline</h1>
+                            </ScrollableAnchor>
                         </div>
                     </div>
                     <div className="key-timeline font-1">

@@ -9,13 +9,16 @@ import MaterialIcon from 'material-icons-react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import { Button, Form, FormGroup, Label, Input, Card, CardText, CardBody, CardLink, CardTitle, CardSubtitle} from 'reactstrap';
 import { Link } from 'react-router-dom';
+import ScrollableAnchor from 'react-scrollable-anchor'
+import { configureAnchors } from 'react-scrollable-anchor'
 
+configureAnchors({offset: -150, scrollDuration: 1000})
 
 class Main extends Component {
     render() {
         return (
             <div className="App">
-            <Header/>
+                <Header/>
                 <div className="body-common z-0">
                     <div className="body-under">
                         <img className="fix bg-large" src="../images/sea.jpg" alt="my_photo" width="100%"/>
@@ -29,9 +32,11 @@ class Main extends Component {
                         <div className="bg-white pb-9">
                             <div className="bg-white">
                                 <div className="title-out pt-4 pb-4">
-                                    <div className="title-in">
-                                        <h1 className="font-5 upper">about</h1>
-                                    </div>
+                                        <div className="title-in">
+                                            <ScrollableAnchor id={'About'}>
+                                                <h1 className="font-5 upper">about</h1>
+                                            </ScrollableAnchor>
+                                        </div>
                                 </div>
                                 <Grid>
                                     <Row className="h100percent mt-9">
@@ -44,7 +49,7 @@ class Main extends Component {
                                             <div className="align-left ml-5 mr-5 mb-more for-mobile">
                                                 <h2 className="upper">hyunsang han</h2>
                                                 <h3 className="mt-3 mb-5">Web Developer</h3>
-                                                <h4>I always try to move forward with new learning, not settle down to the present. I work as a service planner, but I take my own personal time to work on toy projects. If you have a good idea for a new try, feel free to contact me anytime.</h4>
+                                                <h4>I always try to move forward with new learning. I work as a service planner, but I take my own personal time to develop toy projects. If you have a good idea for a new try, feel free to contact me anytime.</h4>
                                                 <div className="bottom">
                                                     <a href = "https://github.com/HyunSangHan" target = "_blank">
                                                         <img className ="link-icon" src="../../images/github.png" alt="github"/>
@@ -70,7 +75,9 @@ class Main extends Component {
                             <div className="bg-grey">
                                 <div className="title-out pt-4 pb-4">
                                     <div className="title-in">
-                                        <h1 className="font-5 upper">gallery</h1>
+                                        <ScrollableAnchor id={'Gallery'}>
+                                            <h1 className="font-5 upper">gallery</h1>
+                                        </ScrollableAnchor>
                                     </div>
                                 </div>
                                 <Grid>
@@ -115,14 +122,16 @@ class Main extends Component {
                                 </Grid>
                             </div>
                         </div>
-
-                        <Timeline/>
+                            <Timeline/>
 
                         <div className="bg-grey pb-9">
                             <div className="bg-grey">
                                 <div className="title-out pt-4 pb-4">
                                     <div className="title-in">
-                                        <h1 className="font-5 upper">skill set</h1>
+                                        <ScrollableAnchor id={'SkillSet'}>
+                                            <h1 className="font-5 upper">skill set</h1>
+                                        </ScrollableAnchor>
+
                                     </div>
                                 </div>
                                 <Grid>
@@ -151,7 +160,9 @@ class Main extends Component {
                             <div className="bg-white">
                                 <div className="title-out pt-4 pb-4">
                                     <div className="title-except">
-                                        <h1 className="font-5 upper">products</h1>
+                                        <ScrollableAnchor id={'Products'}>
+                                            <h1 className="font-5 upper">products</h1>
+                                        </ScrollableAnchor>
                                     </div>
                                 </div>
                                 <Grid>
@@ -327,9 +338,11 @@ class Main extends Component {
                                     <Row className="h100percent mt-4">
                                         <Col className="pb-5" xs={12} md={5}>
                                             <div className="title-out pb-4">
-                                                <div className="test">
+                                                <div>
                                                     <div className="title-in">
-                                                        <h1 className="font-5 upper">contact</h1>
+                                                        <ScrollableAnchor id={'Contact'}>
+                                                            <h1 className="font-5 upper">contact</h1>
+                                                        </ScrollableAnchor>
                                                     </div>
                                                     {/*<div className="font-2 mt-6">*/}
                                                         {/*<div className="mt-3">*/}
