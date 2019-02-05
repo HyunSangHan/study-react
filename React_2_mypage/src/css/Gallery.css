@@ -1,0 +1,19 @@
+.top-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 100px;
+    padding-bottom: 24px;
+}
+
+.flex-thumbnail {
+    display: flex;
+}
+
+.flex-thumbnail > div {
+    max-width: 60px;
+}
+
+.test {
+    width: 80%;
+}

@@ -1,0 +1,23 @@
+.top-content {
+    display: flex;
+}
+
+.top-map {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.top-img {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.each-img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
