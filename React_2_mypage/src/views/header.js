@@ -4,8 +4,6 @@ import '../App.css';
 import '../css/Header.css'
 import '../css/Main.css'
 import MaterialIcon from 'material-icons-react';
-import {Link} from "react-router-dom";
-import {Col} from "react-bootstrap";
 
 class Header extends Component {
     constructor(props){
@@ -20,6 +18,12 @@ class Header extends Component {
         });
     }
 
+    clickBlackBG =() =>() =>{
+        this.setState({
+            openMenubar : false
+        });
+    }
+
     render() {
         return (
             <div className="header-common font-3 z-4">
@@ -29,12 +33,12 @@ class Header extends Component {
                     </a>
                 </div>
                 <div className="header-menus mr-3">
-                    <div className="upper">about</div>
-                    <div className="upper">gallery</div>
-                    <div className="upper">timeline</div>
-                    <div className="upper">skill set</div>
-                    <div className="upper">products</div>
-                    <div className="upper">contact</div>
+                    <a className="none" href='#About'><div className="upper">about</div></a>
+                    <a className="none" href='#Gallery'><div className="upper">gallery</div></a>
+                    <a className="none" href='#Timeline'><div className="upper">timeline</div></a>
+                    <a className="none" href='#SkillSet'><div className="upper">skill set</div></a>
+                    <a className="none" href='#Products'><div className="upper">products</div></a>
+                    <a className="none" href='#Contact'><div className="upper">contact</div></a>
                 </div>
 
                 <div className="header-hamburger mr-3 z-4" onClick={this.clickMenu()}>
@@ -47,16 +51,16 @@ class Header extends Component {
                     <div className="header-hamburger-open z-4">
                         <div className="header-hamburger-limit z-4">
                             <div className="header-hamburger-menus z-4">
-                                <div className="upper">about</div>
-                                <div className="upper">gallery</div>
-                                <div className="upper">timeline</div>
-                                <div className="upper">skill set</div>
-                                <div className="upper">products</div>
-                                <div className="upper">contact</div>
+                                <a className="none" href='#About'><div className="upper" onClick={this.clickMenu()}>about</div></a>
+                                <a className="none" href='#Gallery'><div className="upper" onClick={this.clickMenu()}>gallery</div></a>
+                                <a className="none" href='#Timeline'><div className="upper" onClick={this.clickMenu()}>timeline</div></a>
+                                <a className="none" href='#SkillSet'><div className="upper" onClick={this.clickMenu()}>skill set</div></a>
+                                <a className="none" href='#Products'><div className="upper" onClick={this.clickMenu()}>products</div></a>
+                                <a className="none" href='#Contact'><div className="upper" onClick={this.clickMenu()}>contact</div></a>
                             </div>
                         </div>
                     </div>
-                    <div className="body-under-black fix z-2"/>
+                    <div className="body-under-black fix z-2" onClick={this.clickBlackBG()}/>
                 </div>
                 }
             </div>
