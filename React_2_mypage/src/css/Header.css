@@ -15,14 +15,8 @@
     height: 100%;
 }
 
-.header-menus > div:hover {
-    cursor: pointer;
-    background-color: grey;
-    text-decoration: none;
-    color: black !important;
-}
 
-.none > div:hover {
+.none > :hover {
     cursor: pointer;
     background-color: grey;
     text-decoration: none;

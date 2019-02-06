@@ -48,7 +48,7 @@ class Main extends Component {
                                         <Col className="skin" xs={12} md={6}>
                                             <div className="align-left ml-5 mr-5 mb-more for-mobile">
                                                 <h2 className="upper">hyunsang han</h2>
-                                                <h3 className="mt-3 mb-5">Web Developer</h3>
+                                                <h3 className="mt-3 mb-5">#Self-motivated   #Logical   #Meticulous</h3>
                                                 <h4>I always try to move forward with new learning. I work as a service planner, but I take my own personal time to develop toy projects. If you have a good idea for a new try, feel free to contact me anytime.</h4>
                                                 <div className="bottom">
                                                     <a href = "https://github.com/HyunSangHan" target = "_blank">
@@ -373,7 +373,7 @@ class Main extends Component {
                                         <Col xs={10} md={5}>
                                             <div className="align-left">
                                                 <Form className="font-3 ml-4 mr-4">
-                                                    <FormGroup className="mb-$">
+                                                    <FormGroup className="mb-4">
                                                         <Label for="Name">Name</Label>
                                                         <Input className="contact-line" type="text" name="name" id="name" bsSize="lg" placeholder="Your Name" />
                                                     </FormGroup>
