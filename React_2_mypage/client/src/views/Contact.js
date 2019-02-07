@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import '../App.css';
 import '../css/Main.css';
-import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import {Grid, Row, Col} from 'react-bootstrap';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import axios from "axios";
 
+
 class Contact extends Component {
 
     constructor() {
-        super()
+        super();
 
         this.state = {
             name: '',
@@ -18,8 +19,8 @@ class Contact extends Component {
             message: ''
         }
 
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange = e => {
@@ -98,14 +99,13 @@ class Contact extends Component {
                                             <Label for="message">Message</Label>
                                             <Input className="contact-line" type="textarea" name="text" id="exampleText" bsSize="lg" placeholder="Your Message" onChange={this.handleChange} />
                                         </FormGroup>
-                                        <Button className="font-2" color="primary" size="lg">Submit</Button>
+                                        <Button className="font-2" color="primary" size="lg" >Submit</Button>
                                     </Form>
                                 </div>
                             </Col>
                         </Row>
 
                     </Grid>
-
                 </div>
             </div>
         );

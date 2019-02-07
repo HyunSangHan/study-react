@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { configureAnchors } from 'react-scrollable-anchor'
 
+
 configureAnchors({offset: -140, scrollDuration: 1000})
 
 class Main extends Component {

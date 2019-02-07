@@ -86,6 +86,12 @@
     height: 100px; /*need to edit*/
 }
 
+.toggle {
+    margin: 12px;
+    font-family: "Apple SD Gothic Neo";
+    font-size: medium !important;
+    color: white;
+}
 
 @media(max-width: 767px){ /*Mobile*/
     .photo {

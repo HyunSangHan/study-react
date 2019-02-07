@@ -5,12 +5,56 @@ import '../css/Timeline.css';
 import {Grid, Row, Col} from 'react-bootstrap';
 import {colorPalette} from 'material-icons-react';
 import ScrollableAnchor from 'react-scrollable-anchor'
-import {Card, CardBody, CardLink, CardSubtitle, CardText, CardTitle} from "reactstrap";
+import {Card, CardBody, CardLink, CardSubtitle, CardText, CardTitle, Collapse, Button} from "reactstrap";
 
 class Products extends Component {
+
+
+    constructor(props) {
+        super(props);
+        this.toggle1 = this.toggle1.bind(this);
+        this.toggle2 = this.toggle2.bind(this);
+        this.toggle3 = this.toggle3.bind(this);
+        this.toggle4 = this.toggle4.bind(this);
+        this.toggle5 = this.toggle5.bind(this);
+        this.toggle6 = this.toggle6.bind(this);
+        this.state = {
+            collapse1: false,
+            collapse2: false,
+            collapse3: false,
+            collapse4: false,
+            collapse5: false,
+            collapse6: false };
+    }
+
+    toggle1() {
+        this.setState({ collapse1: !this.state.collapse1 });
+    }
+
+    toggle2() {
+        this.setState({ collapse2: !this.state.collapse2 });
+    }
+
+    toggle3() {
+        this.setState({ collapse3: !this.state.collapse3 });
+    }
+
+    toggle4() {
+        this.setState({ collapse4: !this.state.collapse4 });
+    }
+
+    toggle5() {
+        this.setState({ collapse5: !this.state.collapse5 });
+    }
+
+    toggle6() {
+        this.setState({ collapse6: !this.state.collapse6 });
+    }
+
     render() {
         return (
             <div className="App">
+
                 <div className="bg-white pb-9">
                     <div className="bg-white">
                         <div className="title-out pt-4 pb-4">
@@ -35,15 +79,17 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/mypage.png" alt="mypage" />
-                                            <CardBody>
-                                                <CardText>
-                                                    <h4 className="h4">
-                                                        My own profile page for introducing myself especially about web development. Designed and developed by myself.
-                                                    </h4>
-                                                </CardText>
-                                                <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
-                                                <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
-                                            </CardBody>
+                                            <Button className="toggle" color="info" onClick={this.toggle1} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Collapse isOpen={this.state.collapse1}>
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            My own profile page for introducing myself especially about web development. Designed and developed by myself.
+                                                        </h4>
+                                                    </CardText>
+                                                    <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
+                                                </CardBody>
+                                            </Collapse>
                                         </Card>
                                     </div>
                                 </Col>
@@ -61,15 +107,17 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/calculator.png" alt="calculator" />
-                                            <CardBody>
-                                                <CardText>
-                                                    <h4 className="h4">
-                                                        web based calculator for studying Javascript and React. It supports responsive web. Maybe you will be better to use on mobile.
-                                                    </h4>
-                                                </CardText>
-                                                <CardLink className="font-3" href="http://calculator.dothome.co.kr/" target="_blank">Link</CardLink>
-                                                <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
-                                            </CardBody>
+                                            <Button className="toggle" color="info" onClick={this.toggle2} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Collapse isOpen={this.state.collapse2}>
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            web based calculator for studying Javascript and React. It supports responsive web. Maybe you will be better to use on mobile.
+                                                        </h4>
+                                                    </CardText>
+                                                    <CardLink className="font-3" href="http://calculator.dothome.co.kr/" target="_blank">Link</CardLink>
+                                                </CardBody>
+                                            </Collapse>
                                         </Card>
                                     </div>
                                 </Col>
@@ -87,16 +135,18 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/meeting.png" alt="meeting" />
-                                            <CardBody>
-                                                <CardText>
-                                                    <h4 className="h4">
-                                                        Meeting matching service(to be edited)
-                                                    </h4>
-                                                </CardText>
-                                                <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
-                                                <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
-                                            </CardBody>
-                                        </Card>
+                                            <Button className="toggle" color="info" onClick={this.toggle3} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Collapse isOpen={this.state.collapse3}>
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            Meeting matching service(to be edited)
+                                                        </h4>
+                                                    </CardText>
+                                                    <CardLink className="font-3"  href="https://github.com/HyunSangHan/BRGG_Meeting-App" target="_blank">Github</CardLink>
+                                                </CardBody>
+                                            </Collapse>
+                                            </Card>
                                     </div>
                                 </Col>
 
@@ -115,15 +165,17 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/fish.png" alt="fish" />
-                                            <CardBody>
-                                                <CardText>
-                                                    <h4 className="h4">
-                                                        Education App for kids
-                                                    </h4>
-                                                </CardText>
-                                                <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
-                                                <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
-                                            </CardBody>
+                                            <Button className="toggle" color="info" onClick={this.toggle4} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Collapse isOpen={this.state.collapse4}>
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            Education App for kids
+                                                        </h4>
+                                                    </CardText>
+                                                    <CardLink className="font-3"  href="https://github.com/zzokokeic/barogagi1gibateam" target="_blank">Github</CardLink>
+                                                </CardBody>
+                                            </Collapse>
                                         </Card>
                                     </div>
                                 </Col>
@@ -143,16 +195,17 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/dustbot.jpeg" alt="dustbot" />
-                                            <CardBody>
-                                                <CardText>
-                                                    <h4 className="h4">
-                                                        Using API of Korea Meteorological Administration, it gave information of fine dust to kakao users.
-                                                    </h4>
-                                                </CardText>
-                                                <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
-                                                <CardLink className="font-3"  href="/" target="_blank">Github</CardLink>
-                                            </CardBody>
-                                        </Card>
+                                            <Button className="toggle" color="info" onClick={this.toggle5} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Collapse isOpen={this.state.collapse5}>
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            Using API of Korea Meteorological Administration, it gave information of fine dust to kakao users.
+                                                        </h4>
+                                                    </CardText>
+                                                </CardBody>
+                                            </Collapse>
+                                            </Card>
                                     </div>
                                 </Col>
 
@@ -169,13 +222,16 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/blackjack.jpg" alt="blackjack" />
-                                            <CardBody>
-                                                <CardText>
-                                                    <h4 className="h4">
-                                                        I made BlackJack for an assignment when I was in the university.
-                                                    </h4>
-                                                </CardText>
-                                            </CardBody>
+                                            <Button className="toggle" color="info" onClick={this.toggle6} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Collapse isOpen={this.state.collapse6}>
+                                                <CardBody>
+                                                    <CardText>
+                                                        <h4 className="h4">
+                                                            I made BlackJack for an assignment when I was in the university.
+                                                        </h4>
+                                                    </CardText>
+                                                </CardBody>
+                                            </Collapse>
                                         </Card>
                                     </div>
                                 </Col>
