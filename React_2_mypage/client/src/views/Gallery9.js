@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import '../css/Gallery.css';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid, Col} from 'react-bootstrap';
 
 
 class Gallery9 extends Component {

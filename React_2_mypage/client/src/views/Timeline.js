@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../css/Main.css';
 import '../css/Timeline.css';
-import {Grid, Row, Col, Button} from 'react-bootstrap';
-import MaterialIcon, {colorPalette} from 'material-icons-react';
+import {Grid, Row, Col} from 'react-bootstrap';
+import {colorPalette} from 'material-icons-react';
 import ScrollableAnchor from 'react-scrollable-anchor'
 
 

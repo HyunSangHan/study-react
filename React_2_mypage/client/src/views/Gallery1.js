@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
 import '../css/Gallery.css';
-import {Grid, Row, Col} from 'react-bootstrap';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {Grid,Col} from 'react-bootstrap';
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 // const mapStyles = {
 //     width: '100%',

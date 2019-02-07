@@ -3,7 +3,7 @@ import './App.css';
 import {colorPalette} from 'material-icons-react';
 import Main from './views/Main.js';
 import Gallery from './views/Gallery.js';
-import { BrowserRouter, Route, Router, Link } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
     render() {
