@@ -8,10 +8,14 @@
 
 .flex-thumbnail {
     display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
 .flex-thumbnail > div {
-    max-width: 60px;
+    max-width: 70px;
+    min-width: 60px;
 }
 
 .flex-thumbnail > div:hover {
@@ -20,4 +24,74 @@
 
 .flex-thumbnail > div:active {
     border: black 1px;
+}
+
+.each-img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+
+@media(max-width: 767px){ /*Mobile*/
+    .top-content {
+        display: block;
+    }
+
+    .top-img {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .top-map {
+        margin-top: 2rem;
+        width: 89.5% !important;
+        height: 70% !important;
+    }
+
+    .forgot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+        font-size: 2rem;
+        font-family: "Apple SD Gothic Neo";
+        font-weight: bolder;
+        color: dimgrey;
+        width: 100%;
+    }
+}
+
+@media(min-width: 768px){ /*PC*/
+    .top-content {
+        display: flex;
+        width: 100%;
+    }
+
+    .top-img {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+    }
+
+    .top-map {
+        margin-left: 1rem;
+        width: 48% !important;
+        height: auto;
+    }
+
+    .forgot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        font-size: 2rem;
+        font-family: "Apple SD Gothic Neo";
+        font-weight: bolder;
+        color: dimgrey;
+        width: 50%;
+    }
 }

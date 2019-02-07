@@ -9,10 +9,11 @@ class GalleryHeader extends Component {
         return (
             <div className="header-common z-4">
                 <div className="header-logo ml-3 z-4">
-                    <Link to = "/">
+                    <a href = "/" target={"_self"}>
                         <img src ="../images/arrowback.png" alt = "back" height={"40px;"} color={"white"} />
-                    </Link>
+                    </a>
                 </div>
+                <div className={"upper g-header"}>Gallery</div>
             </div>
 
         );
