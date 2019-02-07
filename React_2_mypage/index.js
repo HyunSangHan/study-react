@@ -23,14 +23,14 @@ app.post('/api/form', (req, res) => {
             host: 'smtp.ethereal.email',
             port: 587,
             auth: {
-                user: 'dtw2h24xhecvjd3z@ethereal.email',
-                pass: 'MADRGreeCH5J5jFgjz'
+                user: 'wqgfkrhkuncoo5di@ethereal.email',
+                pass: 'mbhZtb34xfxFCdXaTd'
             }
         })
 
         let mailOptions = {
             from: 'test@testaccunt.com',
-            to: 'dtw2h24xhecvjd3z@ethereal.email',
+            to: 'wqgfkrhkuncoo5di@ethereal.email',
             replyTo: 'test@testaccunt.com',
             subject: 'My Page - New Message',
             text: req.body.message,
