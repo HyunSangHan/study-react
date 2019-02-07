@@ -13,3 +13,11 @@
 .flex-thumbnail > div {
     max-width: 60px;
 }
+
+.flex-thumbnail > div:hover {
+    cursor: pointer;
+}
+
+.flex-thumbnail > div:active {
+    border: black 1px;
+}
