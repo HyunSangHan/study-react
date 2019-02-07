@@ -18,7 +18,9 @@
     }
 
     .top-map {
-        width: 92.9% !important;
+        margin-top: 2rem;
+        width: 89.5% !important;
+        height: 70% !important;
     }
 
 }
@@ -37,7 +39,8 @@
     }
 
     .top-map {
-        width: 50% !important;
+        margin-left: 1rem;
+        width: 48% !important;
         height: auto;
     }
 

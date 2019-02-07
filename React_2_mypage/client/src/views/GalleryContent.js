@@ -4,10 +4,10 @@ import '../css/GalleryContent.css';
 import {Grid, Row, Col} from 'react-bootstrap';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
-const mapStyles = {
-    width: '100%',
-    height: '100%'
-};
+// const mapStyles = {
+//     width: '100%',
+//     height: '100%'
+// };
 
 class GalleryContent extends Component {
 
@@ -19,12 +19,11 @@ class GalleryContent extends Component {
                         <div className="top-img">
                             <img className="each-img" src="../images/2hifive.jpg" alt="gal1"/>
                         </div>
-                        <div className="top-map">
-                            {/*지도 들어갈 곳*/}
+                        <div>
                             <Map className="top-map"
                                 google={this.props.google}
                                 zoom={14}
-                                style={mapStyles}
+                                // style={mapStyles}
                                 initialCenter={{
                                     lat: 43.722984,
                                     lng: 10.396603
