@@ -71,15 +71,15 @@
     display: none;
 }
 
-.each-gallery :hover{
-    cursor: pointer;
-}
-
-.each-gallery-detail {
+.each-gallery {
     padding: 4px;
     width: 100%;
     max-height: 150px;
     max-width: 150px;
+}
+
+.each-gallery :hover{
+    cursor: pointer;
 }
 
 .h100 {
@@ -134,13 +134,6 @@
     .flex-gallery-last {
         display: flex;
         width: 100%;
-    }
-
-    .each-gallery {
-        padding: 4px;
-        width: 100%;
-        max-height: 150px;
-        max-width: 150px;
     }
 
     .body-under {
@@ -260,12 +253,4 @@
     .bg-small {
         display: none;
     }
-
-    .each-gallery {
-        padding: 4px;
-        height: 110px;
-        width: 110px;
-    }
-
-
 }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../css/Header.css'
 import '../css/Main.css'
-import {Link} from "react-router-dom";
 
 class GalleryHeader extends Component {
     render() {
