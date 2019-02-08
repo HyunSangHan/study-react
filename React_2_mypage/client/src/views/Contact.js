@@ -97,7 +97,7 @@ class Contact extends Component {
                                         </FormGroup>
                                         <FormGroup className="mb-4">
                                             <Label for="message">Message</Label>
-                                            <Input className="contact-line" type="textarea" name="text" id="exampleText" bsSize="lg" placeholder="Your Message" onChange={this.handleChange} />
+                                            <Input className="contact-line" type="textarea" name="message" id="message" bsSize="lg" placeholder="Your Message" onChange={this.handleChange} />
                                         </FormGroup>
                                         <Button className="font-2" color="primary" size="lg" >Submit</Button>
                                     </Form>

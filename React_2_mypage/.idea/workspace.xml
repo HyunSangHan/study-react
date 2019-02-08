@@ -4,14 +4,7 @@
     <list default="true" id="b2593cad-3024-48c6-ac18-593c37a45c37" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../React_1_calculator/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../React_1_calculator/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../React_1_calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../React_1_calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/views/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Timeline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,6 +17,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/views/Contact.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="102" column="43" lean-forward="true" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/views/Products.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="255">
+              <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -195,10 +206,10 @@
         <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/views/Timeline.js" />
         <option value="$PROJECT_DIR$/client/src/views/Footer.js" />
-        <option value="$PROJECT_DIR$/client/src/views/Contact.js" />
         <option value="$PROJECT_DIR$/client/src/views/Main.js" />
         <option value="$PROJECT_DIR$/client/src/views/Products.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/client/src/views/Contact.js" />
       </list>
     </option>
   </component>
@@ -306,12 +317,12 @@
       <workItem from="1549386005520" duration="4967000" />
       <workItem from="1549438219987" duration="3421000" />
       <workItem from="1549456656081" duration="7000" />
-      <workItem from="1549456868341" duration="20945000" />
+      <workItem from="1549456868341" duration="21175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145490000" />
+    <option name="totallyTimeSpent" value="145720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -512,13 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/views/Timeline.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -564,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/views/Contact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="105" column="30" lean-forward="true" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/views/Main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-174">
@@ -600,8 +597,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="255">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/views/Contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="102" column="43" lean-forward="true" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
         </state>
       </provider>
     </entry>
