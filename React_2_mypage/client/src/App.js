@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import {colorPalette} from 'material-icons-react';
 import Main from './views/Main.js';
 import Gallery from './views/Gallery.js';
 import { BrowserRouter, Route } from 'react-router-dom';
