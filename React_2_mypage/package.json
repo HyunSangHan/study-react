@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "PORT=3000 node client/src/index.js",
+    "start": "node index.js",
     "server": "nodemon index.js",
-    "client": "npm run start —-prefix client",
+    "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],

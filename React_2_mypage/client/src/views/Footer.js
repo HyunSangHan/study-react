@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
 import '../css/Footer.css';
-import {colorPalette} from 'material-icons-react';
 
 class Footer extends Component {
     render() {
