@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../App.css';
-import '../css/Gallery.css';
+import '../../App.css';
+import '../../css/Gallery.css';
 import {Grid, Col} from 'react-bootstrap';
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
@@ -9,7 +9,7 @@ import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 //     height: '100%'
 // };
 
-class Gallery7 extends Component {
+class Gallery6 extends Component {
 
     render() {
         return (
@@ -17,7 +17,7 @@ class Gallery7 extends Component {
                 <Col xs={12} md={12}>
                     <div className="top-content">
                         <div className="top-img">
-                            <img className="each-img" src="../images/spain.jpg" alt="gal7"/>
+                            <img className="each-img" src="../images/1niko.jpg" alt="gal6"/>
                         </div>
                         <div>
                             <Map className="top-map"
@@ -25,8 +25,8 @@ class Gallery7 extends Component {
                                 zoom={14}
                                 // style={mapStyles}
                                 initialCenter={{
-                                    lat: 41.234305,
-                                    lng: 1.808081
+                                    lat: 37.501183,
+                                    lng: 127.025603
                                 }}>
                                 <Marker />
                             </Map>
@@ -43,4 +43,4 @@ class Gallery7 extends Component {
 
 export default GoogleApiWrapper({
     apiKey: ("AIzaSyDJklcIhJmX18ByesK5wa-teBvRITPlL4Q")
-})(Gallery7)
+})(Gallery6)

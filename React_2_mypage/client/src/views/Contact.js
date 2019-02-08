@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
 import '../css/Main.css';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import {Grid, Row, Col} from 'react-bootstrap';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import axios from "axios";
-
 
 class Contact extends Component {
 
@@ -16,11 +15,13 @@ class Contact extends Component {
             name: '',
             email: '',
             phone: '',
-            message: ''
+            message: '',
+            modal: false
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.toggle = this.toggle.bind(this);
     }
 
     handleChange = e => {
@@ -37,6 +38,13 @@ class Contact extends Component {
             phone,
             message
         })
+            .then( response => { this.toggle() } );
+    }
+
+    toggle() {
+        this.setState(prevState => ({
+            modal: !prevState.modal
+        }));
     }
 
     render() {
@@ -99,11 +107,23 @@ class Contact extends Component {
                                             <Label for="message">Message</Label>
                                             <Input className="contact-line" type="textarea" name="message" id="message" bsSize="lg" placeholder="Your Message" onChange={this.handleChange} />
                                         </FormGroup>
-                                        <Button className="font-2" color="primary" size="lg" >Submit</Button>
+                                        <Button className="font-2" color="primary" size="lg">Send</Button>
                                     </Form>
                                 </div>
                             </Col>
                         </Row>
+
+            <div>
+                <Modal isOpen={this.state.modal} fade={false} toggle={this.toggle}>
+                    <ModalHeader toggle={this.toggle}>Successfully sent</ModalHeader>
+                    <ModalBody className = "h4">
+                        In fact, this message is not sent to my main mail account. For a quick response, please email me at the address below: <br/> gustkd3@gmail.com
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button className="font-2" color="primary" size="medium" onClick={this.toggle}>OK</Button>
+                    </ModalFooter>
+                </Modal>
+            </div>
 
                     </Grid>
                 </div>
