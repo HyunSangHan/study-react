@@ -152,18 +152,33 @@
         color: white;
     }
 
-    .gate {
+    .gate_under {
         position: absolute;
-        margin-top: -450px;
+        margin-top: -420px;
         color: white;
         width: 100%;
     }
 
+    .gate_on {
+        position: absolute;
+        margin-top: -460px;
+        color: white;
+        width: 100%;
+        opacity: 0.5;
+    }
+
     .font-51 {
         font-family: "Apple SD Gothic Neo";
-        font-size: 3rem !important;
-        font-weight: 500;
+        font-size: 3.9rem !important;
+        font-weight: 800;
     }
+
+    .font-52 {
+        font-family: "Apple SD Gothic Neo";
+        font-size: 2rem !important;
+        font-weight: 400;
+    }
+
 
     .bg-large {
         display: none;
@@ -238,17 +253,32 @@
         color: white;
     }
 
-    .gate {
+    .gate_under {
         position: absolute;
-        margin-top: -410px;
+        margin-top: -380px;
         color: white;
         width: 100%;
     }
 
+    .gate_on {
+        position: absolute;
+        margin-top: -440px;
+        color: white;
+        width: 100%;
+        opacity: 0.8;
+    }
+
     .font-51 {
         font-family: "Apple SD Gothic Neo";
-        font-size: 6rem !important;
-        font-weight: 500;
+        font-size: 6.5rem !important;
+        font-weight: 600;
+    }
+
+    .font-52 {
+        font-family: "Apple SD Gothic Neo";
+        font-size: 3rem !important;
+        font-weight: 400;
+        color: grey;
     }
 
     .profile-right {

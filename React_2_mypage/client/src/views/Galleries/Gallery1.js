@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../App.css';
-import '../css/Gallery.css';
-import {Grid, Col} from 'react-bootstrap';
+import '../../App.css';
+import '../../css/Gallery.css';
+import {Grid,Col} from 'react-bootstrap';
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 // const mapStyles = {
@@ -9,7 +9,7 @@ import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 //     height: '100%'
 // };
 
-class Gallery8 extends Component {
+class Gallery1 extends Component {
 
     render() {
         return (
@@ -17,16 +17,16 @@ class Gallery8 extends Component {
                 <Col xs={12} md={12}>
                     <div className="top-content">
                         <div className="top-img">
-                            <img className="each-img" src="../images/dq.jpg" alt="gal8"/>
+                            <img className="each-img" src="../images/2hifive.jpg" alt="gal1"/>
                         </div>
                         <div>
                             <Map className="top-map"
                                 google={this.props.google}
-                                zoom={17}
+                                zoom={14}
                                 // style={mapStyles}
                                 initialCenter={{
-                                    lat: 37.508696,
-                                    lng: 127.061004
+                                    lat: 43.722984,
+                                    lng: 10.396603
                                 }}>
                                 <Marker />
                             </Map>
@@ -43,4 +43,4 @@ class Gallery8 extends Component {
 
 export default GoogleApiWrapper({
     apiKey: ("AIzaSyDJklcIhJmX18ByesK5wa-teBvRITPlL4Q")
-})(Gallery8)
+})(Gallery1)

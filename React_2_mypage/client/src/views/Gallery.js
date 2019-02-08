@@ -1,90 +1,88 @@
 import React, { Component } from 'react';
 import '../App.css';
-import '../css/Gallery.css';
-import Gallery1 from '../views/Gallery1.js';
-import Gallery2 from '../views/Gallery2.js';
-import Gallery3 from '../views/Gallery3.js';
-import Gallery4 from '../views/Gallery4.js';
-import Gallery5 from '../views/Gallery5.js';
-import Gallery6 from '../views/Gallery6.js';
-import Gallery7 from '../views/Gallery7.js';
-import Gallery8 from '../views/Gallery8.js';
-import Gallery9 from '../views/Gallery9.js';
-import GalleryHeader from '../views/GalleryHeader.js';
+import '../css/Main.css';
+import '../css/Timeline.css';
 import {Grid, Col} from 'react-bootstrap';
-import {Link, Route} from "react-router-dom";
+import { Link } from 'react-router-dom';
+import ScrollableAnchor from 'react-scrollable-anchor'
+import { configureAnchors } from 'react-scrollable-anchor'
+
+
+configureAnchors({offset: -140, scrollDuration: 1000})
 
 class Gallery extends Component {
     render() {
         return (
             <div className="App">
-                <GalleryHeader/>
-
-                <Grid>
-                    <Col xs={12} md={12}>
-                        <div className="top-thumbnail">
-                            <div className="flex-thumbnail">
-                                <div>
-                                    <Link to = "/gallery/1">
-                                        <img className="each-gallery" src="../images/2hifive.jpg" alt="gal1"/>
-                                    </Link>
-                                </div>
-                                <div>
-                                    <Link to = "/gallery/2">
-                                        <img className="each-gallery" src="../images/3positano.jpg" alt="gal2"/>
-                                   </Link>
-                                </div>
-                                <div>
-                                    <Link to = "/gallery/3">
-                                    <img className="each-gallery" src="../images/6airplane.jpg" alt="gal3"/>
-                                        </Link>
-                                </div>
-                                <div>
-                                    <Link to = "/gallery/4">
-                                        <img className="each-gallery" src="../images/5soba.jpg" alt="gal4"/>
-                                    </Link>
-                                </div>
-                                <div>
-                                    <Link to = "/gallery/5">
-                                        <img className="each-gallery" src="../images/jongro.jpg" alt="gal5"/>
-                                    </Link>
-                                </div>
-                                <div>
-                                    <Link to = "/gallery/6">
-                                        <img className="each-gallery" src="../images/1niko.jpg" alt="gal6"/>
-                                    </Link>
-                                </div>
-                                <div>
-                                    <Link to = "/gallery/7">
-                                        <img className="each-gallery" src="../images/spain.jpg" alt="gal7"/>
-                                    </Link>
-                                </div>
-                                <div>
-                                    <Link to = "/gallery/8">
-                                        <img className="each-gallery" src="../images/dq.jpg" alt="gal8"/>
-                                    </Link>
-                                </div>
-                                <div>
-                                    <Link to = "/gallery/9">
-                                        <img className="each-gallery" src="../images/5young.jpg" alt="gal9"/>
-                                    </Link>
-                                </div>
+                <div className="bg-grey pb-9">
+                    <div className="bg-grey">
+                        <div className="title-out pt-4 pb-4">
+                            <div className="title-in">
+                                <ScrollableAnchor id={'Gallery'}>
+                                    <h1 className="font-5 upper">gallery</h1>
+                                </ScrollableAnchor>
                             </div>
                         </div>
-                        <div>
-                            <Route exact path="/gallery" component={Gallery1}/>
-                            <Route exact path="/gallery/1" component={Gallery1}/>
-                            <Route exact path="/gallery/2" component={Gallery2}/>
-                            <Route exact path="/gallery/3" component={Gallery3}/>
-                            <Route exact path="/gallery/4" component={Gallery4}/>
-                            <Route exact path="/gallery/5" component={Gallery5}/>
-                            <Route exact path="/gallery/6" component={Gallery6}/>
-                            <Route exact path="/gallery/7" component={Gallery7}/>
-                            <Route exact path="/gallery/8" component={Gallery8}/>
-                            <Route exact path="/gallery/9" component={Gallery9}/>
-                        </div>
-                    </Col>
-                </Grid>
+                        <Grid>
+                            <Col xs={12} md={12}>
+                                <div className="top-gallery">
+                                    <div className="flex-gallery-left">
+                                        <div>
+                                            <Link to = "/gallery/1">
+                                                <img className="each-gallery" src="../images/2hifive.jpg" alt="gal1"/>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link to = "/gallery/2">
+                                                <img className="each-gallery" src="../images/3positano.jpg" alt="gal2"/>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link to = "/gallery/3">
+                                                <img className="each-gallery" src="../images/6airplane.jpg" alt="gal3"/>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className="flex-gallery-right">
+                                        <div>
+                                            <Link to = "/gallery/4">
+                                                <img className="each-gallery" src="../images/5soba.jpg" alt="gal4"/>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link to = "/gallery/5">
+                                                <img className="each-gallery" src="../images/jongro.jpg" alt="gal5"/>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link to = "/gallery/6">
+                                                <img className="each-gallery" src="../images/1niko.jpg" alt="gal6"/>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className="flex-gallery-last">
+                                        <div>
+                                            <Link to = "/gallery/7">
+                                                <img className="each-gallery" src="../images/spain.jpg" alt="gal7"/>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link to = "/gallery/8">
+                                                <img className="each-gallery" src="../images/dq.jpg" alt="gal8"/>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link to = "/gallery/9">
+                                                <img className="each-gallery" src="../images/5young.jpg" alt="gal9"/>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                                <Link className="link-more font-3" to = "/gallery">See more > </Link>
+                            </Col>
+                        </Grid>
+                    </div>
+                </div>
             </div>
         );
     }
