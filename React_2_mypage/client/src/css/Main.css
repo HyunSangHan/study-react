@@ -11,7 +11,7 @@
     width: 100%;
     height: 1200px;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .link-icon {
@@ -144,7 +144,7 @@
 
     .body-under {
         width: 100%;
-        height: 720px;
+        height: 700px;
         background-color: #282c34;
         display: flex;
         justify-content: center;
@@ -152,25 +152,20 @@
         color: white;
     }
 
-    .gate_under {
+    .gate {
         position: absolute;
-        margin-top: -420px;
+        margin-top: -520px;
+        padding: 5%;
         color: white;
         width: 100%;
-    }
+        height: 50%;
 
-    .gate_on {
-        position: absolute;
-        margin-top: -460px;
-        color: white;
-        width: 100%;
-        opacity: 0.5;
     }
 
     .font-51 {
         font-family: "Apple SD Gothic Neo";
         font-size: 3.9rem !important;
-        font-weight: 800;
+        font-weight: 900;
     }
 
     .font-52 {
@@ -182,6 +177,14 @@
 
     .bg-large {
         display: none;
+    }
+
+    .gate-img {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        vertical-align: middle;
     }
 
     .for-mobile {
@@ -245,7 +248,7 @@
 
     .body-under {
         width: 100%;
-        height: 700px;
+        height: 730px;
         background-color: #282c34;
         display: flex;
         justify-content: center;
@@ -253,32 +256,23 @@
         color: white;
     }
 
-    .gate_under {
+    .gate {
         position: absolute;
-        margin-top: -380px;
-        color: white;
+        margin-top: -455px;
         width: 100%;
-    }
-
-    .gate_on {
-        position: absolute;
-        margin-top: -440px;
-        color: white;
-        width: 100%;
-        opacity: 0.8;
+        height: 50%;
     }
 
     .font-51 {
-        font-family: "Apple SD Gothic Neo";
+        font-family: "Apple SD Gothic";
         font-size: 6.5rem !important;
-        font-weight: 600;
+        font-weight: 900;
     }
 
     .font-52 {
         font-family: "Apple SD Gothic Neo";
         font-size: 3rem !important;
         font-weight: 400;
-        color: grey;
     }
 
     .profile-right {
@@ -286,7 +280,25 @@
         margin-right: 30px;
     }
 
+    .gate-img {
+        position: relative;
+        max-width: 80%;
+        min-width: 558px;
+        height: auto;
+        vertical-align: middle;
+    }
+
+    .gate-txt {
+        margin: 0px 120px;
+    }
+
     .bg-small {
         display: none;
+    }
+}
+
+@media(min-width: 1200px) { /*big PC*/
+    .gate-txt {
+        margin: 0px 210px;
     }
 }

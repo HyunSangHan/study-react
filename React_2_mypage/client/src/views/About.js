@@ -28,7 +28,7 @@ class About extends Component {
                                 <Col className="skin" xs={12} md={6}>
                                     <div className="align-left ml-5 mr-5 mb-more for-mobile">
                                         <h2 className="upper">hyunsang han</h2>
-                                        <h3 className="mt-3 mb-5">Frontend developer</h3>
+                                        <h3 className="mt-3 mb-5">who will be a developer</h3>
                                         <h4>I always try to move forward with new learning. I work as a service planner, but I take my own personal time to develop toy projects. If you have a good idea for a new try, feel free to contact me anytime.</h4>
                                         <div className="bottom">
                                             <a href = "https://github.com/HyunSangHan" rel="noopener noreferrer" target = "_blank">
