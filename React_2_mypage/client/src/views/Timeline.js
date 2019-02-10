@@ -46,7 +46,7 @@ class Timeline extends Component {
                                             <h3 className="h3 mt-4">Shopping Search&Display (APR 2018 - PRESENT)</h3>
                                             <h4 className="h4 mb-5">Service planning&Strategy for Naver shopping search</h4>
                                             <h3 className="h3 mt-4">Service Support (MAR 2016 - MAR 2018)</h3>
-                                            <h4 className="h4">Managing HR(compensation, recruiting) of Service Committee<br/>Supporting CEO and growth</h4>
+                                            <h4 className="h4">HR(compensation, recruiting) of Service Committee<br/>CEO support for Naver services</h4>
                                         </div>
                                     </div>
                                 </Col>

@@ -268,7 +268,7 @@ h4 {
 
 .font-white {
   color: white !important;
-  font-weight: bolder !important;
+  /*font-weight: bolder !important;*/
 }
 
 .font-blue {
@@ -286,6 +286,7 @@ h4 {
 .menu-item-wrapper.active {
     border: 1px white solid;
 }
+
 .menu-item.active {
     border: 1px green solid;
 }

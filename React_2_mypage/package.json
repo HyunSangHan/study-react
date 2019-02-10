@@ -17,6 +17,6 @@
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "nodemailer": "^5.1.1",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.10"
   }
 }

@@ -113,17 +113,17 @@ class Contact extends Component {
                             </Col>
                         </Row>
 
-            <div>
-                <Modal isOpen={this.state.modal} fade={false} toggle={this.toggle}>
-                    <ModalHeader toggle={this.toggle}>Successfully sent</ModalHeader>
-                    <ModalBody className = "h4">
-                        In fact, this message is not sent to my main mail account. For a quick response, please email me at the address below: <br/> gustkd3@gmail.com
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button className="font-2" color="primary" size="medium" onClick={this.toggle}>OK</Button>
-                    </ModalFooter>
-                </Modal>
-            </div>
+                        <div>
+                            <Modal isOpen={this.state.modal} fade={false} toggle={this.toggle}>
+                                <ModalHeader toggle={this.toggle}>Successfully sent</ModalHeader>
+                                <ModalBody className = "h4">
+                                    In fact, this message is not sent to my main mail account. For a quick response, please email me at the address below: <br/> gustkd3@gmail.com
+                                </ModalBody>
+                                <ModalFooter>
+                                    <Button className="font-2" color="primary" size="medium" onClick={this.toggle}>OK</Button>
+                                </ModalFooter>
+                            </Modal>
+                        </div>
 
                     </Grid>
                 </div>

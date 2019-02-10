@@ -77,12 +77,12 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/mypage.png" alt="mypage" />
-                                            <Button className="toggle" color="info" onClick={this.toggle1} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Button className="toggle" color="secondary" onClick={this.toggle1} style={{ marginBottom: '1rem' }}>More info</Button>
                                             <Collapse isOpen={this.state.collapse1}>
                                                 <CardBody>
                                                     <h4 className="h4">
                                                         <CardText>
-                                                        My own profile page for introducing myself especially about web development. Designed and developed by myself.
+                                                            My own profile page for introducing myself especially related to web development, designed and developed by myself.
                                                         </CardText>
                                                     </h4>
                                                     <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
@@ -105,12 +105,12 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/calculator.png" alt="calculator" />
-                                            <Button className="toggle" color="info" onClick={this.toggle2} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Button className="toggle" color="secondary" onClick={this.toggle2} style={{ marginBottom: '1rem' }}>More info</Button>
                                             <Collapse isOpen={this.state.collapse2}>
                                                 <CardBody>
                                                     <h4 className="h4">
                                                         <CardText>
-                                                            web based calculator for studying Javascript and React. It supports responsive web. Maybe you will be better to use on mobile.
+                                                            Web based calculator for studying React and HTML+CSS. It supports responsive web, but it is optimized for mobile.
                                                         </CardText>
                                                     </h4>
                                                     <CardLink className="font-3" href="http://calculator.dothome.co.kr/" target="_blank">Link</CardLink>
@@ -133,12 +133,12 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/meeting.png" alt="meeting" />
-                                            <Button className="toggle" color="info" onClick={this.toggle3} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Button className="toggle" color="secondary" onClick={this.toggle3} style={{ marginBottom: '1rem' }}>More info</Button>
                                             <Collapse isOpen={this.state.collapse3}>
                                                 <CardBody>
                                                     <h4 className="h4">
                                                         <CardText>
-                                                            Meeting matching service(to be edited)
+                                                            Meeting matching service on a first-come-first-served basis only for workers.
                                                         </CardText>
                                                     </h4>
                                                     <CardLink className="font-3"  href="https://github.com/HyunSangHan/BRGG_Meeting-App" target="_blank">Github</CardLink>
@@ -163,14 +163,15 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/fish.png" alt="fish" />
-                                            <Button className="toggle" color="info" onClick={this.toggle4} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Button className="toggle" color="secondary" onClick={this.toggle4} style={{ marginBottom: '1rem' }}>More info</Button>
                                             <Collapse isOpen={this.state.collapse4}>
                                                 <CardBody>
                                                     <h4 className="h4">
                                                         <CardText>
-                                                            Education App for kids
+                                                            Kid's habits formation helper service.
                                                         </CardText>
                                                     </h4>
+                                                    <CardLink className="font-3"  href="https://bomin.myportfolio.com/invalid" target="_blank">Link</CardLink>
                                                     <CardLink className="font-3"  href="https://github.com/zzokokeic/barogagi1gibateam" target="_blank">Github</CardLink>
                                                 </CardBody>
                                             </Collapse>
@@ -193,12 +194,12 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/dustbot.jpeg" alt="dustbot" />
-                                            <Button className="toggle" color="info" onClick={this.toggle5} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Button className="toggle" color="secondary" onClick={this.toggle5} style={{ marginBottom: '1rem' }}>More info</Button>
                                             <Collapse isOpen={this.state.collapse5}>
                                                 <CardBody>
                                                     <h4 className="h4">
                                                         <CardText>
-                                                            Using API of Korea Meteorological Administration, it gave information of fine dust to kakao users.
+                                                            Chatbot about fine dust in Kakaotalk using openAPI of Korea Meteorological Administration.
                                                         </CardText>
                                                     </h4>
                                                 </CardBody>
@@ -220,14 +221,15 @@ class Products extends Component {
                                                 </CardSubtitle>
                                             </CardBody>
                                             <img width="100%" src="../images/blackjack.jpg" alt="blackjack" />
-                                            <Button className="toggle" color="info" onClick={this.toggle6} style={{ marginBottom: '1rem' }}>More info</Button>
+                                            <Button className="toggle" color="secondary" onClick={this.toggle6} style={{ marginBottom: '1rem' }}>More info</Button>
                                             <Collapse isOpen={this.state.collapse6}>
                                                 <CardBody>
                                                     <h4 className="h4">
                                                         <CardText>
-                                                            I made BlackJack for an assignment when I was in the university.
+                                                            Card game for an assignment when I was in the university.
                                                         </CardText>
                                                     </h4>
+                                                    <CardLink className="font-3"  href="https://github.com/HyunSangHan/BlackJack" target="_blank">Github</CardLink>
                                                 </CardBody>
                                             </Collapse>
                                         </Card>
