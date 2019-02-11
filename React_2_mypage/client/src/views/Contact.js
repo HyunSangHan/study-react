@@ -107,7 +107,7 @@ class Contact extends Component {
                                             <Label for="message">Message</Label>
                                             <Input className="contact-line" type="textarea" name="message" id="message" bsSize="lg" placeholder="Your Message" onChange={this.handleChange} />
                                         </FormGroup>
-                                        <Button className="font-2" color="primary" size="lg">Send</Button>
+                                        <Button onClick={this.toggle} className="font-2" color="primary" size="lg">Send</Button>
                                     </Form>
                                 </div>
                             </Col>

@@ -54,8 +54,6 @@
 
     .header-hamburger > div:hover {
         cursor: pointer;
-        background-color: grey;
-        color: black;
     }
 
     .header-hamburger-open {

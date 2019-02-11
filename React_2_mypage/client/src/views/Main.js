@@ -30,17 +30,13 @@ class Main extends Component {
                         <Grid>
                             <img className="gate-img" src="../images/hsforgate.png" alt="explain" />
                             <div className="gate-txt font-3 font-white mt-5">
-                                You can access this.state(.about, .gallery, .timeline, .skill-set, .products) of
-                                <font color="#59d1fb"> H</font>YUN<font color="#59d1fb">S</font>ANG through this site.
-                                I will update my status through this.setState
+                                You can access <i>this.state(.about, .gallery, .timeline, .skill-set, .products) </i>of
+                                <font color="#59d1fb"> <b>H</b></font>YUN<font color="#59d1fb"><b>S</b></font>ANG through this site.
+                                I will update my status through <i>this.setState </i>
                                 whenever there is a change.
                             </div>
                         </Grid>
                     </div>
-                    {/*<div className="gate_on font-52">To iterate is human,*/}
-                    {/*</div>*/}
-                    {/*<div className="gate_under font-51">To recurse divine.*/}
-                    {/*</div>*/}
                     <div className="body-on z-2">
                         <About/>
                         <Gallery/>

@@ -6,7 +6,7 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer-common z-2">
-                <div>Copyright © Design & Developed by Hyunsang Han</div>
+                <div>Copyright © Designed & Developed by Hyunsang Han</div>
             </div>
         );
     }
