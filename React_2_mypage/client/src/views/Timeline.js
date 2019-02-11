@@ -69,7 +69,7 @@ class Timeline extends Component {
                                     <div className="right-timeline">
                                         <div className="align-left">
                                             <h2 className="h2 mb-5">Seoul National Univ.</h2>
-                                            <h3 className="h3 mt-4">Rural Systems Engineering</h3>
+                                            <h3 className="h3 mt-4">Rural System Engineering</h3>
                                             <h4 className="h4 mb-5">Bachelor of Engineering</h4>
                                             <h3 className="h3 mt-4">SNU American Football Team, Green Terrors</h3>
                                             <h4 className="h4 mb-5">Tight end, Defensive end</h4>

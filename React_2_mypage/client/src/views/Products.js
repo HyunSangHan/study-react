@@ -69,7 +69,7 @@ class Products extends Component {
                                         <Card>
                                             <CardBody>
                                                 <CardTitle>
-                                                    <h2 className="h2">My Profile Page</h2>
+                                                    <h2 className="h2">tHiS.state.</h2>
                                                 </CardTitle>
                                                 <CardSubtitle>
                                                     <h3 className="h3">JAN - FEB 2019</h3>
@@ -82,7 +82,7 @@ class Products extends Component {
                                                 <CardBody>
                                                     <h4 className="h4">
                                                         <CardText>
-                                                            My own profile page for introducing myself especially related to web development, designed and developed by myself.
+                                                            My own profile page for introducing myself especially related to web development. designed and developed by myself.
                                                         </CardText>
                                                     </h4>
                                                     <CardLink className="font-3" href="/" target="_blank">Link</CardLink>
@@ -110,7 +110,7 @@ class Products extends Component {
                                                 <CardBody>
                                                     <h4 className="h4">
                                                         <CardText>
-                                                            Web based calculator for studying React and HTML+CSS. It supports responsive web, but it is optimized for mobile.
+                                                            Web based calculator for studying React and HTML+CSS. Optimized for mobile.
                                                         </CardText>
                                                     </h4>
                                                     <CardLink className="font-3" href="http://calculator.dothome.co.kr/" target="_blank">Link</CardLink>

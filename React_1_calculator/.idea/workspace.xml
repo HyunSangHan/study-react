@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9959b55c-80d9-4b16-9693-2119314f4546" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/1niko.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/2hifive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/3positano.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/4pool.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/5soba.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/5young.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/6airplane.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/7goldenbell.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/8gradu.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/9abu.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/afc.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/afc2.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/blackjack.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/calculator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/hifive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/meeting.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/mypage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/pisa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/positano.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/questionmark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React_2_mypage/public/images/sea.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../React_2_mypage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React_2_mypage/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React_2_mypage/src/css/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/src/css/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React_2_mypage/src/css/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/src/css/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React_2_mypage/src/css/Timeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/src/css/Timeline.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React_2_mypage/src/views/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/src/views/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React_2_mypage/src/views/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/src/views/header.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,12 +16,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+              <caret line="201" selection-start-line="201" selection-end-line="201" />
             </state>
           </provider>
         </entry>
@@ -56,9 +31,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="x" value="610" />
+    <option name="y" value="37" />
+    <option name="width" value="794" />
     <option name="height" value="834" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -119,24 +102,20 @@
       <option name="presentableId" value="Default" />
       <updated>1549196405016</updated>
       <workItem from="1549196406284" duration="137000" />
+      <workItem from="1549432237399" duration="217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137000" />
+    <option name="totallyTimeSpent" value="354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="npm" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -144,6 +123,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -153,10 +136,17 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
         </state>
       </provider>
     </entry>
