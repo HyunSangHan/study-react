@@ -1,3 +1,5 @@
+// import App from "../App";
+
 export default class api1 {
     addr1: string;
     addr2: string;
@@ -10,7 +12,7 @@ export default class api1 {
     createdtime: number;
     firstimage: string;
     firstimage2: string;
-    mapx: number;
+    mapx: number;ㅞ
     mapy: number;
     mlevel: number;
     modifiedtime: number;
