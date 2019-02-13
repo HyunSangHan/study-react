@@ -1,69 +1,67 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import api1 from './Model/api1'
+import api1 from './Model/api1';
+// import {Grid, Col, Row} from 'reactstrap';
 
 class App extends Component {
 
     constructor(){
         super();
+
         this.state = {
-            // currentDust : new findDust(''),
-            nowRestauranttitle : '',
-            _tempResttitle : ''
+            // ans1 : '',
+            // ans2 : '',
+            ans3 : ''
         }
 
     }
 
-    click1 =() =>() =>{
-        // 공공 관광
-        let _tempResttitle = '';
+    movie = () => () => {
+        let _tmp;
         let self = this;
-        axios.get('http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList', {
-            params: {
-                rlangtype: 'KOR',
-                contentTypeId : 39,
-                areaCode : 1,
-                sigunguCode : 5,
-                cat1 : "A05",
-                cat2 : 'A0502',
-                cat3 : 'A05020100',
-                listYN : 'Y',
-                MobileOS : 'ETC',
-                MobileApp : 'TourAPI3.0_Guide',
-                arrange : 'A',
-                numOfRows : 12,
-                pageNo : 1,
-                ServiceKey : decodeURIComponent('2QU5eb99JUJErbOjP%2Blrcpi%2BeNxaz%2FHNHPH6JoHEzNEB9PsIupv7yZ1oRyajFGVfaVaDkhRWOkbr2clcRAL%2FCA%3D%3D'),
-            }
-        })
-            .then(function (response) {
-                let restList: api1[] = [];
-                console.log(response.data.response.body.items.item);
-                for(let i=0; i<12; i++){
-                    // console.log(response.data.response.body.items.item[i]);
-                    let itemList: api1 = new api1(response.data.response.body.items.item[i]);
-                    restList.push(itemList);
+        axios.get('http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json',
+            {
+            params : {
+                key: '33db767e8a6a752e4accc49239ac668e',
+                targetDt: '20190213'
                 }
-                console.log(restList);
-                self._tempResttitle = restList[0].title;
-                self.setState({
-                    nowRestauranttitle : self._tempResttitle,
-                    // currentDust : _tempDust
-                });
             })
+            .then(function(response){
+                _tmp = response.data.boxOfficeResult.dailyBoxOfficeList[0].movieNm;
 
+                    self.setState({
+                            ans3: _tmp
+                        }
+                    );
+                })
     }
+
 
     render() {
         return (
             <div className="App">
-                <div className="pointer" onClick={this.click1()}>
-                    여기를 클릭하라
+                <div className="pointer">
+                    여기를 클릭하면 미세먼지 정보가 나온다
                 </div>
-                <div>
-                    {this.state.nowRestauranttitle}
+                <div className="answer">
+                    (미세먼 정보가 나올 공간)
                 </div>
+
+                <div className="pointer">
+                    여기를 클릭하면 도로명주소 정보가 나온다
+                </div>
+                <div className="answer">
+                    (도로명주소 정보가 나올 공간)
+                </div>
+
+                <div className="pointer" onClick={this.movie()}>
+                    여기를 클릭하면 영화 박스오피스 정보가 나온다
+                </div>
+                <div className="answer">
+                    오늘 박스오피스 1등은? {this.state.ans3}
+                </div>
+
             </div>
 
         );
