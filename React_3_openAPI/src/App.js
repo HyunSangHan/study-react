@@ -4,7 +4,18 @@ import axios from 'axios';
 import api1 from './Model/api1'
 
 class App extends Component {
-    clickMenu =() =>() =>{
+
+    constructor(){
+        super();
+        this.state = {
+            // currentDust : new findDust(''),
+            nowRestauranttitle : '',
+            _tempResttitle : ''
+        }
+
+    }
+
+    click1 =() =>() =>{
         // 공공 관광
         let _tempResttitle = '';
         let self = this;
@@ -27,17 +38,16 @@ class App extends Component {
             }
         })
             .then(function (response) {
-                let restList: Restaurant[] = [];
+                let restList: api1[] = [];
                 console.log(response.data.response.body.items.item);
                 for(let i=0; i<12; i++){
                     // console.log(response.data.response.body.items.item[i]);
-                    let itemList: Restaurant = new Restaurant(response.data.response.body.items.item[i]);
+                    let itemList: api1 = new api1(response.data.response.body.items.item[i]);
                     restList.push(itemList);
                 }
                 console.log(restList);
                 self._tempResttitle = restList[0].title;
                 self.setState({
-                    openMenubar : !self.state.openMenubar,
                     nowRestauranttitle : self._tempResttitle,
                     // currentDust : _tempDust
                 });
@@ -45,14 +55,20 @@ class App extends Component {
 
     }
 
+    render() {
+        return (
+            <div className="App">
+                <div className="pointer" onClick={this.click1()}>
+                    여기를 클릭하라
+                </div>
+                <div>
+                    {this.state.nowRestauranttitle}
+                </div>
+            </div>
 
-  render() {
-    return (
-      <div className="App">
-?
-      </div>
-    );
-  }
+        );
+    }
 }
 
 export default App;
+
