@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import api1 from './Model/api1';
 import api3 from './Model/api3';
 // import {Grid, Col, Row} from 'reactstrap';
 
@@ -17,12 +18,13 @@ class App extends Component {
     }
 
     fineDust = () => () => {
-        axios.get('http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc&_returnType=json',
+        axios.get('http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty',
             {
                 params: {
-                    stationName: "종로구",
-                    dataTerm: "DAILY",
+                    sidoName: "서울",
+                    ver: "1.0",
                     ServiceKey: decodeURIComponent('mNVy9aaH3reQ1JFjxQOrlFw5y%2FMhhpBvfqBXY0%2BBCIV12bD6w65no4SFckivi7JOCkMCrRX5%2BwPTytRh0EbKmg%3D%3D'),
+                    _returnType: "json"
                 }
         })
         .then( function (response) {
@@ -30,6 +32,11 @@ class App extends Component {
         })
 
     }
+
+
+
+
+    // mNVy9aaH3reQ1JFjxQOrlFw5y%2FMhhpBvfqBXY0%2BBCIV12bD6w65no4SFckivi7JOCkMCrRX5%2BwPTytRh0EbKmg%3D%3D
 
     movie = () => () => {
         let _tmp;
