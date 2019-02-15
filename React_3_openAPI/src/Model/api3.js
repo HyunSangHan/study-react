@@ -41,7 +41,7 @@ export default class api3 {
 
     cha(movieNm: string) {
         if (movieNm === "극한직업") {
-            return "극한현상";
+            return "북한직업";
         }
         return movieNm;
     }
