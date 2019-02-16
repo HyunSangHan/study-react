@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './../App.css';
 import axios from 'axios';
-import api1 from './../Model/api1';
+// import api1 from './../Model/api1';
 import api3 from './../Model/api3';
 // import {Grid, Col, Row} from 'reactstrap';
 
