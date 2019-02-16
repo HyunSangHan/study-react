@@ -45,13 +45,13 @@ class App extends Component {
             {
             params : {
                 key: '33db767e8a6a752e4accc49239ac668e',
-                targetDt: '20190213'
+                targetDt: '20190214'
                 }
             })
             .then(function(response){
                 let movieList: api3[] = [];
                 for(let i=0; i<10; i++) {
-                    let movieEach = response.data.boxOfficeResult.dailyBoxOfficeList[i];
+                    let movieEach = new api3(response.data.boxOfficeResult.dailyBoxOfficeList[i]);
                     movieList.push(movieEach);
                 }
                 _tmp = movieList[0].movieNm;

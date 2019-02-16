@@ -24,7 +24,7 @@ export default class api3 {
         this.audiCnt = data.audiCnt||"";
         this.audiInten = data.audiInten||"";
         this.movieCd = data.movieCd||"";
-        this.movieNm = this.cha(data.movieNm);
+        this.movieNm = this.cha(data.movieNm)||"";
         this.openDt = data.openDt||"";
         this.rank = data.rank||"";
         this.rankInten = data.rankInten||"";
