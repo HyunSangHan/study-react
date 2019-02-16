@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
+import './../App.css';
 import axios from 'axios';
-import api1 from './Model/api1';
-import api3 from './Model/api3';
+import api1 from './../Model/api1';
+import api3 from './../Model/api3';
 // import {Grid, Col, Row} from 'reactstrap';
 
-class App extends Component {
+class OpenAPIs extends Component {
 
     constructor(){
         super();
@@ -26,10 +26,10 @@ class App extends Component {
                     ServiceKey: decodeURIComponent('mNVy9aaH3reQ1JFjxQOrlFw5y%2FMhhpBvfqBXY0%2BBCIV12bD6w65no4SFckivi7JOCkMCrRX5%2BwPTytRh0EbKmg%3D%3D'),
                     _returnType: "json"
                 }
-        })
-        .then( function (response) {
-            console.log(response);
-        })
+            })
+            .then( function (response) {
+                console.log(response);
+            })
 
     }
 
@@ -43,9 +43,9 @@ class App extends Component {
         let c = this;
         axios.get('http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json',
             {
-            params : {
-                key: '33db767e8a6a752e4accc49239ac668e',
-                targetDt: '20190214'
+                params : {
+                    key: '33db767e8a6a752e4accc49239ac668e',
+                    targetDt: '20190214'
                 }
             })
             .then(function(response){
@@ -55,12 +55,12 @@ class App extends Component {
                     movieList.push(movieEach);
                 }
                 _tmp = movieList[0].movieNm;
-                    console.log(_tmp)
-                    c.setState({
-                            ans3: _tmp
-                        }
-                    );
-                })
+                console.log(_tmp)
+                c.setState({
+                        ans3: _tmp
+                    }
+                );
+            })
     }
 
     render() {
@@ -93,5 +93,5 @@ class App extends Component {
     }
 }
 
-export default App;
+export default OpenAPIs;
 
