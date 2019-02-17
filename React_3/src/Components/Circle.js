@@ -25,7 +25,7 @@ class Circle extends Component {
     render() {
         return (
             <div className="App mt-4">
-                {this.props.id}
+                {this.props.id + 1 + "번째"}
                 <div className={"circle"} onClick={this.increaseNum()}>
                     {this.props.number + this.state.plusNum}
                 </div>
