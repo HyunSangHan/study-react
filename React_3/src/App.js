@@ -15,6 +15,17 @@ class App extends Component {
                 {totalNum: 0, id: 1},
                 {totalNum: 0, id: 2},
                 {totalNum: 0, id: 3},
+                {totalNum: 0, id: 4},
+                {totalNum: 0, id: 5},
+                {totalNum: 0, id: 6},
+                {totalNum: 0, id: 7},
+                {totalNum: 0, id: 8},
+                {totalNum: 0, id: 9},
+                {totalNum: 0, id: 10},
+                {totalNum: 0, id: 11},
+                {totalNum: 0, id: 12},
+                {totalNum: 0, id: 13},
+
             ]
         }
     }
