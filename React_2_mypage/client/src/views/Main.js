@@ -21,22 +21,31 @@ class Main extends Component {
             <div className="App">
                 <Header/>
                 <div className="body-common z-0">
-                    <div className="body-under">
+                    <div className="body-under center">
                         <img className="fix bg-large" src="../images/sea.jpg" alt="my_photo" width="100%"/>
+                        <img className="fix bg-medium" src="../images/sea1.jpg" alt="my_photo" width="100%"/>
                         <img className="fix bg-small" src="../images/sea2.jpg" alt="my_photo" width="100%"/>
                         <div className="body-under-black fix"/>
                     </div>
-                    <div className="gate">
+                    <div className="gate center">
+                        <div>
+
                         <Grid>
-                            <img className="gate-img" src="../images/hsforgate.png" alt="explain" />
-                            <div className="gate-txt font-3 font-white mt-5">
-                                You can access <i>this.state(.about, .gallery, .timeline, .skill-set, .products) </i>of
-                                <font color="#59d1fb"> <b>H</b></font>YUN<font color="#59d1fb"><b>S</b></font>ANG through this site.
-                                I will update my status through <i>this.setState </i>
-                                whenever there is a change.
-                            </div>
+                                <img className="gate-img" src="../images/hsforgate.png" alt="explain" />
+                                <div className="gate-txt font-3 font-white mt-5">
+                                    You can access <i>this.state(.about, .gallery, .timeline, .skill-set, .products) </i>of
+                                    <font color="#59d1fb"> <b>H</b></font>YUN<font color="#59d1fb"><b>S</b></font>ANG through this site.
+                                    I will update my status through <i>this.setState </i>
+                                    whenever there is a change.
+                                </div>
                         </Grid>
+                        </div>
                     </div>
+                    <a href='#About'>
+                        <div className="arrow center">
+                            <img src="../images/arrow-down.png" alt="arrow-down" />
+                        </div>
+                    </a>
                     <div className="body-on z-2">
                         <About/>
                         <Gallery/>
