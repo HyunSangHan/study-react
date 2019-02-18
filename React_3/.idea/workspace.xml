@@ -4,7 +4,8 @@
     <list default="true" id="7c66cb6d-19b9-4458-922b-6ca5983f8a94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../React_2_mypage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../React_2_mypage/client/src/css/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/client/src/css/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_2_mypage/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React_2_mypage/client/src/views/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React_2_mypage/client/src/views/Main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -103,9 +104,10 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="477" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="963" />
     <option name="height" value="834" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -175,22 +177,22 @@
       <workItem from="1550314908799" duration="1639000" />
       <workItem from="1550316881808" duration="9090000" />
       <workItem from="1550416254211" duration="423000" />
-      <workItem from="1550464496194" duration="572000" />
+      <workItem from="1550464496194" duration="691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29765000" />
+    <option name="totallyTimeSpent" value="29884000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="477" y="23" width="963" height="834" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.37579617" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.25783134" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2884097" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
