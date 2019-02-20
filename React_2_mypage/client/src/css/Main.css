@@ -270,16 +270,16 @@
 
     .body-under {
         width: 100vw;
-        height: 94vh;
+        height: 96vh;
         background-color: #282c34;
         color: white;
     }
 
     .gate {
         position: absolute;
-        margin-top: -94vh;
+        margin-top: -96vh;
         width: 100vw;
-        height: 94vh;
+        height: 96vh;
     }
 
     .font-51 {
