@@ -9,6 +9,12 @@ class Circle extends Component {
 
         this.state = {
             plusNum : 0,
+            onIncrement: () => {
+                return console.warn('onIncrement not defined');
+            },
+            onSetColor: () => {
+                return console.warn('setColor not defined');
+            }
         }
     }
 
@@ -26,8 +32,8 @@ class Circle extends Component {
         return (
             <div className="App mt-4">
                 {this.props.id + 1 + "번째"}
-                <div className={"circle"} onClick={this.increaseNum()}>
-                    {this.props.number + this.state.plusNum}
+                <div className={"circle"} onClick={this.props.onIncrement} >
+                    {this.props.totalNum + this.state.plusNum}
                 </div>
             </div>
 

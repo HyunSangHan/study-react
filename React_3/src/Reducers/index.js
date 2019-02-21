@@ -1,4 +1,4 @@
-import * as types from './ActionTypes';
+import * as types from '../Actions/ActionTypes';
 
 const initializeState = {
     color: 'black',
@@ -10,13 +10,13 @@ function counter(state = initializeState, action) {
         case types.INCREMENT:
             return {
                 ...state,
-                number = state.number + 1
+                number: state.number + 1
             };
 
         case types.SET_COLOR:
             return {
                 ...state,
-                color = action.color
+                color: action.color
             };
 
         default:
