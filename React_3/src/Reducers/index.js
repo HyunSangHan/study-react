@@ -1,27 +1,33 @@
 import * as types from '../Actions/ActionTypes';
 
-const initializeState = {
-    color: 'black',
-    number: 0
-}
+// 초기 상태를 정의합니다.
+const initialState = {
+    color : 'black',
+    number : 0
+};
 
-function counter(state = initializeState, action) {
+function babo(state = initialState, action) {
+    console.log(action)
+
     switch(action.type) {
         case types.INCREMENT:
             return {
-                ...state,
                 number: state.number + 1
             };
-
+        case types.DECREMENT:
+            return {
+                number: state.number - 1
+            };
         case types.SET_COLOR:
             return {
-                ...state,
-                color: action.color
+                color: action.color, //?
+                number: state.number -1 //과연?
+//                number: state.number +10 //실험용
             };
-
         default:
             return state;
     }
-};
 
-export default counter;
+}
+
+export default babo;
