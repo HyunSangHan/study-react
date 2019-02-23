@@ -1,0 +1,15 @@
+.circle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    /*background-color: #DDDDDD;*/
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Apple SD Gothic Neo";
+}
