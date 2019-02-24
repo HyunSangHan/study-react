@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-import CounterListContainer from './CounterListContainer';
 import { connect } from 'react-redux';
 import OpenAPIs from '../Components/OpenAPIs';
 import * as Actions from '../Actions';
-
-import CounterList from "../Components/CounterList";
 
 class App extends Component {
 
@@ -15,7 +12,6 @@ class App extends Component {
                           movieList={this.props.movieList}
                           onTour={this.props.onTour}
                           tourList={this.props.tourList}/>
-                <CounterListContainer/>
             </div>
         );
     }
