@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './../App.css';
 import axios from 'axios';
-// import Dust from './../Model/Dust';
+import Dust from './../Model/Dust';
 import Tour from './../Model/Tour';
-// import {Grid, Col, Row} from 'reactstrap';
+import {Container, Col, Row, Pagination, PaginationItem, PaginationLink} from 'reactstrap';
 
 class OpenAPIs extends Component {
 
@@ -16,12 +16,12 @@ class OpenAPIs extends Component {
             },
             loading_dust : false,
             loading_tour : false,
-            loading_movie : false,
-            tmp : ''
+            // loading_movie : false,
+            // tmp : ''
         }
 
-     //   this.getDust();
-     //   this.movie();
+//       this.getDust();
+      this.getTour(1);
     }
 
      getTour = (page) => () => {
@@ -37,8 +37,8 @@ class OpenAPIs extends Component {
                      arrange: 'P',
                      cat1 : 'A05',
                      contentTypeID: 39,
-                     areaCode: 1,
-                     sigunguCode: 15,
+                     areaCode: 31,
+                     sigunguCode: 12,
                      cat2 : 'A0502',
                      cat3 : 'A05020100',
                      listYN: 'Y',
@@ -64,60 +64,99 @@ class OpenAPIs extends Component {
              })
      }
 
-    // fineDust = () => () => {
-    //     axios.get('http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty',
-    //         {
-    //             params: {
-    //                 sidoName: "서울",
-    //                 ver: "1.0",
-    //                 ServiceKey: decodeURIComponent('mNVy9aaH3reQ1JFjxQOrlFw5y%2FMhhpBvfqBXY0%2BBCIV12bD6w65no4SFckivi7JOCkMCrRX5%2BwPTytRh0EbKmg%3D%3D'),
-    //                 _returnType: "json"
-    //             }
-    //         })
-    //         .then( function (response) {
-    //             console.log(response);
-    //         })
-    //
-    // }
+    getDust = () => () => {
+        let self = this;
+        axios.get('http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty',
+            {
+                params: {
+                    sidoName: "경기",
+                    ver: "1.0",
+                    ServiceKey: decodeURIComponent('mNVy9aaH3reQ1JFjxQOrlFw5y%2FMhhpBvfqBXY0%2BBCIV12bD6w65no4SFckivi7JOCkMCrRX5%2BwPTytRh0EbKmg%3D%3D'),
+                   _returnType: "json"
+                }
 
-    //
+            })
+            .then( function (response) {
+                let dustList: Dust[] = [];
+
+
+                console.log(response);
+            })
+
+    }
+
+
 
 
     render() {
         return (
             <div className="App">
-                <div className="pointer">
-                    여기를 클릭하면 미세먼지 정보가 나온다
-                </div>
-                <div className="answer">
-                    (미세먼지 정보가 나올 공간)
-                </div>
 
-                <div className="pointer" onClick={this.getTour(1)}>
-                    여기를 클릭하면 음식점 정보가 나온다
+                {/*<div className="pointer" onClick={this.getDust()}>*/}
+                    {/*여기를 클릭하면 미세먼지 정보가 나온다*/}
+                {/*</div>*/}
+                {/*<div className="answer">*/}
+                    {/*(미세먼지 정보가 나올 공간)*/}
+                {/*</div>*/}
+                <div className="big-title pointer" onClick={this.getTour(1)}>
+                    성남시 한식 맛집 리스트
                 </div>
-                <div>
-                    {this.state.loading_tour ? (
-                        <div className="answer">
-                            음식점 정보야 나와랏 =>
+                <Container>
+                    <div>
+                        {this.state.loading_tour ? (
                             <div>
-                                {this.props.tourList.map(
-                                    (tourEach) => (
-                                        <div>
-                                            <div>{tourEach.title}</div>
-                                            <div>{tourEach.addr1}</div>
-                                            <div><img src = {tourEach.firstimage2} /> </div>
-                                            <div>{tourEach.tel}</div>
-                                        </div>
-                                    )
-                                )}
+                                <div className={"page"}>
+                                    <Pagination>
+                                        {/*<PaginationItem>*/}
+                                        {/*<PaginationLink previous href="#" />*/}
+                                        {/*</PaginationItem>*/}
+                                        <PaginationItem>
+                                            <PaginationLink onClick={this.getTour(1)}>
+                                                TOP 1- 10
+                                            </PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink onClick={this.getTour(2)}>
+                                                TOP 11 - 20
+                                            </PaginationLink>
+                                        </PaginationItem>
+                                        {/*<PaginationItem>*/}
+                                        {/*<PaginationLink next href="#" />*/}
+                                        {/*</PaginationItem>*/}
+                                    </Pagination>
+                                </div>
+                                <div className={"table"}>
+                                    {this.props.tourList.map(
+                                        (tourEach) => (
+                                            <Row className={"min"}>
+                                                <Col xs="12" sm="3">
+                                                    <img src = {tourEach.firstimage} alt={"thumbnail"}/>
+                                                </Col>
+                                                <Col xs="12" sm="4">
+                                                    <div className={"title"}>
+                                                        <b>{tourEach.title}</b>
+                                                    </div>
+                                                </Col>
+                                                <Col xs="12" sm="5">
+                                                    <div className={"rest"}>
+                                                        <div className={"left"}>
+                                                            <li>{tourEach.tel}</li>
+                                                            {/*<br/>*/}
+                                                            <li>{tourEach.addr1}</li>
+                                                        </div>
+                                                    </div>
+                                                </Col>
+                                            </Row>
+                                        )
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ) : (
-                        <div>투어 로딩중</div>
-                    )}
-                </div>
+                        ) : (
+                            <div>▲ 눌러야함</div>
+                        )}
+                    </div>
 
+                </Container>
                 {/*<div className="pointer" onClick={this.movie()}>*/}
                     {/*여기를 클릭하면 영화 박스오피스 정보가 나온다*/}
                 {/*</div>*/}

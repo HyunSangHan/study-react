@@ -24,32 +24,32 @@ export default class Tour {
     zipcode: string;
 
     constructor(data: any) {
-        this.numOfRows = data.numOfRows||"";
-        this.pageNo = data.pageNo||"";
-        this.totalCount = data.totalCount||"";
+        this.numOfRows = data.numOfRows||0;
+        this.pageNo = data.pageNo||0;
+        this.totalCount = data.totalCount||0;
         this.addr1 = data.addr1||"";
         this.addr2 = data.addr2||"";
-        this.areacode = data.areacode||"";
-        this.booktour = data.booktour||"";
+        this.areacode = data.areacode||0;
+        this.booktour = data.booktour||0;
         this.cat1 = data.cat1||"";
         this.cat2 = data.cat2||"";
         this.cat3 = data.cat3||"";
-        this.contentid = data.contentid||"";
-        this.contenttypeid = data.contenttypeid||"";
+        this.contentid = data.contentid||0;
+        this.contenttypeid = data.contenttypeid||0;
         this.createdtime = data.createdtime||"";
         this.firstimage = data.firstimage||"";
         this.firstimage2 = data.firstimage2||"";
-        this.mapx = data.mapx||"";
-        this.mapy = data.mapy||"";
-        this.mlevel = data.mlevel||"";
-        this.readcount = data.readcount||"";
-        this.sigungucode = data.sigungucode||"";
+        this.mapx = data.mapx||0;
+        this.mapy = data.mapy||0;
+        this.mlevel = data.mlevel||0;
+        this.readcount = data.readcount||0;
+        this.sigungucode = data.sigungucode||0;
         this.tel = data.tel||"";
         this.title = data.title||"";
         this.zipcode = data.zipcode||"";
     }
 
     isNull(): boolean {
-        return this.title === "" && this.firstimage2 === "";
+        return this.title === "" && this.firstimage === "";
     }
 }
