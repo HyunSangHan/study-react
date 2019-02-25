@@ -54,6 +54,10 @@
     position: relative;
 }
 
+.left {
+justify-content: start;
+}
+
 .bottom {
     position: absolute;
     bottom: 0;

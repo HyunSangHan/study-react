@@ -130,7 +130,8 @@ class OpenAPIs extends Component {
                                         (tourEach) => (
                                             <Row className={"min"}>
                                                 <Col xs="12" sm="3">
-                                                    <img src = {tourEach.firstimage} alt={"thumbnail"}/>
+                                                    {!tourEach.firstimage? (<div>이미지 없음</div>) : (
+                                                    <img src = {tourEach.firstimage} alt={"thumbnail"}/>)}
                                                 </Col>
                                                 <Col xs="12" sm="4">
                                                     <div className={"title"}>
