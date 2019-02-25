@@ -12,6 +12,7 @@ import SkillSet from "./SkillSet";
 import About from "./About";
 import Gallery from "./Gallery";
 import {Grid} from 'react-bootstrap';
+//import Typing from 'react-typing-animation';
 
 configureAnchors({offset: -140, scrollDuration: 1000})
 
@@ -33,6 +34,11 @@ class Main extends Component {
                         <Grid>
                                 <img className="gate-img" src="../images/hsforgate.png" alt="explain" />
                                 <div className="gate-txt font-3 font-white mt-5">
+                                    {/*<Typing loop>*/}
+                                        {/*<span className={"left"}>This span will get typed, then erased.</span>*/}
+                                        {/*<Typing.Backspace count={10} />*/}
+                                        {/*with ease.*/}
+                                    {/*</Typing>*/}
                                     You can access <i>this.state(.about, .gallery, .timeline, .skill-set, .products) </i>of
                                     <font color="#59d1fb"> <b>H</b></font>YUN<font color="#59d1fb"><b>S</b></font>ANG through this site.
                                     I will update my status through <i>this.setState </i>

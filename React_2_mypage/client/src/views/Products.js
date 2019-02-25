@@ -9,7 +9,6 @@ import {Card, CardBody, CardLink, CardSubtitle, CardText, CardTitle, Collapse, B
 
 class Products extends Component {
 
-
     constructor(props) {
         super(props);
         this.toggle1 = this.toggle1.bind(this);
@@ -228,7 +227,7 @@ class Products extends Component {
                                                     <h4 className="h4">Java</h4>
                                                 </CardSubtitle>
                                             </CardBody>
-                                            <img width="100%" src="../images/blackjack.jpg" alt="blackjack" />
+                                            <img width="100%" src="../images/blackjack.png" alt="blackjack" />
                                             <Button className="toggle" color="secondary" onClick={this.toggle6} style={{ marginBottom: '1rem' }}>More info</Button>
                                             <Collapse isOpen={this.state.collapse6}>
                                                 <CardBody>
