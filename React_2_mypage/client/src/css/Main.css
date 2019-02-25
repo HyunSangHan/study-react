@@ -99,6 +99,12 @@
     align-items: center;
 }
 
+.calculator {
+    position: fixed;
+    width: 100% !important;
+    height: 100% !important;
+}
+
 @media(max-width: 767px){ /*Mobile*/
     .photo {
         width: 90%;
@@ -308,7 +314,7 @@
     }
 
     .gate-txt {
-        margin: 0px 120px;
+        margin: 0 10rem;
     }
 
     /*.bg-large {*/
