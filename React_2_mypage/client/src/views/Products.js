@@ -5,6 +5,7 @@ import '../css/Timeline.css';
 import {Grid, Row, Col} from 'react-bootstrap';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import {Card, CardBody, CardLink, CardSubtitle, CardText, CardTitle, Collapse, Button} from "reactstrap";
+//import Calculator from './Projects/Calculator';
 
 class Products extends Component {
 
@@ -104,7 +105,14 @@ class Products extends Component {
                                                     <h4 className="h4">ReactJS</h4>
                                                 </CardSubtitle>
                                             </CardBody>
-                                            <img width="100%" src="../images/calculator.png" alt="calculator" />
+                                            {/*<div className={"body-on"}>*/}
+                                                {/*<div className={"z-3"}>*/}
+                                                    <img width="100%" src="../images/calculator.png" alt="calculator" />
+                                                {/*</div>*/}
+                                                {/*<div className={"calculator z-5"}>*/}
+                                                    {/*<Calculator/>*/}
+                                                {/*</div>*/}
+                                            {/*</div>*/}
                                             <Button className="toggle" color="secondary" onClick={this.toggle2} style={{ marginBottom: '1rem' }}>More info</Button>
                                             <Collapse isOpen={this.state.collapse2}>
                                                 <CardBody>
