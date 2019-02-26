@@ -200,7 +200,7 @@ class Products extends Component {
                                                     <h4 className="h4">Ruby on Sinatra / Kakao Chatbot / API of KMA</h4>
                                                 </CardSubtitle>
                                             </CardBody>
-                                            <img width="100%" src="../images/dustbot.jpeg" alt="dustbot" />
+                                            <img width="100%" src="../images/finedust.png" alt="dustbot" />
                                             <Button className="toggle" color="secondary" onClick={this.toggle5} style={{ marginBottom: '1rem' }}>More info</Button>
                                             <Collapse isOpen={this.state.collapse5}>
                                                 <CardBody>
