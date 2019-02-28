@@ -14,7 +14,7 @@ class Timeline extends Component {
                     <div className="title-out pt-4 pb-4">
                         <div className="title-in">
                             <ScrollableAnchor id={'Timeline'}>
-                                <h1 className="font-5 upper">timeline</h1>
+                                <h1 className="font-5 font-new">timeline</h1>
                             </ScrollableAnchor>
                         </div>
                     </div>
