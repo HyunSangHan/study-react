@@ -58,7 +58,7 @@ class Products extends Component {
                         <div className="title-out pt-4 pb-4">
                             <div className="title-except">
                                 <ScrollableAnchor id={'Products'}>
-                                    <h1 className="font-5 upper">products</h1>
+                                    <h1 className="font-5 font-new">products</h1>
                                 </ScrollableAnchor>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ class Products extends Component {
                                         <Card>
                                             <CardBody>
                                                 <CardTitle>
-                                                    <h2 className="h2">tHiS.state.</h2>
+                                                    <h2 className="h2">this.state.</h2>
                                                 </CardTitle>
                                                 <CardSubtitle>
                                                     <h3 className="h3">JAN - FEB 2019</h3>

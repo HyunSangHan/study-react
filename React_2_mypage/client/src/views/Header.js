@@ -32,12 +32,12 @@ class Header extends Component {
                     </a>
                 </div>
                 <div className="header-menus mr-3">
-                    <a className="none" href='#About'><div className="upper">about</div></a>
-                    <a className="none" href='#Gallery'><div className="upper">gallery</div></a>
-                    <a className="none" href='#Timeline'><div className="upper">timeline</div></a>
-                    <a className="none" href='#SkillSet'><div className="upper">skill set</div></a>
-                    <a className="none" href='#Products'><div className="upper">products</div></a>
-                    <a className="none" href='#Contact'><div className="upper">contact</div></a>
+                    <a className="none" href='#About'><div className="font-new font-white">about</div></a>
+                    <a className="none" href='#Gallery'><div className="font-new font-white">gallery</div></a>
+                    <a className="none" href='#Timeline'><div className="font-new font-white">timeline</div></a>
+                    <a className="none" href='#SkillSet'><div className="font-new font-white">skill-set</div></a>
+                    <a className="none" href='#Products'><div className="font-new font-white">products</div></a>
+                    <a className="none" href='#Contact'><div className="font-new font-white">contact</div></a>
                 </div>
 
                 <div className="header-hamburger mr-3 z-4">
@@ -50,12 +50,12 @@ class Header extends Component {
                     <div className="header-hamburger-open z-4">
                         <div className="header-hamburger-limit z-4">
                             <div className="header-hamburger-menus z-4">
-                                <a className="none" href='#About'><div className="upper" onClick={this.clickMenu()}>about</div></a>
-                                <a className="none" href='#Gallery'><div className="upper" onClick={this.clickMenu()}>gallery</div></a>
-                                <a className="none" href='#Timeline'><div className="upper" onClick={this.clickMenu()}>timeline</div></a>
-                                <a className="none" href='#SkillSet'><div className="upper" onClick={this.clickMenu()}>skill set</div></a>
-                                <a className="none" href='#Products'><div className="upper" onClick={this.clickMenu()}>products</div></a>
-                                <a className="none" href='#Contact'><div className="upper" onClick={this.clickMenu()}>contact</div></a>
+                                <a className="none" href='#About'><div className="font-new font-white" onClick={this.clickMenu()}>about</div></a>
+                                <a className="none" href='#Gallery'><div className="font-new font-white" onClick={this.clickMenu()}>gallery</div></a>
+                                <a className="none" href='#Timeline'><div className="font-new font-white" onClick={this.clickMenu()}>timeline</div></a>
+                                <a className="none" href='#SkillSet'><div className="font-new font-white" onClick={this.clickMenu()}>skill-set</div></a>
+                                <a className="none" href='#Products'><div className="font-new font-white" onClick={this.clickMenu()}>products</div></a>
+                                <a className="none" href='#Contact'><div className="font-new font-white" onClick={this.clickMenu()}>contact</div></a>
                             </div>
                         </div>
                     </div>

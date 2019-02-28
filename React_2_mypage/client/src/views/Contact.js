@@ -59,7 +59,7 @@ class Contact extends Component {
                                     <div>
                                         <div className="title-in">
                                             <ScrollableAnchor id={'Contact'}>
-                                                <h1 className="font-5 upper">contact</h1>
+                                                <h1 className="font-5 font-new">contact</h1>
                                             </ScrollableAnchor>
                                         </div>
                                         {/*<div className="font-2 mt-6">*/}

@@ -266,6 +266,14 @@ h4 {
   font-size: larger !important;
 }
 
+.font-new {
+  font-family: "share tech mono" !important;
+  border-width: thick;
+  color: black;
+  /*font-weight: 600;*/
+}
+
+
 .font-white {
   color: white !important;
   /*font-weight: bolder !important;*/

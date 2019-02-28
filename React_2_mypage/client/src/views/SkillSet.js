@@ -14,7 +14,7 @@ class SkillSet extends Component {
                         <div className="title-out pt-4 pb-4">
                             <div className="title-in">
                                 <ScrollableAnchor id={'SkillSet'}>
-                                    <h1 className="font-5 upper">skill set</h1>
+                                    <h1 className="font-5 font-new">skill-set</h1>
                                 </ScrollableAnchor>
 
                             </div>

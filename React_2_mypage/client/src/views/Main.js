@@ -33,7 +33,7 @@ class Main extends Component {
 
                         <Grid>
                                 <img className="gate-img" src="../images/hsforgate.png" alt="explain" />
-                                <div className="gate-txt font-3 font-white mt-5">
+                                <div className="gate-txt font-sub font-white">
                                     {/*<Typing loop>*/}
                                         {/*<span className={"left"}>This span will get typed, then erased.</span>*/}
                                         {/*<Typing.Backspace count={10} />*/}
@@ -42,7 +42,7 @@ class Main extends Component {
                                     You can access <i>this.state(.about, .gallery, .timeline, .skill-set, .products) </i>of
                                     <font color="#59d1fb"> <b>H</b></font>YUN<font color="#59d1fb"><b>S</b></font>ANG through this site.
                                     I will update my status through <i>this.setState </i>
-                                    whenever there is a change.
+                                    whenever there is some change.
                                 </div>
                         </Grid>
                         </div>
