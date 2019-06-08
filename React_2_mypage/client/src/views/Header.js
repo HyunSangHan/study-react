@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import ReactDOM from 'react-dom';
 import '../App.css';
 import '../css/Header.css'
 import '../css/Main.css'
@@ -11,6 +12,12 @@ class Header extends Component {
           openMenubar : false
         }
     }
+
+    // componentDidMount(){
+    //     window.addEventListener('scroll', this.onScroll);
+    //     console.log("componentDidMount");
+    // }
+
     clickMenu =() =>() =>{
         this.setState({
             openMenubar : !this.state.openMenubar
@@ -23,12 +30,19 @@ class Header extends Component {
         });
     }
 
+    // onScroll = (e) => {
+    //     const scrollTop = ('scroll', e.srcElement.scrollingElement.scrollTop);
+    //     const aboutTop = ReactDOM.findDOMNode(this.refs.about).getBoundingClientRect().top;
+    //     console.log(scrollTop);
+    //     console.log(aboutTop);
+    // };
+
     render() {
         return (
             <div className="header-common font-3 z-4">
-                <div className="header-logo ml-3 z-4">
+                <div className="header-logo ml-4 mb-1 z-4">
                     <a href = "/" target="_self">
-                        <img src = "../images/hea.png" alt = "home" height={"20px;"}/>
+                        <img src = "../images/hea.png" alt = "home" height={"14px;"}/>
                     </a>
                 </div>
                 <div className="header-menus mr-3">
@@ -41,7 +55,7 @@ class Header extends Component {
                 </div>
 
                 <div className="header-hamburger mr-3 z-4">
-                    <div className="z-4" onClick={this.clickMenu()}>
+                    <div className="z-4 mt-2" onClick={this.clickMenu()}>
                         <MaterialIcon icon="menu" size="medium" color="white"/>
                     </div>
                 </div>

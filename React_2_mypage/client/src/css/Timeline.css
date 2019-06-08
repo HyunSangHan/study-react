@@ -11,8 +11,8 @@
     height: 100%;
     width: 1.5px;
     background-color: lightgrey;
-    position: absolute;
-    left: 49.9%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .timeline-margin {
@@ -106,7 +106,7 @@
     .top-timeline {
         position: relative;
         height: 100%;
-        min-height: 150px;
+        /*min-height: 150px;*/
     }
 
     .img-timeline {

@@ -78,7 +78,7 @@ class Gallery extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <Link className="link-more font-3" to = "/gallery">See more > </Link>
+                                <Link className="link-more font-3" to = "/gallery"> See more > </Link>
                             </Col>
                         </Grid>
                     </div>

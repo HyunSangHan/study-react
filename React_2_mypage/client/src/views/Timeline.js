@@ -42,9 +42,9 @@ class Timeline extends Component {
                                     </div>
                                     <div className="right-timeline">
                                         <div className="align-left">
-                                            <h2 className="h2 mb-5">NAVER Corp.</h2>
-                                            <h3 className="h3 mt-4">Shopping Search&Display (APR 2018 - PRESENT)</h3>
-                                            <h4 className="h4 mb-5">Service planning&Strategy for Naver shopping search</h4>
+                                            <h2 className="h2 mb-5"><a href="https://www.navercorp.com/en" target="_blank" rel="noopener noreferrer">NAVER Corp.</a></h2>
+                                            <h3 className="h3 mt-4">Shopping Search (APR 2018 - PRESENT)</h3>
+                                            <h4 className="h4 mb-5">Service & strategy planning for <a href="https://shopping.naver.com/" target="_blank" rel="noopener noreferrer">Naver Shopping</a></h4>
                                             <h3 className="h3 mt-4">Service Support (MAR 2016 - MAR 2018)</h3>
                                             <h4 className="h4">HR(compensation, recruiting) of Service Committee<br/>CEO support for Naver services</h4>
                                         </div>
@@ -56,7 +56,7 @@ class Timeline extends Component {
                                     </div>
                                     <div className="left-timeline">
                                         <div className="align-right">
-                                            <h2 className="h2"> R.O.K. Marine Corps</h2>
+                                            <h2 className="h2"><a href="http://www.rokmc.mil.kr/index.do" target="_blank" rel="noopener noreferrer">R.O.K. Marine Corps</a></h2>
                                             <h3 className="h3 mt-4">2nd Infantry Division</h3>
                                             <h4 className="h42">Platoon leader and Operation officer (First Lieutenant)</h4>
                                         </div>
@@ -68,13 +68,15 @@ class Timeline extends Component {
                                     </div>
                                     <div className="right-timeline">
                                         <div className="align-left">
-                                            <h2 className="h2 mb-5">Seoul National Univ.</h2>
+                                            <h2 className="h2 mb-5"><a href="http://en.snu.ac.kr/" target="_blank" rel="noopener noreferrer">Seoul National Univ.</a></h2>
                                             <h3 className="h3 mt-4">Rural System Engineering</h3>
                                             <h4 className="h4 mb-5">Bachelor of Engineering</h4>
                                             <h3 className="h3 mt-4">SNU American Football Team, Green Terrors</h3>
                                             <h4 className="h4 mb-5">Tight end, Defensive end</h4>
                                             <h3 className="h3 mt-4">101 ROTC</h3>
-                                            <h4 className="h4">Military cadet</h4>
+                                            <h4 className="h4 mb-5">Military cadet</h4>
+                                            <h3 className="h3 mt-4"><a href="https://likelion.net/en/" target="_blank" rel="noopener noreferrer">LIKELION</a> (* after graduation)</h3>
+                                            <h4 className="h4">Programming Team Play</h4>
                                         </div>
                                     </div>
                                 </Col>
