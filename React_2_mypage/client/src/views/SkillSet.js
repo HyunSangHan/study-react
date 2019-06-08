@@ -22,18 +22,18 @@ class SkillSet extends Component {
                         <Grid>
                             <Row className="h100percent mt-9">
                                 <Col xs={12} md={4}>
-                                    <div>
-                                        <img className="skill" src="../images/React.png" alt="React"/>
+                                    <div className="flex-center h-100">
+                                        <img className="skill-react" src="../images/React.png" alt="React Javascript"/>
                                     </div>
                                 </Col>
                                 <Col xs={12} md={4}>
-                                    <div>
-                                        <img className="skill"  src="../images/Python.png" alt="Python"/>
+                                    <div className="flex-center h-100">
+                                        <img className="skill-django"  src="../images/Django.png" alt="Django Python"/>
                                     </div>
                                 </Col>
                                 <Col xs={12} md={4}>
-                                    <div>
-                                        <img className="skill"  src="../images/ruby.png" alt="Ruby"/>
+                                    <div className="flex-center h-100">
+                                        <img className="skill-sinatra"  src="../images/Sinatra.png" alt="Sinatra Ruby"/>
                                     </div>
                                 </Col>
                             </Row>

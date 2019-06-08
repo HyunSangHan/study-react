@@ -22,7 +22,7 @@ class About extends Component {
                             <Row className="h100percent mt-9">
                                 <Col xs={12} md={6}>
                                     <div className="profile-right">
-                                        <img className="photo" src="../images/hal.jpg" alt="my_photo"/>
+                                        <img className="photo" src="../../images/vietnam.jpg" alt="my_photo"/>
                                     </div>
                                 </Col>
                                 <Col className="skin" xs={12} md={6}>

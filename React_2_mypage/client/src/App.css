@@ -22,6 +22,10 @@
   text-align: right;
 }
 
+a {
+  text-decoration: none;
+  color: inherit !important;
+}
 
 h1 {
   font-weight: black !important;
@@ -282,6 +286,12 @@ h4 {
 .font-blue {
   color: #40c5ef !important;
   font-weight: bolder !important;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-item {
