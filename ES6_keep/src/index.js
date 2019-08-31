@@ -1,1 +1,7 @@
-console.log("비야 내려라 예비군 실내에서 하게")
+myFun = (a, b) => {
+    let multiply = a * b;
+    console.log(`${a}*${b}=${a*b} (즉, ${multiply})`);
+};
+
+myFun(1, 5);
+myFun(2, 7);
