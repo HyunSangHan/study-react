@@ -1,0 +1,26 @@
+.blog-list > ul > li{
+    border: 1px solid lightgrey;
+    display: flex;
+    margin: 15px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.keep {
+    color: blue;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.unkeep {
+    color: lightgrey;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.load-btn {
+    padding: 20px;
+    font-size: 20px;
+}
