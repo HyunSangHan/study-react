@@ -3,8 +3,9 @@ var path = require('path');
 module.exports = {
   entry: './src/index.js',
   output : {
-  filename : 'bundle.js',
-  path : path.resolve(__dirname, 'dist')
+    filename : 'bundle.js',
+    path : path.resolve(__dirname, 'dist'),
+    publicPath : '/dist'
   },
   module : {
     rules : [{
@@ -14,11 +15,11 @@ module.exports = {
         loader : 'babel-loader',
         options : {
           presets : [
-            ['env', {
+            ['@babel/preset-env', {
               'targets' : {
                 'browsers' : ["last 2 versions", "ie 9"]
               },
-              'debug' : true
+              // 'debug' : true
             }]
           ]
         }
