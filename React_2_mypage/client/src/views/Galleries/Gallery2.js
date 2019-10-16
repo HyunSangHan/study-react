@@ -42,5 +42,5 @@ class Gallery2 extends Component {
 // export default GalleryContent;
 
 export default GoogleApiWrapper({
-    apiKey: ("AIzaSyDJklcIhJmX18ByesK5wa-teBvRITPlL4Q")
+    apiKey: (process.env.REACT_APP_GOOGLE_MAP_API_KEY)
 })(Gallery2)
