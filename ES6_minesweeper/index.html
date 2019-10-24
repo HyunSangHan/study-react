@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="label">
+        <div class="minesLeft">minesLeft</div> 
+        <button type="button" class="buttonReset" onclick="reset()">reset</button>
+        <div class="timer" onload="timer()">Time</div> 
+      <div>
+      <div class="setting">
+        <input id="row" type="number" placeholder="가로" value="10">
+        <input id="col" type="number" placeholder="세로" value="10">
+        <input id="mine" type="number" placeholder="지뢰 개수" value="10">
+        <button id="play">게임 시작</button>
+      </div>
+    </header>  
+    <section id="map">
+
+    </section>
+
+    <script type="text/javascript" src="./game.js" />
+  </body> 
+</html>
