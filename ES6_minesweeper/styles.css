@@ -4,6 +4,18 @@
     width: 20px;
 }
 
+.cell:hover {
+    cursor: pointer;
+}
+
+.cell.open {
+    background-color: black;
+}
+
+.cell.flag {
+    background-color: red;
+}
+
 .cell-parent {
     display: flex;
 }
