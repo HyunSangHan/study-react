@@ -1,0 +1,9 @@
+.cell {
+    border: 1px black solid;
+    height: 20px;
+    width: 20px;
+}
+
+.cell-parent {
+    display: flex;
+}
