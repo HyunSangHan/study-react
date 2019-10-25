@@ -22,6 +22,22 @@
     background: url("./mine.png") center / cover; 
 }
 
+.cell.mine.open {
+    border: 2px solid red;
+}
+
 .cell-parent {
     display: flex;
+}
+
+#status {
+    font-weight: 700;
+}
+
+#status.win {
+    color: blue;
+}
+
+#status.lose {
+    color: red;
 }

@@ -3,27 +3,31 @@ const cells = [];
 let maxX = null;
 let maxY = null;
 let mineNumTotal = null;
+let isOver = false;
+let cellsLeft = null;
 
 // 칸 셋팅
 document.getElementById("play").addEventListener('click', function(){
     // 정수화하기
-    maxX = parseInt(document.getElementById("row").value);
-    maxY = parseInt(document.getElementById("col").value);
+    maxX = parseInt(document.getElementById("col").value);
+    maxY = parseInt(document.getElementById("row").value);
     mineNumTotal = parseInt(document.getElementById("mine").value);
-    document.getElementById("row").value = maxX
-    document.getElementById("col").value = maxY
+    document.getElementById("col").value = maxX
+    document.getElementById("row").value = maxY
     document.getElementById("mine").value = mineNumTotal
     if (maxX < 1 || maxY < 1 || mineNumTotal < 1) { //입력값이 올바르지 않을 때
         alert('입력값이 올바르지 않습니다.');
     } else if (maxX * maxY <= mineNumTotal) { //지뢰가 칸 개수보다 많거나 같을 때
         alert('지뢰가 너무 많아서 게임이 불가능해요. 지뢰 개수를 줄여주세요.');
+    } else if (maxX > 30 || maxY > 30) {
+        alert('언제 다 하시려고... 30 X 30 미만으로 줄여주세요.');
     } else { //일반적인 경우(게임 가능)
         // map 중복 방지
         while (map.hasChildNodes()) {
             map.removeChild(map.firstChild);
-        }    
-        
-        for(let i = 0; i < maxX; i++) {
+        }
+        document.getElementById("cellsLeft").innerText = maxX * maxY;
+        for(let i = 0; i < maxY; i++) {
             const cellsX = []; // 하나의 행
             cells.push(cellsX); // 빈 행을 여러 열에 넣음
             const domElementParent = document.createElement('div'); // 한세트 칸 생성
@@ -31,17 +35,15 @@ document.getElementById("play").addEventListener('click', function(){
 
             map.appendChild(domElementParent); // DOM에 칸 그리기
 
-            for(let j=0; j < maxY; j++) {
+            for(let j=0; j < maxX; j++) {
                 const domElement = document.createElement('div'); // 하나의 칸 생성
                 domElementParent.appendChild(domElement); // DOM에 칸 그리기
 
                 // 그 칸의 속성들 설정하기
                 domElement.classList.add('cell');
-                domElement.setAttribute('x', i);
-                domElement.setAttribute('y', j);
-                domElement.setAttribute('isMine', false);
-                domElement.setAttribute('isOpen', false);
-                domElement.setAttribute('isFlag', false);
+                domElement.classList.add('close');
+                domElement.setAttribute('y', i);
+                domElement.setAttribute('x', j);
                 cellsX[j] = domElement;
 
                 domElement.addEventListener('click', function(e) {
@@ -62,48 +64,60 @@ document.getElementById("play").addEventListener('click', function(){
 const openCell = function(cell) {
     const x = cell.getAttribute('x');
     const y = cell.getAttribute('y');
-    console.log(`(${y}, ${x})가 클릭되었어요.`)
-    const isMine = (cell.getAttribute('isMine') === 'true');
-    const isOpen = (cell.getAttribute('isOpen') === 'true');
-    const isFlag = (cell.getAttribute('isFlag') === 'true');
-    if(isOpen) {
-        return; //아무것도 리턴하지 않음
-    } else if(!isOpen && isFlag) {
-        return; //진짜 누를 것인지 얼럿창 띄우기(추가스펙)
+    const isMine = (cell.getAttribute('isMine'));
+    const isOpen = cell.classList.contains('open');
+    const isFlag = cell.classList.contains('flag');
+    if(isOpen || isOver) {
+        return; //아무것도 리턴하지 않음        
+    } else if(!isOpen && isMine && isFlag) {
+        confirm('진짜 누르시겠어요? 지뢰일 수도 있어요.')
+        gameOver();
+    } else if(!isOpen && !isMine && isFlag) {
+        confirm('진짜 누르시겠어요? 지뢰일 수도 있어요.')
+        cell.classList.remove('flag')
+        openCell(cell);   
     } else if(!isOpen && isMine) {
-        gameOver(); //TODO: gameOver함수 짜야됨
+        gameOver();
     } else {
-        cell.setAttribute('isOpen', true);
-        cell.classList.add('open');
-
-        const neighborCells = getNeighborCells(x, y);
+        const neighborCells = getNeighborCells(cell);
         const mineCount = neighborCells.reduce((pv, cv) => {
             if(cv.getAttribute('isMine') === 'true') pv++;
             return pv;
         } , 0);
 
-        if(mineCount > 0) { //주변 (최대)8칸 중에서 지뢰가 1개라도 있으면
+        cell.classList.remove('close');
+        cell.classList.add('open');
+
+        if(mineCount > 0) { //주변 8칸 중에서 지뢰가 1개라도 있으면
             cell.textContent = mineCount; //그 셀에 주변 지뢰 개수를 적어준다
-            cell.setAttribute('isOpen', true);
         } else { // 주변에 지뢰가 없으면 재귀로 주변을 터뜨린다
-            neighborCells.forEach(neighborCell => openCell(neighborCell)); //재귀
+            neighborCells.forEach(neighborCell => {
+                if(!neighborCell.isOpen) { //메모이제이션 활용
+                    openCell(neighborCell);
+                }
+            }); //재귀
+        }
+        cellsLeft = document.getElementsByClassName("close").length
+        document.getElementById("cellsLeft").innerText = cellsLeft;
+        if (cellsLeft === mineNumTotal) {
+            gameWin();
         }
     }
 };
 
 const flagCell = function(cell) { //우클릭시
-    if (cell.getAttribute('isOpen') === 'false') {
+    if (!cell.classList.contains('open')) {
         cell.classList.add('flag');
     }
 }
 
-const getNeighborCells = function(x, y) {
-    x = parseInt(x);
-    y = parseInt(y);
-    const tmpCells = [ cells[y][x] ];
+const getNeighborCells = function(cell) {
+    const x = parseInt(cell.getAttribute('x'));
+    const y = parseInt(cell.getAttribute('y'));
+    const neighborCells = [ cells[y][x] ];
 
     if (0 < y && y < maxY-1 && 0 < x && x < maxX-1) {
-        tmpCells.push(
+        neighborCells.push(
             cells[y+1][x+1],
             cells[y+1][x],
             cells[y+1][x-1],
@@ -114,7 +128,7 @@ const getNeighborCells = function(x, y) {
             cells[y-1][x-1]
         )
     } else if (y === 0 && 0 < x && x < maxX-1) {
-        tmpCells.push(
+        neighborCells.push(
             cells[y+1][x+1],
             cells[y+1][x],
             cells[y+1][x-1],
@@ -122,13 +136,13 @@ const getNeighborCells = function(x, y) {
             cells[y][x-1]
         )
     } else if (y === 0 && x === maxX-1) {
-        tmpCells.push(
+        neighborCells.push(
             cells[y+1][x],
             cells[y+1][x-1],
             cells[y][x-1],
         )
     } else if (0 < y && y < maxY-1 && x === maxX-1) {
-        tmpCells.push(
+        neighborCells.push(
             cells[y+1][x],
             cells[y+1][x-1],
             cells[y][x-1],
@@ -136,13 +150,13 @@ const getNeighborCells = function(x, y) {
             cells[y-1][x-1]
         )
     } else if (y === maxY-1 && 0 < x && x === maxX-1) {
-        tmpCells.push(
+        neighborCells.push(
             cells[y][x-1],
             cells[y-1][x],
             cells[y-1][x-1]
         )
     } else if (y === maxY-1 && 0 < x && x < maxX-1) {
-        tmpCells.push(
+        neighborCells.push(
             cells[y][x+1],
             cells[y][x-1],
             cells[y-1][x+1],
@@ -150,13 +164,13 @@ const getNeighborCells = function(x, y) {
             cells[y-1][x-1]
         )
     } else if (y === maxY-1 && x === 0) {
-        tmpCells.push(
+        neighborCells.push(
             cells[y][x+1],
             cells[y-1][x+1],
             cells[y-1][x],
         )
     } else if (0 < y && y < maxY-1 && x === 0) {
-        tmpCells.push(
+        neighborCells.push(
             cells[y+1][x+1],
             cells[y+1][x],
             cells[y][x+1],
@@ -164,26 +178,19 @@ const getNeighborCells = function(x, y) {
             cells[y-1][x],
         )
     }  else if (y === 0 && x === 0) {
-        tmpCells.push(
+        neighborCells.push(
             cells[y+1][x+1],
             cells[y+1][x],
             cells[y][x+1]
         )
     } else {
-        throw new Error("뭔가 잘못되었습니다!")
+        alert("뭔가 잘못되었습니다!")
+        throw new Error("알 수 없는 경우의 수")
     }
-    //flag가 아니고 open이 아닌 경우만으로 한정
-    const neighborCells = tmpCells.filter(
-        tmpCell => (tmpCell.getAttribute('isOpen') === 'false')
-    )
-//map
-console.log(neighborCells)
-
     return neighborCells;// 주변 8칸 리턴하도록
 }
 
 function makeMine() {
-
     let i, j, k;
     const uniqueNumbers = [...Array(maxY * maxX).keys()];
     for (i = uniqueNumbers.length; i; i -= 1) {
@@ -194,9 +201,48 @@ function makeMine() {
     }
 
     for (let count = 0; count < mineNumTotal; count++) { // 지뢰 다 깔 때까지 반복
-        const y = parseInt(uniqueNumbers[0] / maxY);
-        const x = uniqueNumbers[0] % maxY;
+        const y = parseInt(uniqueNumbers[0] / maxX);
+        const x = uniqueNumbers[0] % maxX;
         uniqueNumbers.shift(); //큐처럼 구현
         cells[y][x].setAttribute('isMine', true);
     }
+}
+
+function gameOver() {
+    alert('으악! 지뢰를 밟았다!');
+    for(let y = 0; y < maxY; y++) {
+        for(let x = 0; x < maxX; x++) {
+            if (cells[y][x].getAttribute('isMine') === 'true') {
+                cells[y][x].classList.remove('flag')
+                cells[y][x].classList.add('mine')    
+            }
+        }
+    }
+    document.getElementById("status").innerText = "You Lose!";
+    document.getElementById("status").classList.add('lose');
+    isOver = true;
+}
+
+function gameWin() {
+    document.getElementById("status").innerText = "You win!";
+    document.getElementById("status").classList.add('win');
+    isOver = true;
+}
+
+function reset() {
+    while (map.hasChildNodes()) {
+        map.removeChild(map.firstChild);
+    }    
+    cells.splice();
+    maxX = null;
+    maxY = null;
+    mineNumTotal = null;
+    isOver = false;
+    cellsLeft = null;
+    document.getElementById("row").value = 10
+    document.getElementById("col").value = 10
+    document.getElementById("mine").value = 10
+    document.getElementById("status").innerText = null;
+    document.getElementById("status").classList.remove('win');
+    document.getElementById("status").classList.remove('lose');
 }
