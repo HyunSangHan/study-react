@@ -236,13 +236,14 @@ function reset() {
     document.getElementById("status").innerText = null;
     document.getElementById("status").classList.remove('win');
     document.getElementById("status").classList.remove('lose');
+    replay();
 }
 
 function replay() {
     while (map.hasChildNodes()) {
         map.removeChild(map.firstChild);
     }    
-    cells.splice(0, maxY-1);
+    cells.splice(0, cells.length);
     maxX = null;
     maxY = null;
     mineNumTotal = null;
