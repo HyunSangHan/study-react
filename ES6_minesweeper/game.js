@@ -8,6 +8,7 @@ let cellsLeft = null;
 
 // 칸 셋팅
 document.getElementById("play").addEventListener('click', function(){
+    replay();
     // 정수화하기
     maxX = parseInt(document.getElementById("col").value);
     maxY = parseInt(document.getElementById("row").value);
@@ -58,13 +59,11 @@ document.getElementById("play").addEventListener('click', function(){
             }
         }
     }
-    makeMine(); //지뢰깔기
+    makeMine(cells); //지뢰깔기
 });
 
 const openCell = function(cell) {
-    const x = cell.getAttribute('x');
-    const y = cell.getAttribute('y');
-    const isMine = (cell.getAttribute('isMine'));
+    const isMine = (cell.getAttribute('isMine') === 'true');
     const isOpen = cell.classList.contains('open');
     const isFlag = cell.classList.contains('flag');
     if(isOpen || isOver) {
@@ -106,7 +105,7 @@ const openCell = function(cell) {
 };
 
 const flagCell = function(cell) { //우클릭시
-    if (!cell.classList.contains('open')) {
+    if (!cell.classList.contains('open') && !isOver) {
         cell.classList.add('flag');
     }
 }
@@ -201,9 +200,10 @@ function makeMine() {
     }
 
     for (let count = 0; count < mineNumTotal; count++) { // 지뢰 다 깔 때까지 반복
-        const y = parseInt(uniqueNumbers[0] / maxX);
-        const x = uniqueNumbers[0] % maxX;
-        uniqueNumbers.shift(); //큐처럼 구현
+        const x = parseInt(uniqueNumbers[0] / maxY);
+        const y = uniqueNumbers[0] % maxY;
+        console.log(uniqueNumbers[0], cells[y][x])
+        uniqueNumbers.shift();
         cells[y][x].setAttribute('isMine', true);
     }
 }
@@ -230,19 +230,22 @@ function gameWin() {
 }
 
 function reset() {
-    while (map.hasChildNodes()) {
-        map.removeChild(map.firstChild);
-    }    
-    cells.splice();
-    maxX = null;
-    maxY = null;
-    mineNumTotal = null;
-    isOver = false;
-    cellsLeft = null;
     document.getElementById("row").value = 10
     document.getElementById("col").value = 10
     document.getElementById("mine").value = 10
     document.getElementById("status").innerText = null;
     document.getElementById("status").classList.remove('win');
     document.getElementById("status").classList.remove('lose');
+}
+
+function replay() {
+    while (map.hasChildNodes()) {
+        map.removeChild(map.firstChild);
+    }    
+    cells.splice(0, maxY-1);
+    maxX = null;
+    maxY = null;
+    mineNumTotal = null;
+    isOver = false;
+    cellsLeft = null;
 }
