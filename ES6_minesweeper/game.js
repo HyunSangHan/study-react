@@ -43,12 +43,12 @@ document.getElementById("play").addEventListener('click', function(){
 
         cellElement.addEventListener('click', function(e) {
           e.preventDefault();
-          openCell(this);
+          !isOver && handleClick(this);
         });
 
         cellElement.addEventListener('contextmenu', function(e) {
           e.preventDefault();
-          flagCell(this);
+          !isOver && flagCell(this);
         });
       }
     }
@@ -56,11 +56,11 @@ document.getElementById("play").addEventListener('click', function(){
   makeMine(cells); //지뢰깔기
 });
 
-const openCell = function(cell) {
+const handleClick = function(cell) {
   const isMine = (cell.getAttribute('isMine') === 'true');
   const isOpen = cell.classList.contains('open');
   const isFlag = cell.classList.contains('flag');
-  if(isOpen || isOver) {
+  if(isOpen) {
     return; //아무것도 리턴하지 않음
   } else if(!isOpen && isMine && isFlag) {
     confirm('진짜 누르시겠어요? 지뢰일 수도 있어요.')
@@ -68,7 +68,7 @@ const openCell = function(cell) {
   } else if(!isOpen && !isMine && isFlag) {
     confirm('진짜 누르시겠어요? 지뢰일 수도 있어요.')
     cell.classList.remove('flag')
-    openCell(cell);
+    handleClick(cell);
   } else if(!isOpen && isMine) {
     gameOver();
   } else {
@@ -85,8 +85,8 @@ const openCell = function(cell) {
       cell.textContent = mineCount; //그 셀에 주변 지뢰 개수를 적어준다
     } else { // 주변에 지뢰가 없으면 재귀로 주변을 터뜨린다
       neighborCells.forEach(neighborCell => {
-        if(!neighborCell.isOpen) { //메모이제이션 활용
-          openCell(neighborCell);
+        if(!neighborCell.classList.contains('open')) { //메모이제이션 활용
+          handleClick(neighborCell);
         }
       }); //재귀
     }
@@ -96,7 +96,7 @@ const openCell = function(cell) {
       gameWin();
     }
   }
-};
+}
 
 const flagCell = function(cell) { //우클릭시
   if (!cell.classList.contains('open') && !isOver) {
