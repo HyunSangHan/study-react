@@ -26,7 +26,7 @@
     border: 2px solid red;
 }
 
-.cellParent {
+.row {
     display: flex;
 }
 
