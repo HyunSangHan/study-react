@@ -1,6 +1,6 @@
 const { random, take } = require('lodash')
 const board = document.getElementById("board");
-const cells = [];
+let cells = [];
 let colNumber = null;
 let rowNumber = null;
 let mine = null;
@@ -48,12 +48,12 @@ document.getElementById("play").addEventListener('click', function(){
 
         cellElement.addEventListener('contextmenu', function(e) {
           e.preventDefault();
-          !isOver && flagCell(this);
+          !this.classList.contains('open') && !isOver && flagCell(this);
         });
       }
     }
   }
-  makeMine(cells); //지뢰깔기
+  makeMine(); //지뢰깔기
 });
 
 const handleClick = function(cell) {
@@ -95,12 +95,6 @@ const handleClick = function(cell) {
     if (cellsLeft === mine) {
       gameWin();
     }
-  }
-}
-
-const flagCell = function(cell) { //우클릭시
-  if (!cell.classList.contains('open') && !isOver) {
-    cell.classList.add('flag');
   }
 }
 
@@ -191,8 +185,7 @@ function makeMine() {
   }
 }
 
-function gameOver() {
-  alert('으악! 지뢰를 밟았다!');
+function showMine() {
   for(let y = 0; y < rowNumber; y++) {
     for(let x = 0; x < colNumber; x++) {
       if (cells[y][x].getAttribute('isMine') === 'true') {
@@ -201,14 +194,32 @@ function gameOver() {
       }
     }
   }
+}
+
+function flagCell(cell) { //우클릭시
+    cell.classList.add('flag');
+}
+
+function showGameOver() {
   document.getElementById("status").innerText = "You Lose!";
   document.getElementById("status").classList.add('lose');
+}
+
+function showGameWin() {
+  document.getElementById("status").innerText = "You win!";
+  document.getElementById("status").classList.add('win');
+}
+
+function gameOver() {
+  alert('으악! 지뢰를 밟았다!');
+  showMine()
+  showGameOver()
   isOver = true;
 }
 
 function gameWin() {
-  document.getElementById("status").innerText = "You win!";
-  document.getElementById("status").classList.add('win');
+  alert('승리하였습니다');
+  showGameWin()
   isOver = true;
 }
 
@@ -216,7 +227,7 @@ function reset() {
   while (board.hasChildNodes()) {
     board.removeChild(board.firstChild);
   }
-  cells.splice(0, cells.length);
+  cells = []
   colNumber = null;
   rowNumber = null;
   mine = null;
