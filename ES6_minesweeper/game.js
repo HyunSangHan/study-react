@@ -1,4 +1,4 @@
-const { random, take } = require('lodash')
+const { random, take, filter, map } = require('lodash')
 const board = document.getElementById("board");
 let cells = [];
 let colNumber = null;
@@ -101,80 +101,27 @@ const handleClick = function(cell) {
 const getNeighborCells = function(cell) {
   const x = parseInt(cell.getAttribute('x'));
   const y = parseInt(cell.getAttribute('y'));
-  const neighborCells = [ cells[y][x] ];
-
-  if (0 < y && y < rowNumber-1 && 0 < x && x < colNumber-1) {
-    neighborCells.push(
-      cells[y+1][x+1],
-      cells[y+1][x],
-      cells[y+1][x-1],
-      cells[y][x+1],
-      cells[y][x-1],
-      cells[y-1][x+1],
-      cells[y-1][x],
-      cells[y-1][x-1]
-    )
-  } else if (y === 0 && 0 < x && x < colNumber-1) {
-    neighborCells.push(
-      cells[y+1][x+1],
-      cells[y+1][x],
-      cells[y+1][x-1],
-      cells[y][x+1],
-      cells[y][x-1]
-    )
-  } else if (y === 0 && x === colNumber-1) {
-    neighborCells.push(
-      cells[y+1][x],
-      cells[y+1][x-1],
-      cells[y][x-1],
-    )
-  } else if (0 < y && y < rowNumber-1 && x === colNumber-1) {
-    neighborCells.push(
-      cells[y+1][x],
-      cells[y+1][x-1],
-      cells[y][x-1],
-      cells[y-1][x],
-      cells[y-1][x-1]
-    )
-  } else if (y === rowNumber-1 && 0 < x && x === colNumber-1) {
-    neighborCells.push(
-      cells[y][x-1],
-      cells[y-1][x],
-      cells[y-1][x-1]
-    )
-  } else if (y === rowNumber-1 && 0 < x && x < colNumber-1) {
-    neighborCells.push(
-      cells[y][x+1],
-      cells[y][x-1],
-      cells[y-1][x+1],
-      cells[y-1][x],
-      cells[y-1][x-1]
-    )
-  } else if (y === rowNumber-1 && x === 0) {
-    neighborCells.push(
-      cells[y][x+1],
-      cells[y-1][x+1],
-      cells[y-1][x],
-    )
-  } else if (0 < y && y < rowNumber-1 && x === 0) {
-    neighborCells.push(
-      cells[y+1][x+1],
-      cells[y+1][x],
-      cells[y][x+1],
-      cells[y-1][x+1],
-      cells[y-1][x],
-    )
-  }  else if (y === 0 && x === 0) {
-    neighborCells.push(
-      cells[y+1][x+1],
-      cells[y+1][x],
-      cells[y][x+1]
-    )
-  } else {
-    alert("뭔가 잘못되었습니다!")
-    throw new Error("알 수 없는 경우의 수")
-  }
-  return neighborCells;// 주변 8칸 리턴하도록
+  const neighborCoords = [
+    [y+1, x+1],
+    [y+1, x],
+    [y+1, x-1],
+    [y, x+1],
+    [y, x-1],
+    [y-1, x+1],
+    [y-1, x],
+    [y-1, x-1]
+  ]
+  const validCoords = filter(neighborCoords, coord => {
+    const y = coord[0]
+    const x = coord[1]
+    return (x >= 0 && x <colNumber) && (y >= 0 && y <rowNumber)
+  })
+  const neighborCells = map(validCoords, coord => {
+    const y = coord[0]
+    const x = coord[1]
+    return cells[y][x]
+  })
+  return neighborCells
 }
 
 function makeMine() {
@@ -219,6 +166,7 @@ function gameOver() {
 
 function gameWin() {
   alert('승리하였습니다');
+  showMine()
   showGameWin()
   isOver = true;
 }
