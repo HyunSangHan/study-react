@@ -1,3 +1,4 @@
+const { random, take } = require('lodash')
 const board = document.getElementById("board");
 const cells = [];
 let colNumber = null;
@@ -183,20 +184,10 @@ const getNeighborCells = function(cell) {
 }
 
 function makeMine() {
-    let i, j, k;
-    const uniqueNumbers = [...Array(rowNumber * colNumber).keys()];
-    for (i = uniqueNumbers.length; i; i -= 1) {
-        j = Math.floor(Math.random() * i);
-        k = uniqueNumbers[i - 1];
-        uniqueNumbers[i - 1] = uniqueNumbers[j];
-        uniqueNumbers[j] = k;
-    }
-
     for (let count = 0; count < mine; count++) { // 지뢰 다 깔 때까지 반복
-        const x = parseInt(uniqueNumbers[0] / rowNumber);
-        const y = uniqueNumbers[0] % rowNumber;
-        uniqueNumbers.shift();
-        cells[y][x].setAttribute('isMine', true);
+      const i = random(colNumber-1)
+      const j = random(rowNumber-1)
+      cells[i][j].setAttribute('isMine', true);
     }
 }
 
