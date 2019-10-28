@@ -15,18 +15,18 @@
 }
 
 .cell.flag { /* 임시 이미지임 */
-    background: url("./flag_icon.jpg") center / cover; 
+    background: url("./flag_icon.jpg") center / cover;
 }
 
 .cell.mine {
-    background: url("./mine.png") center / cover; 
+    background: url("./mine.png") center / cover;
 }
 
 .cell.mine.open {
     border: 2px solid red;
 }
 
-.cell-parent {
+.cellParent {
     display: flex;
 }
 

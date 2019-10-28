@@ -1,8 +1,8 @@
-const map = document.getElementById("map");
+const board = document.getElementById("board");
 const cells = [];
-let maxX = null;
-let maxY = null;
-let mineNumTotal = null;
+let col = null;
+let row = null;
+let mine = null;
 let isOver = false;
 let cellsLeft = null;
 
@@ -10,33 +10,33 @@ let cellsLeft = null;
 document.getElementById("play").addEventListener('click', function(){
     replay();
     // 정수화하기
-    maxX = parseInt(document.getElementById("col").value);
-    maxY = parseInt(document.getElementById("row").value);
-    mineNumTotal = parseInt(document.getElementById("mine").value);
-    document.getElementById("col").value = maxX
-    document.getElementById("row").value = maxY
-    document.getElementById("mine").value = mineNumTotal
-    if (maxX < 1 || maxY < 1 || mineNumTotal < 1) { //입력값이 올바르지 않을 때
+    col = parseInt(document.getElementById("col").value);
+    row = parseInt(document.getElementById("row").value);
+    mine = parseInt(document.getElementById("mine").value);
+    document.getElementById("col").value = col
+    document.getElementById("row").value = row
+    document.getElementById("mine").value = mine
+    if (col < 1 || row < 1 || mine < 1) { //입력값이 올바르지 않을 때
         alert('입력값이 올바르지 않습니다.');
-    } else if (maxX * maxY <= mineNumTotal) { //지뢰가 칸 개수보다 많거나 같을 때
+    } else if (col * row <= mine) { //지뢰가 칸 개수보다 많거나 같을 때
         alert('지뢰가 너무 많아서 게임이 불가능해요. 지뢰 개수를 줄여주세요.');
-    } else if (maxX > 30 || maxY > 30) {
+    } else if (col > 30 || row > 30) {
         alert('언제 다 하시려고... 30 X 30 미만으로 줄여주세요.');
     } else { //일반적인 경우(게임 가능)
-        // map 중복 방지
-        while (map.hasChildNodes()) {
-            map.removeChild(map.firstChild);
+        // board 중복 방지
+        while (board.hasChildNodes()) {
+            board.removeChild(board.firstChild);
         }
-        document.getElementById("cellsLeft").innerText = maxX * maxY;
-        for(let i = 0; i < maxY; i++) {
-            const cellsX = []; // 하나의 행
-            cells.push(cellsX); // 빈 행을 여러 열에 넣음
+        document.getElementById("cellsLeft").innerText = col * row;
+        for(let i = 0; i < row; i++) {
+            const row = []; // 하나의 행
+            cells.push(row); // 빈 행을 여러 열에 넣음
             const domElementParent = document.createElement('div'); // 한세트 칸 생성
-            domElementParent.classList.add('cell-parent');
+            domElementParent.classList.add('cellParent');
 
-            map.appendChild(domElementParent); // DOM에 칸 그리기
+            board.appendChild(domElementParent); // DOM에 칸 그리기
 
-            for(let j=0; j < maxX; j++) {
+            for(let j=0; j < col; j++) {
                 const domElement = document.createElement('div'); // 하나의 칸 생성
                 domElementParent.appendChild(domElement); // DOM에 칸 그리기
 
@@ -45,7 +45,7 @@ document.getElementById("play").addEventListener('click', function(){
                 domElement.classList.add('close');
                 domElement.setAttribute('y', i);
                 domElement.setAttribute('x', j);
-                cellsX[j] = domElement;
+                row[j] = domElement;
 
                 domElement.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -67,14 +67,14 @@ const openCell = function(cell) {
     const isOpen = cell.classList.contains('open');
     const isFlag = cell.classList.contains('flag');
     if(isOpen || isOver) {
-        return; //아무것도 리턴하지 않음        
+        return; //아무것도 리턴하지 않음
     } else if(!isOpen && isMine && isFlag) {
         confirm('진짜 누르시겠어요? 지뢰일 수도 있어요.')
         gameOver();
     } else if(!isOpen && !isMine && isFlag) {
         confirm('진짜 누르시겠어요? 지뢰일 수도 있어요.')
         cell.classList.remove('flag')
-        openCell(cell);   
+        openCell(cell);
     } else if(!isOpen && isMine) {
         gameOver();
     } else {
@@ -98,7 +98,7 @@ const openCell = function(cell) {
         }
         cellsLeft = document.getElementsByClassName("close").length
         document.getElementById("cellsLeft").innerText = cellsLeft;
-        if (cellsLeft === mineNumTotal) {
+        if (cellsLeft === mine) {
             gameWin();
         }
     }
@@ -115,7 +115,7 @@ const getNeighborCells = function(cell) {
     const y = parseInt(cell.getAttribute('y'));
     const neighborCells = [ cells[y][x] ];
 
-    if (0 < y && y < maxY-1 && 0 < x && x < maxX-1) {
+    if (0 < y && y < row-1 && 0 < x && x < col-1) {
         neighborCells.push(
             cells[y+1][x+1],
             cells[y+1][x],
@@ -126,7 +126,7 @@ const getNeighborCells = function(cell) {
             cells[y-1][x],
             cells[y-1][x-1]
         )
-    } else if (y === 0 && 0 < x && x < maxX-1) {
+    } else if (y === 0 && 0 < x && x < col-1) {
         neighborCells.push(
             cells[y+1][x+1],
             cells[y+1][x],
@@ -134,13 +134,13 @@ const getNeighborCells = function(cell) {
             cells[y][x+1],
             cells[y][x-1]
         )
-    } else if (y === 0 && x === maxX-1) {
+    } else if (y === 0 && x === col-1) {
         neighborCells.push(
             cells[y+1][x],
             cells[y+1][x-1],
             cells[y][x-1],
         )
-    } else if (0 < y && y < maxY-1 && x === maxX-1) {
+    } else if (0 < y && y < row-1 && x === col-1) {
         neighborCells.push(
             cells[y+1][x],
             cells[y+1][x-1],
@@ -148,13 +148,13 @@ const getNeighborCells = function(cell) {
             cells[y-1][x],
             cells[y-1][x-1]
         )
-    } else if (y === maxY-1 && 0 < x && x === maxX-1) {
+    } else if (y === row-1 && 0 < x && x === col-1) {
         neighborCells.push(
             cells[y][x-1],
             cells[y-1][x],
             cells[y-1][x-1]
         )
-    } else if (y === maxY-1 && 0 < x && x < maxX-1) {
+    } else if (y === row-1 && 0 < x && x < col-1) {
         neighborCells.push(
             cells[y][x+1],
             cells[y][x-1],
@@ -162,13 +162,13 @@ const getNeighborCells = function(cell) {
             cells[y-1][x],
             cells[y-1][x-1]
         )
-    } else if (y === maxY-1 && x === 0) {
+    } else if (y === row-1 && x === 0) {
         neighborCells.push(
             cells[y][x+1],
             cells[y-1][x+1],
             cells[y-1][x],
         )
-    } else if (0 < y && y < maxY-1 && x === 0) {
+    } else if (0 < y && y < row-1 && x === 0) {
         neighborCells.push(
             cells[y+1][x+1],
             cells[y+1][x],
@@ -191,7 +191,7 @@ const getNeighborCells = function(cell) {
 
 function makeMine() {
     let i, j, k;
-    const uniqueNumbers = [...Array(maxY * maxX).keys()];
+    const uniqueNumbers = [...Array(row * col).keys()];
     for (i = uniqueNumbers.length; i; i -= 1) {
         j = Math.floor(Math.random() * i);
         k = uniqueNumbers[i - 1];
@@ -199,9 +199,9 @@ function makeMine() {
         uniqueNumbers[j] = k;
     }
 
-    for (let count = 0; count < mineNumTotal; count++) { // 지뢰 다 깔 때까지 반복
-        const x = parseInt(uniqueNumbers[0] / maxY);
-        const y = uniqueNumbers[0] % maxY;
+    for (let count = 0; count < mine; count++) { // 지뢰 다 깔 때까지 반복
+        const x = parseInt(uniqueNumbers[0] / row);
+        const y = uniqueNumbers[0] % row;
         console.log(uniqueNumbers[0], cells[y][x])
         uniqueNumbers.shift();
         cells[y][x].setAttribute('isMine', true);
@@ -210,11 +210,11 @@ function makeMine() {
 
 function gameOver() {
     alert('으악! 지뢰를 밟았다!');
-    for(let y = 0; y < maxY; y++) {
-        for(let x = 0; x < maxX; x++) {
+    for(let y = 0; y < row; y++) {
+        for(let x = 0; x < col; x++) {
             if (cells[y][x].getAttribute('isMine') === 'true') {
                 cells[y][x].classList.remove('flag')
-                cells[y][x].classList.add('mine')    
+                cells[y][x].classList.add('mine')
             }
         }
     }
@@ -240,13 +240,13 @@ function reset() {
 }
 
 function replay() {
-    while (map.hasChildNodes()) {
-        map.removeChild(map.firstChild);
-    }    
+    while (board.hasChildNodes()) {
+        board.removeChild(board.firstChild);
+    }
     cells.splice(0, cells.length);
-    maxX = null;
-    maxY = null;
-    mineNumTotal = null;
+    col = null;
+    row = null;
+    mine = null;
     isOver = false;
     cellsLeft = null;
 }

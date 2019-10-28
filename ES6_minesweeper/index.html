@@ -3,18 +3,17 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <header class="bar">
       <div class="label">
         <span>
-          <div class="cellsLeft"><strong>cellsLeft </strong><span id="cellsLeft"></span></div>           
+          <div class="cellsLeft"><strong>cellsLeft </strong><span id="cellsLeft"></span></div>
           <div id="status">
           </div>
           <button type="button" class="buttonReset" onclick="reset()">reset</button>
         </span>
-<!--        <div class="timer" onload="timer()">Time</div> -->
       <div>
       <div class="setting">
         가로 : <input id="col" type="number" placeholder="가로" value="10">
@@ -24,11 +23,11 @@
         지뢰개수 : <input id="mine" type="number" placeholder="지뢰 개수" value="10">
         <button id="play">게임 시작</button>
       </div>
-    </header>  
-    <section id="map">
+    </header>
+    <section id="board">
 
     </section>
 
-    <script type="text/javascript" src="./game.js" ></script>
-  </body> 
+    <script type="text/javascript" src="game.js" ></script>
+  </body>
 </html>
