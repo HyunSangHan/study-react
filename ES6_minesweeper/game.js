@@ -8,14 +8,11 @@ let cellsLeft = null;
 
 // 칸 셋팅
 document.getElementById("play").addEventListener('click', function(){
-    replay();
+    reset();
     // 정수화하기
     col = parseInt(document.getElementById("col").value);
     row = parseInt(document.getElementById("row").value);
     mine = parseInt(document.getElementById("mine").value);
-    document.getElementById("col").value = col
-    document.getElementById("row").value = row
-    document.getElementById("mine").value = mine
     if (col < 1 || row < 1 || mine < 1) { //입력값이 올바르지 않을 때
         alert('입력값이 올바르지 않습니다.');
     } else if (col * row <= mine) { //지뢰가 칸 개수보다 많거나 같을 때
@@ -229,16 +226,6 @@ function gameWin() {
 }
 
 function reset() {
-    document.getElementById("row").value = 10
-    document.getElementById("col").value = 10
-    document.getElementById("mine").value = 10
-    document.getElementById("status").innerText = null;
-    document.getElementById("status").classList.remove('win');
-    document.getElementById("status").classList.remove('lose');
-    replay();
-}
-
-function replay() {
     while (board.hasChildNodes()) {
         board.removeChild(board.firstChild);
     }
