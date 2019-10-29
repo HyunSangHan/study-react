@@ -91,7 +91,7 @@ const openCell = function(cell) {
             cell.textContent = mineCount; //그 셀에 주변 지뢰 개수를 적어준다
         } else { // 주변에 지뢰가 없으면 재귀로 주변을 터뜨린다
             neighborCells.forEach(neighborCell => {
-                if(!neighborCell.isOpen) { //메모이제이션 활용
+                if(!neighborCell.getAttribute('isOpen')) { //메모이제이션 활용
                     openCell(neighborCell);
                 }
             }); //재귀
