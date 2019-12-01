@@ -11,6 +11,7 @@
     "material-icons-react": "^1.0.4",
     "react": "^16.7.0",
     "react-anchor-link-smooth-scroll": "^1.0.11",
+    "react-app-polyfill": "^1.0.4",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.7.0",
     "react-horizontal-scrolling-menu": "^0.4.5",
@@ -34,8 +35,8 @@
   "browserslist": [
     ">0.2%",
     "not dead",
-    "not ie <= 11",
-    "not op_mini all"
+    "not op_mini all",
+    "ie 11"
   ],
   "husky": {
     "hooks": {
