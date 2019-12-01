@@ -15,6 +15,12 @@ import {
   Button
 } from "reactstrap"
 //import Calculator from './Projects/Calculator';
+import thumbnail1 from "../images/mypage.png"
+import thumbnail2 from "../images/calculator.png"
+import thumbnail3 from "../images/meeting.png"
+import thumbnail4 from "../images/fish.png"
+import thumbnail5 from "../images/finedust.png"
+import thumbnail6 from "../images/blackjack.png"
 
 class Products extends Component {
   constructor(props) {
@@ -85,11 +91,7 @@ class Products extends Component {
                           <h4 className="h4">ReactJS</h4>
                         </CardSubtitle>
                       </CardBody>
-                      <img
-                        width="100%"
-                        src="../images/mypage.png"
-                        alt="mypage"
-                      />
+                      <img width="100%" src={thumbnail1} alt="mypage" />
                       <Button
                         className="toggle"
                         color="secondary"
@@ -130,11 +132,7 @@ class Products extends Component {
                       </CardBody>
                       {/*<div className={"body-on"}>*/}
                       {/*<div className={"z-3"}>*/}
-                      <img
-                        width="100%"
-                        src="../images/calculator.png"
-                        alt="calculator"
-                      />
+                      <img width="100%" src={thumbnail2} alt="calculator" />
                       {/*</div>*/}
                       {/*<div className={"calculator z-5"}>*/}
                       {/*<Calculator/>*/}
@@ -181,11 +179,7 @@ class Products extends Component {
                           <h4 className="h4">Ruby on Sinatra</h4>
                         </CardSubtitle>
                       </CardBody>
-                      <img
-                        width="100%"
-                        src="../images/meeting.png"
-                        alt="meeting"
-                      />
+                      <img width="100%" src={thumbnail3} alt="meeting" />
                       <Button
                         className="toggle"
                         color="secondary"
@@ -227,7 +221,7 @@ class Products extends Component {
                           <h4 className="h4">Ruby on Sinatra / Fuse</h4>
                         </CardSubtitle>
                       </CardBody>
-                      <img width="100%" src="../images/fish.png" alt="fish" />
+                      <img width="100%" src={thumbnail4} alt="fish" />
                       <Button
                         className="toggle"
                         color="secondary"
@@ -277,11 +271,7 @@ class Products extends Component {
                           </h4>
                         </CardSubtitle>
                       </CardBody>
-                      <img
-                        width="100%"
-                        src="../images/finedust.png"
-                        alt="dustbot"
-                      />
+                      <img width="100%" src={thumbnail5} alt="dustbot" />
                       <Button
                         className="toggle"
                         color="secondary"
@@ -316,11 +306,7 @@ class Products extends Component {
                           <h4 className="h4">Java</h4>
                         </CardSubtitle>
                       </CardBody>
-                      <img
-                        width="100%"
-                        src="../images/blackjack.png"
-                        alt="blackjack"
-                      />
+                      <img width="100%" src={thumbnail6} alt="blackjack" />
                       <Button
                         className="toggle"
                         color="secondary"

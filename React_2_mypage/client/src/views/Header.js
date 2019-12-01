@@ -4,6 +4,7 @@ import "../App.css"
 import "../css/Header.css"
 import "../css/Main.css"
 import MaterialIcon from "material-icons-react"
+import photoHome from "../images/hea.png"
 
 class Header extends Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class Header extends Component {
       <div className="header-common font-3 z-4">
         <div className="header-logo ml-4 mb-1 z-4">
           <a href="/" target="_self">
-            <img src="../images/hea.png" alt="home" height={"14px;"} />
+            <img src={photoHome} alt="home" height={"14px;"} />
           </a>
         </div>
         <div className="header-menus mr-3">

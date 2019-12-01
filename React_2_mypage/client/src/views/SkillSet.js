@@ -3,11 +3,20 @@ import "../App.css"
 import "../css/Main.css"
 import { Grid, Row, Col } from "react-bootstrap"
 import ScrollableAnchor from "react-scrollable-anchor"
+import logoReact from "../images/React.png"
+import logoDjango from "../images/Django.png"
+import logoSinatra from "../images/Sinatra.png"
+
+const skillSets = [
+  ["React", logoReact, "skill-react"],
+  ["Django", logoDjango, "skill-django"],
+  ["Ruby for Sinatra", logoSinatra, "skill-sinatra"]
+]
 
 class SkillSet extends Component {
   render() {
     return (
-      <div className="App">
+      <>
         <div className="bg-grey pb-9">
           <div className="bg-grey">
             <div className="title-out pt-4 pb-4">
@@ -19,38 +28,18 @@ class SkillSet extends Component {
             </div>
             <Grid>
               <Row className="h100percent mt-9">
-                <Col xs={12} md={4}>
-                  <div className="flex-center h-100">
-                    <img
-                      className="skill-react"
-                      src="../images/React.png"
-                      alt="React Javascript"
-                    />
-                  </div>
-                </Col>
-                <Col xs={12} md={4}>
-                  <div className="flex-center h-100">
-                    <img
-                      className="skill-django"
-                      src="../images/Django.png"
-                      alt="Django Python"
-                    />
-                  </div>
-                </Col>
-                <Col xs={12} md={4}>
-                  <div className="flex-center h-100">
-                    <img
-                      className="skill-sinatra"
-                      src="../images/Sinatra.png"
-                      alt="Sinatra Ruby"
-                    />
-                  </div>
-                </Col>
+                {skillSets.map((skill, idx) => (
+                  <Col xs={12} md={4}>
+                    <div className="flex-center h-100">
+                      <img alt={skill[0]} src={skill[1]} className={skill[2]} />
+                    </div>
+                  </Col>
+                ))}
               </Row>
             </Grid>
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }
