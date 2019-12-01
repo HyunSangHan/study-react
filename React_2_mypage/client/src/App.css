@@ -277,7 +277,6 @@ h4 {
   /*font-weight: 600;*/
 }
 
-
 .font-white {
   color: white !important;
   /*font-weight: bolder !important;*/
@@ -297,21 +296,21 @@ h4 {
 }
 
 .menu-item {
-    /*padding: 0 5px;*/
-    margin: 5px 5px;
-    user-select: none;
-    cursor: pointer;
-    border: none;
+  /*padding: 0 5px;*/
+  margin: 5px 5px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
 }
 .menu-item-wrapper.active {
-    border: 1px white solid;
+  border: 1px white solid;
 }
 
 .menu-item.active {
-    border: 1px green solid;
+  border: 1px green solid;
 }
 
 .scroll-menu-arrow {
-    padding: 20px;
-    cursor: pointer;
+  padding: 20px;
+  cursor: pointer;
 }

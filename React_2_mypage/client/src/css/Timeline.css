@@ -1,319 +1,316 @@
 .timeline {
-    height: 300px; /*not necessary in future*/
-    border: 0.5px dotted grey;  /*not necessary in future*/
-    background-color: lavender;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 300px; /*not necessary in future*/
+  border: 0.5px dotted grey; /*not necessary in future*/
+  background-color: lavender;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .vertical-line {
-    height: 100%;
-    width: 1.5px;
-    background-color: lightgrey;
-    margin-left: auto;
-    margin-right: auto;
+  height: 100%;
+  width: 1.5px;
+  background-color: lightgrey;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .timeline-margin {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
+@media (max-width: 767px) {
+  /*Mobile*/
+  .top-timeline {
+    display: flex;
+    height: 100%;
+    min-height: 90px;
+  }
 
-@media(max-width: 767px){ /*Mobile*/
-    .top-timeline {
-        display: flex;
-        height: 100%;
-        min-height: 90px;
-    }
+  .img-timeline {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #40c5ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 5%;
+    z-index: 3;
+    color: black;
+    line-height: 15px;
+    min-width: 80px;
+    font-family: "Apple SD Gothic Neo";
+    font-size: small;
+    font-weight: medium;
+  }
 
-    .img-timeline {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        background-color: #40c5ef;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        left: 5%;
-        z-index: 3;
-        color: black;
-        line-height: 15px;
-        min-width: 80px;
-        font-family: "Apple SD Gothic Neo";
-        font-size: small;
-        font-weight: medium;
-    }
+  .left-timeline {
+    width: 70%;
+    height: 100%;
+    /*background-color: whitesmoke;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 20px;
+    margin-left: 100px;
+  }
 
-    .left-timeline {
-        width: 70%;
-        height: 100%;
-        /*background-color: whitesmoke;*/
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0px 20px;
-        margin-left: 100px;
-    }
+  .right-timeline {
+    width: 70%;
+    height: 100%;
+    /*background-color: whitesmoke;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 20px;
+    margin-left: 100px;
+  }
 
-    .right-timeline {
-        width: 70%;
-        height: 100%;
-        /*background-color: whitesmoke;*/
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0px 20px;
-        margin-left: 100px;
-    }
+  .for-line {
+    height: 100%;
+    width: 90px;
+    position: absolute;
+    left: 5%;
+  }
 
-    .for-line {
-        height: 100%;
-        width: 90px;
-        position: absolute;
-        left: 5%;
-    }
+  .align-right {
+    text-align: left;
+  }
 
-    .align-right {
-        text-align: left;
-    }
+  .align-left {
+    text-align: left;
+  }
 
-    .align-left {
-        text-align: left;
-    }
+  .h2 {
+    font-size: 2rem !important;
+  }
 
-    .h2 {
-        font-size: 2.0rem !important;;
-    }
+  .h3 {
+    font-size: 1.5rem !important;
+  }
 
-    .h3 {
-        font-size: 1.5rem !important;;
-    }
-
-    .h4 {
-        font-size: 1.4rem !important;
-    }
-
+  .h4 {
+    font-size: 1.4rem !important;
+  }
 }
 
-@media(min-width: 768px){ /*tablet*/
-    .key-timeline {
-        margin-bottom: 20px;
-        width: 100%;
-    }
+@media (min-width: 768px) {
+  /*tablet*/
+  .key-timeline {
+    margin-bottom: 20px;
+    width: 100%;
+  }
 
-    .top-timeline {
-        position: relative;
-        height: 100%;
-        /*min-height: 150px;*/
-    }
+  .top-timeline {
+    position: relative;
+    height: 100%;
+    /*min-height: 150px;*/
+  }
 
-    .img-timeline {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: #40c5ef;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        left: 43%;
-        z-index: 3;
-        color: black;
-        line-height: 15px;
-        font-family: "Apple SD Gothic Neo";
-        font-size: medium;
-        font-weight: medium;
-    }
+  .img-timeline {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #40c5ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 43%;
+    z-index: 3;
+    color: black;
+    line-height: 15px;
+    font-family: "Apple SD Gothic Neo";
+    font-size: medium;
+    font-weight: medium;
+  }
 
-    .left-timeline {
-        width: 40%;
-        height: 100%;
-        /*background-color: whitesmoke;*/
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        float: left;
-        padding: 0px 20px;
-    }
+  .left-timeline {
+    width: 40%;
+    height: 100%;
+    /*background-color: whitesmoke;*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    float: left;
+    padding: 0px 20px;
+  }
 
-    .right-timeline {
-        width: 40%;
-        height: 100%;
-        /*background-color: whitesmoke;*/
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        float: right;
-        padding: 0px 20px;
-    }
+  .right-timeline {
+    width: 40%;
+    height: 100%;
+    /*background-color: whitesmoke;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    float: right;
+    padding: 0px 20px;
+  }
 
-    .for-line {
-        height: 100%;
-        width: 100px;
-        position: absolute;
-        left: 43%;
-    }
+  .for-line {
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    left: 43%;
+  }
 
-    .align-right {
-        text-align: right;
-    }
+  .align-right {
+    text-align: right;
+  }
 
-    .align-left {
-        text-align: left;
-    }
+  .align-left {
+    text-align: left;
+  }
 
+  .h2 {
+    font-size: 3rem !important;
+  }
 
-    .h2 {
-        font-size: 3rem !important;;
-    }
+  .h3 {
+    font-size: 1.5rem !important;
+  }
 
-    .h3 {
-        font-size: 1.5rem !important;;
-    }
-
-    .h4 {
-        /*margin-top: 0px !important;          why cannot?*/
-        font-size: 1.4rem !important;
-    }
+  .h4 {
+    /*margin-top: 0px !important;          why cannot?*/
+    font-size: 1.4rem !important;
+  }
 }
 
-@media(min-width: 992px) {  /*laptop*/
-    .img-timeline {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: #40c5ef;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        left: 42.5%;
-        z-index: 3;
-        color: black;
-        line-height: 20px;
-        font-family: "Apple SD Gothic Neo";
-        font-size: large;
-        font-weight: bold;
-    }
+@media (min-width: 992px) {
+  /*laptop*/
+  .img-timeline {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #40c5ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 42.5%;
+    z-index: 3;
+    color: black;
+    line-height: 20px;
+    font-family: "Apple SD Gothic Neo";
+    font-size: large;
+    font-weight: bold;
+  }
 
-    .for-line {
-        height: 100%;
-        width: 150px;
-        position: absolute;
-        left: 42.5%;
-    }
+  .for-line {
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    left: 42.5%;
+  }
 
-    .top-timeline {
-        height: 100%;
-        min-height: 150px;
-    }
+  .top-timeline {
+    height: 100%;
+    min-height: 150px;
+  }
 
+  .left-timeline {
+    width: 40%;
+    height: 100%;
+    /*background-color: whitesmoke;*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    float: left;
+    padding: 0px 40px 0px 20px;
+  }
 
-    .left-timeline {
-        width: 40%;
-        height: 100%;
-        /*background-color: whitesmoke;*/
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        float: left;
-        padding: 0px 40px 0px 20px;
-    }
+  .right-timeline {
+    width: 40%;
+    height: 100%;
+    /*background-color: whitesmoke;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    float: right;
+    padding: 0px 20px 0px 40px;
+  }
 
-    .right-timeline {
-        width: 40%;
-        height: 100%;
-        /*background-color: whitesmoke;*/
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        float: right;
-        padding: 0px 20px 0px 40px;
-    }
+  .timeline-margin {
+    margin-bottom: 90px;
+  }
 
-    .timeline-margin {
-        margin-bottom: 90px;
-    }
+  .align-right {
+    text-align: right;
+  }
 
-    .align-right {
-        text-align: right;
-    }
+  .align-left {
+    text-align: left;
+  }
 
-    .align-left {
-        text-align: left;
-    }
+  .h2 {
+    font-size: 4rem !important;
+  }
 
-    .h2 {
-        font-size: 4rem !important;;
-    }
+  .h3 {
+    font-size: 1.75rem !important;
+  }
 
-    .h3 {
-        font-size: 1.75rem !important;;
-    }
-
-    .h4 {
-        font-size: 1.5rem !important;
-    }
-
-
+  .h4 {
+    font-size: 1.5rem !important;
+  }
 }
 
-@media(min-width: 1200px) {  /*desktop*/
-    .img-timeline {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: #40c5ef;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        left: 43.5%;
-        z-index: 3;
-        color: black;
-        line-height: 20px;
-        font-family: "Apple SD Gothic Neo";
-        font-size: large;
-        font-weight: bold;
-        margin-bottom: 50px;
-    }
+@media (min-width: 1200px) {
+  /*desktop*/
+  .img-timeline {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #40c5ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 43.5%;
+    z-index: 3;
+    color: black;
+    line-height: 20px;
+    font-family: "Apple SD Gothic Neo";
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
 
-    .for-line {
-        height: 100%;
-        width: 150px;
-        position: absolute;
-        left: 43.5%;
-    }
+  .for-line {
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    left: 43.5%;
+  }
 
-    .top-timeline {
-        height: 100%;
-        min-height: 150px;
-    }
+  .top-timeline {
+    height: 100%;
+    min-height: 150px;
+  }
 
-    .timeline-margin {
-        margin-bottom: 90px;
-    }
+  .timeline-margin {
+    margin-bottom: 90px;
+  }
 
-    .align-right {
-        text-align: right;
-    }
+  .align-right {
+    text-align: right;
+  }
 
-    .align-left {
-        text-align: left;
-    }
+  .align-left {
+    text-align: left;
+  }
 
-    .h2 {
-        font-size: 4rem !important;;
-    }
+  .h2 {
+    font-size: 4rem !important;
+  }
 
-    .h3 {
-        font-size: 1.75rem !important;;
-    }
+  .h3 {
+    font-size: 1.75rem !important;
+  }
 
-    .h4 {
-        font-size: 1.5rem !important;
-    }
-
+  .h4 {
+    font-size: 1.5rem !important;
+  }
 }
