@@ -60,6 +60,18 @@ class GalleryPage extends Component {
               </div>
             </div>
             <div>
+              <Route
+                exact
+                path={`/gallery`}
+                render={() => (
+                  <GalleryDetail
+                    idx={1}
+                    imgSrc={imgSrc1}
+                    zoomCustom={mapInfos[0][0]}
+                    initialCenter={mapInfos[0][1]}
+                  />
+                )}
+              />
               {imgSrcs.map((img, idx) => (
                 <Route
                   exact
