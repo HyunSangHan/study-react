@@ -37,8 +37,8 @@ class Contact extends Component {
             email,
             phone,
             message
-        })
-            .then( response => { this.toggle() } );
+        }).then( response => { this.toggle() } )
+        .catch(e => console.log(e));
     }
 
     toggle() {
