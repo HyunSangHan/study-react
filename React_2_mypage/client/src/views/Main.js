@@ -12,6 +12,12 @@ import SkillSet from "./SkillSet"
 import About from "./About"
 import Gallery from "./Gallery"
 import { Grid } from "react-bootstrap"
+import photoBackgroundLarge from "../images/sea.jpg"
+import photoBackgroundMedium from "../images/sea1.jpg"
+import photoBackgroundSmall from "../images/sea2.jpg"
+import photoGate from "../images/hsforgate.png"
+import icArrowDown from "../images/arrow-down.png"
+
 //import Typing from 'react-typing-animation';
 
 configureAnchors({ offset: -140, scrollDuration: 1000 })
@@ -25,19 +31,19 @@ class Main extends Component {
           <div className="body-under center">
             <img
               className="fix bg-large"
-              src="../images/sea.jpg"
+              src={photoBackgroundLarge}
               alt="my_photo"
               width="100%"
             />
             <img
               className="fix bg-medium"
-              src="../images/sea1.jpg"
+              src={photoBackgroundMedium}
               alt="my_photo"
               width="100%"
             />
             <img
               className="fix bg-small"
-              src="../images/sea2.jpg"
+              src={photoBackgroundSmall}
               alt="my_photo"
               width="100%"
             />
@@ -46,11 +52,7 @@ class Main extends Component {
           <div className="gate center">
             <div>
               <Grid>
-                <img
-                  className="gate-img"
-                  src="../images/hsforgate.png"
-                  alt="explain"
-                />
+                <img className="gate-img" src={photoGate} alt="explain" />
                 <div className="gate-txt font-sub font-white">
                   {/*<Typing loop>*/}
                   {/*<span className={"left"}>This span will get typed, then erased.</span>*/}
@@ -80,7 +82,7 @@ class Main extends Component {
           </div>
           <a href="#About">
             <div className="arrow center">
-              <img src="../images/arrow-down.png" alt="arrow-down" />
+              <img src={icArrowDown} alt="arrow-down" />
             </div>
           </a>
           <div className="body-on z-2">
