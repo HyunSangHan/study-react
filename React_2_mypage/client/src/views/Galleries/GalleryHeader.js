@@ -3,6 +3,7 @@ import "../../App.css"
 import "../../css/Header.css"
 import "../../css/Main.css"
 import { Link } from "react-router-dom"
+import icArrowBack from "../../images/arrowback.png"
 
 class GalleryHeader extends Component {
   render() {
@@ -11,7 +12,7 @@ class GalleryHeader extends Component {
         <div className="header-logo ml-3 z-4">
           <Link to="/">
             <img
-              src="../images/arrowback.png"
+              src={icArrowBack}
               alt="back"
               height={"40px;"}
               color={"white"}

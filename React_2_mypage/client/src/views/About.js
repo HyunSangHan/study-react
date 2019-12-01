@@ -3,6 +3,11 @@ import "../App.css"
 import "../css/Main.css"
 import { Grid, Row, Col } from "react-bootstrap"
 import ScrollableAnchor from "react-scrollable-anchor"
+import photoVietnam from "../images/vietnam.jpg"
+import photoGithub from "../images/github.png"
+import photoLinkedIn from "../images/linkedin.png"
+import photoFacebook from "../images/facebook.png"
+import photoInsta from "../images/instagram.png"
 
 class About extends Component {
   render() {
@@ -21,11 +26,7 @@ class About extends Component {
               <Row className="h100percent mt-9">
                 <Col xs={12} md={6}>
                   <div className="profile-right">
-                    <img
-                      className="photo"
-                      src="../../images/vietnam.jpg"
-                      alt="my_photo"
-                    />
+                    <img className="photo" src={photoVietnam} alt="my_photo" />
                   </div>
                 </Col>
                 <Col className="skin" xs={12} md={6}>
@@ -46,7 +47,7 @@ class About extends Component {
                       >
                         <img
                           className="link-icon"
-                          src="../../images/github.png"
+                          src={photoGithub}
                           alt="github"
                         />
                       </a>
@@ -57,7 +58,7 @@ class About extends Component {
                       >
                         <img
                           className="link-icon"
-                          src="../../images/linkedin.png"
+                          src={photoLinkedIn}
                           alt="linked-in"
                         />
                       </a>
@@ -68,7 +69,7 @@ class About extends Component {
                       >
                         <img
                           className="link-icon"
-                          src="../../images/facebook.png"
+                          src={photoFacebook}
                           alt="facebook"
                         />
                       </a>
@@ -79,7 +80,7 @@ class About extends Component {
                       >
                         <img
                           className="link-icon"
-                          src="../../images/instagram.png"
+                          src={photoInsta}
                           alt="instagram"
                         />
                       </a>
