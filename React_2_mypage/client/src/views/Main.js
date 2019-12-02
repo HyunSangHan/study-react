@@ -25,7 +25,7 @@ configureAnchors({ offset: -140, scrollDuration: 1000 })
 class Main extends Component {
   render() {
     return (
-      <div className="App">
+      <>
         <Header />
         <div className="body-common z-0">
           <div className="body-under center">
@@ -95,7 +95,7 @@ class Main extends Component {
           </div>
         </div>
         <Footer />
-      </div>
+      </>
     )
   }
 }
