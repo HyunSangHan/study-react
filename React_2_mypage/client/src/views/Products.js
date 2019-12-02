@@ -67,7 +67,7 @@ class Products extends Component {
 
   render() {
     return (
-      <div className="App">
+      <>
         <div className="bg-white pb-9">
           <div className="bg-white">
             <div className="title-out pt-4 pb-4">
@@ -176,7 +176,7 @@ class Products extends Component {
                         </CardTitle>
                         <CardSubtitle>
                           <h3 className="h3">DEC 2018 - PRESENT</h3>
-                          <h4 className="h4">Ruby on Sinatra</h4>
+                          <h4 className="h4">Ruby for Sinatra</h4>
                         </CardSubtitle>
                       </CardBody>
                       <img width="100%" src={thumbnail3} alt="meeting" />
@@ -218,7 +218,7 @@ class Products extends Component {
                         </CardTitle>
                         <CardSubtitle>
                           <h3 className="h3">SEP 2018 - PRESENT</h3>
-                          <h4 className="h4">Ruby on Sinatra / Fuse</h4>
+                          <h4 className="h4">Ruby for Sinatra / Fuse</h4>
                         </CardSubtitle>
                       </CardBody>
                       <img width="100%" src={thumbnail4} alt="fish" />
@@ -267,7 +267,7 @@ class Products extends Component {
                         <CardSubtitle>
                           <h3 className="h3">AUG 2018</h3>
                           <h4 className="h4">
-                            Ruby on Sinatra / Kakao Chatbot / API of KMA
+                            Ruby for Sinatra / Kakao Chatbot / API of KMA
                           </h4>
                         </CardSubtitle>
                       </CardBody>
@@ -339,7 +339,7 @@ class Products extends Component {
             </Grid>
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }

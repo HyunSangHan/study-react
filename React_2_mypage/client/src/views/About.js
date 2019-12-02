@@ -12,7 +12,7 @@ import photoInsta from "../images/instagram.png"
 class About extends Component {
   render() {
     return (
-      <div className="App">
+      <>
         <div className="bg-white pb-9">
           <div className="bg-white">
             <div className="title-out pt-4 pb-4">
@@ -91,7 +91,7 @@ class About extends Component {
             </Grid>
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }
