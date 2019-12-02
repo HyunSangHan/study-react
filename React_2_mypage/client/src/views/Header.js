@@ -5,7 +5,7 @@ import "../css/Main.css"
 import MaterialIcon from "material-icons-react"
 import photoHome from "../images/hea.png"
 
-const menuName = [
+const menuNames = [
   "about",
   "gallery",
   "timeline",
@@ -43,26 +43,13 @@ class Header extends Component {
           </a>
         </div>
         <div className="header-menus mr-3">
-          {" "}
+          &nbsp;
           {/* TODO: contribution 추가 필요 */}
-          <a className="none" href="#About">
-            <div className="font-new font-white">about</div>
-          </a>
-          <a className="none" href="#Gallery">
-            <div className="font-new font-white">gallery</div>
-          </a>
-          <a className="none" href="#Timeline">
-            <div className="font-new font-white">timeline</div>
-          </a>
-          <a className="none" href="#SkillSet">
-            <div className="font-new font-white">skill-set</div>
-          </a>
-          <a className="none" href="#Products">
-            <div className="font-new font-white">products</div>
-          </a>
-          <a className="none" href="#Contact">
-            <div className="font-new font-white">contact</div>
-          </a>
+          {menuNames.map(menu => (
+            <a className="none" href={`#${menu}`}>
+              <div className="font-new font-white">{menu}</div>
+            </a>
+          ))}
         </div>
 
         <div className="header-hamburger mr-3 z-4">
@@ -75,54 +62,16 @@ class Header extends Component {
             <div className="header-hamburger-open z-4">
               <div className="header-hamburger-limit z-4">
                 <div className="header-hamburger-menus z-4">
-                  <a className="none" href="#about">
-                    <div
-                      className="font-new font-white"
-                      onClick={this.clickMenu}
-                    >
-                      about
-                    </div>
-                  </a>
-                  <a className="none" href="#gallery">
-                    <div
-                      className="font-new font-white"
-                      onClick={this.clickMenu}
-                    >
-                      gallery
-                    </div>
-                  </a>
-                  <a className="none" href="#timeline">
-                    <div
-                      className="font-new font-white"
-                      onClick={this.clickMenu}
-                    >
-                      timeline
-                    </div>
-                  </a>
-                  <a className="none" href="#skill-set">
-                    <div
-                      className="font-new font-white"
-                      onClick={this.clickMenu}
-                    >
-                      skill-set
-                    </div>
-                  </a>
-                  <a className="none" href="#products">
-                    <div
-                      className="font-new font-white"
-                      onClick={this.clickMenu}
-                    >
-                      products
-                    </div>
-                  </a>
-                  <a className="none" href="#contact">
-                    <div
-                      className="font-new font-white"
-                      onClick={this.clickMenu}
-                    >
-                      contact
-                    </div>
-                  </a>
+                  {menuNames.map(menu => (
+                    <a className="none" href={`#${menu}`}>
+                      <div
+                        className="font-new font-white"
+                        onClick={this.clickMenu}
+                      >
+                        {menu}
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
