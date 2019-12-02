@@ -1,10 +1,18 @@
 import React, { Component } from "react"
-// import ReactDOM from 'react-dom';
 import "../App.css"
 import "../css/Header.css"
 import "../css/Main.css"
 import MaterialIcon from "material-icons-react"
 import photoHome from "../images/hea.png"
+
+const menuName = [
+  "about",
+  "gallery",
+  "timeline",
+  "skill-set",
+  "products",
+  "contact"
+]
 
 class Header extends Component {
   constructor(props) {
@@ -14,29 +22,17 @@ class Header extends Component {
     }
   }
 
-  // componentDidMount(){
-  //     window.addEventListener('scroll', this.onScroll);
-  //     console.log("componentDidMount");
-  // }
-
-  clickMenu = () => () => {
+  clickMenu = () => {
     this.setState({
       openMenubar: !this.state.openMenubar
     })
   }
 
-  clickBlackBG = () => () => {
+  clickBlackBG = () => {
     this.setState({
       openMenubar: false
     })
   }
-
-  // onScroll = (e) => {
-  //     const scrollTop = ('scroll', e.srcElement.scrollingElement.scrollTop);
-  //     const aboutTop = ReactDOM.findDOMNode(this.refs.about).getBoundingClientRect().top;
-  //     console.log(scrollTop);
-  //     console.log(aboutTop);
-  // };
 
   render() {
     return (
@@ -47,6 +43,8 @@ class Header extends Component {
           </a>
         </div>
         <div className="header-menus mr-3">
+          {" "}
+          {/* TODO: contribution 추가 필요 */}
           <a className="none" href="#About">
             <div className="font-new font-white">about</div>
           </a>
@@ -68,7 +66,7 @@ class Header extends Component {
         </div>
 
         <div className="header-hamburger mr-3 z-4">
-          <div className="z-4 mt-2" onClick={this.clickMenu()}>
+          <div className="z-4 mt-2" onClick={this.clickMenu}>
             <MaterialIcon icon="menu" size="medium" color="white" />
           </div>
         </div>
@@ -77,50 +75,50 @@ class Header extends Component {
             <div className="header-hamburger-open z-4">
               <div className="header-hamburger-limit z-4">
                 <div className="header-hamburger-menus z-4">
-                  <a className="none" href="#About">
+                  <a className="none" href="#about">
                     <div
                       className="font-new font-white"
-                      onClick={this.clickMenu()}
+                      onClick={this.clickMenu}
                     >
                       about
                     </div>
                   </a>
-                  <a className="none" href="#Gallery">
+                  <a className="none" href="#gallery">
                     <div
                       className="font-new font-white"
-                      onClick={this.clickMenu()}
+                      onClick={this.clickMenu}
                     >
                       gallery
                     </div>
                   </a>
-                  <a className="none" href="#Timeline">
+                  <a className="none" href="#timeline">
                     <div
                       className="font-new font-white"
-                      onClick={this.clickMenu()}
+                      onClick={this.clickMenu}
                     >
                       timeline
                     </div>
                   </a>
-                  <a className="none" href="#SkillSet">
+                  <a className="none" href="#skill-set">
                     <div
                       className="font-new font-white"
-                      onClick={this.clickMenu()}
+                      onClick={this.clickMenu}
                     >
                       skill-set
                     </div>
                   </a>
-                  <a className="none" href="#Products">
+                  <a className="none" href="#products">
                     <div
                       className="font-new font-white"
-                      onClick={this.clickMenu()}
+                      onClick={this.clickMenu}
                     >
                       products
                     </div>
                   </a>
-                  <a className="none" href="#Contact">
+                  <a className="none" href="#contact">
                     <div
                       className="font-new font-white"
-                      onClick={this.clickMenu()}
+                      onClick={this.clickMenu}
                     >
                       contact
                     </div>
@@ -130,7 +128,7 @@ class Header extends Component {
             </div>
             <div
               className="body-under-black fix z-2"
-              onClick={this.clickBlackBG()}
+              onClick={this.clickBlackBG}
             />
           </div>
         )}

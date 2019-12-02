@@ -81,7 +81,7 @@ class Main extends Component {
               </Grid>
             </div>
           </div>
-          <a href="#About">
+          <a href="#about">
             <div className="arrow center">
               <img src={icArrowDown} alt="arrow-down" />
             </div>

@@ -40,7 +40,7 @@ class Gallery extends Component {
           <div className={this.props.bgColorGrey ? "bg-grey" : "bg-white"}>
             <div className="title-out pt-4 pb-4">
               <div className="title-in">
-                <ScrollableAnchor id={"Gallery"}>
+                <ScrollableAnchor id={"gallery"}>
                   <h1 className="font-5 font-new">gallery</h1>
                 </ScrollableAnchor>
               </div>
