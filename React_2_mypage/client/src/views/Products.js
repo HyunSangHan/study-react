@@ -68,8 +68,10 @@ class Products extends Component {
   render() {
     return (
       <>
-        <div className="bg-white pb-9">
-          <div className="bg-white">
+        <div
+          className={this.props.bgColorGrey ? "bg-grey pb-9" : "bg-white pb-9"}
+        >
+          <div className={this.props.bgColorGrey ? "bg-grey" : "bg-white"}>
             <div className="title-out pt-4 pb-4">
               <div className="title-except">
                 <ScrollableAnchor id={"Products"}>
