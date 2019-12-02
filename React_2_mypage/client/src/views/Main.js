@@ -1,16 +1,17 @@
 import React, { Component } from "react"
 import Header from "./Header.js"
-import Footer from "./Footer.js"
-import Contact from "./Contact.js"
+import About from "./About"
+import Gallery from "./Gallery"
+import Timeline from "../views/Timeline.js"
+import SkillSet from "./SkillSet"
 import Products from "./Products.js"
+import Contribution from "./Contribution.js"
+import Contact from "./Contact.js"
+import Footer from "./Footer.js"
 import "../App.css"
 import "../css/Main.css"
 import "../css/Timeline.css"
-import Timeline from "../views/Timeline.js"
 import { configureAnchors } from "react-scrollable-anchor"
-import SkillSet from "./SkillSet"
-import About from "./About"
-import Gallery from "./Gallery"
 import { Grid } from "react-bootstrap"
 import photoBackgroundLarge from "../images/sea.jpg"
 import photoBackgroundMedium from "../images/sea1.jpg"
@@ -86,15 +87,16 @@ class Main extends Component {
             </div>
           </a>
           <div className="body-on z-2">
-            <About />
-            <Gallery />
-            <Timeline />
-            <SkillSet />
-            <Products />
-            <Contact />
+            <About bgColorGrey={false} />
+            <Gallery bgColorGrey={true} />
+            <Timeline bgColorGrey={false} />
+            <SkillSet bgColorGrey={true} />
+            <Products bgColorGrey={false} />
+            <Contribution bgColorGrey={true} />
+            <Contact bgColorGrey={false} />
           </div>
         </div>
-        <Footer />
+        <Footer bgColorGrey={true} />
       </>
     )
   }
