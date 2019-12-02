@@ -14,7 +14,7 @@ class Timeline extends Component {
         <div className={this.props.bgColorGrey ? "bg-grey" : "bg-white"}>
           <div className="title-out pt-4 pb-4">
             <div className="title-in">
-              <ScrollableAnchor id={"Timeline"}>
+              <ScrollableAnchor id={"timeline"}>
                 <h1 className="font-5 font-new">timeline</h1>
               </ScrollableAnchor>
             </div>
