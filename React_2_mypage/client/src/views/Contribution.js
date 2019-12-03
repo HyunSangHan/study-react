@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import "../App.css"
 import "../css/Main.css"
 import styled, { css } from "styled-components"
@@ -35,31 +35,35 @@ const ListGroupItemCustomContent = styled(ListGroupItem)`
 `
 
 const BadgeCustom = styled(Badge)`
-  margin-left: 4px !important;
+  margin: 0 0.25rem 0.5rem !important;
 
-  ${props => {
-    props.type === "Merged" &&
-    css`
-      background-color: #6f42c1 !important;
-      color: #fff !important;
-    `(props.type === "Open") &&
-    css`
-      background-color: #2cbe4e !important;
-      color: #fff !important;
-    `(props.type === "Closed") &&
-    css`
-      background-color: #cb2431 !important;
-      color: #fff !important;
-    `(props.type === "Appoved") && //TODO:
-    css`
-      background-color: #cb2431 !important;
-      color: #fff !important;
-    `(props.type === "Released") && //TODO:
-      css`
-        background-color: #cb2431 !important;
-        color: #fff !important;
-      `
-  }}
+  &.Merged {
+    background-color: #6f42c1 !important;
+    color: #fff !important;
+  }
+  &.Open {
+    background-color: #2cbe4e !important;
+    color: #fff !important;
+  }
+  &.Closed {
+    background-color: #cb2431 !important;
+    color: #fff !important;
+  }
+  &.Approved {
+    background-color: #fff !important;
+    color: #6f42c1 !important;
+    border: 1px solid #6f42c1 !important;
+  }
+  &.Released {
+    background-color: #fff !important;
+    color: #1e1e1e !important;
+    border: 1px solid #1e1e1e !important;
+  }
+  &.ChangesRequested {
+    background-color: #fff !important;
+    color: #cb2431 !important;
+    border: 1px solid #cb2431 !important;
+  }
 `
 
 const data = [
@@ -70,15 +74,15 @@ const data = [
         title:
           "Add a description for installing GraphicsMagick or ImageMagick in docs/README.md",
         uri: "https://github.com/mochajs/mocha/pull/4045",
+        prStatus: "Merged",
         reviewStatus: "",
-        prStatus: "",
         releaseStatus: ""
       },
       {
         title: "Change sh to bash for code block in docs/index.md",
         uri: "https://github.com/mochajs/mocha/pull/4066",
+        prStatus: "Merged",
         reviewStatus: "",
-        prStatus: "",
         releaseStatus: ""
       }
     ]
@@ -89,8 +93,8 @@ const data = [
       {
         title: "Change sentence on hook-intro",
         uri: "https://github.com/reactjs/ko.reactjs.org/pull/188",
+        prStatus: "Merged",
         reviewStatus: "",
-        prStatus: "",
         releaseStatus: ""
       }
     ]
@@ -111,8 +115,8 @@ const ContentWrapper = ({ repositoryName, contributionSets }) => {
               key={idx}
               title={contribution.title}
               uri={contribution.uri}
-              reviewStatus={contribution.reviewStatus}
               prStatus={contribution.prStatus}
+              reviewStatus={contribution.reviewStatus}
               releaseStatus={contribution.releaseStatus}
             />
           )
@@ -124,18 +128,19 @@ const ContentWrapper = ({ repositoryName, contributionSets }) => {
 
 const ContributionContent = props => {
   const { title, uri, reviewStatus, prStatus, releaseStatus } = props
+  console.log(prStatus)
   return (
     <ListGroupItemCustomContent>
       <ListGroupItemHeading>
-        {title}
-
+        {prStatus && <BadgeCustom className={prStatus}>{prStatus}</BadgeCustom>}
         {reviewStatus && (
-          <BadgeCustom type={reviewStatus}>{reviewStatus}</BadgeCustom>
+          <BadgeCustom className={reviewStatus}>{reviewStatus}</BadgeCustom>
         )}
-        {prStatus && <BadgeCustom type={prStatus}>{prStatus}</BadgeCustom>}
         {releaseStatus && (
-          <BadgeCustom type={releaseStatus}>{releaseStatus}</BadgeCustom>
+          <BadgeCustom className={releaseStatus}>{releaseStatus}</BadgeCustom>
         )}
+        <br />
+        {title}
       </ListGroupItemHeading>
       <ListGroupItemText>
         <a href={uri} target="_blank" rel="noopener noreferrer">
