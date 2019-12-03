@@ -105,9 +105,10 @@ const ContentWrapper = ({ repositoryName, contributionSets }) => {
           <ListGroupItemHeading>{repositoryName}</ListGroupItemHeading>
         </ListGroupItemCustomTitle>
 
-        {contributionSets.map(contribution => {
+        {contributionSets.map((contribution, idx) => {
           return (
             <ContributionContent
+              key={idx}
               title={contribution.title}
               uri={contribution.uri}
               reviewStatus={contribution.reviewStatus}
@@ -159,8 +160,9 @@ const Contribution = props => {
           </div>
           <Grid>
             <Row className="h100percent mt-9">
-              {data.map(datum => (
+              {data.map((datum, idx) => (
                 <ContentWrapper
+                  key={idx}
                   repositoryName={datum.repositoryName}
                   contributionSets={datum.contributionSets}
                 />

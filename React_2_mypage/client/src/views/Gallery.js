@@ -49,9 +49,9 @@ class Gallery extends Component {
               <Col xs={12} md={12}>
                 <div className="top-gallery">
                   {imgSrcs.map((imgList, firstIdx) => (
-                    <div className={galleryAlign[firstIdx]}>
+                    <div key={firstIdx} className={galleryAlign[firstIdx]}>
                       {imgList.map((img, secondIdx) => (
-                        <div>
+                        <div key={secondIdx}>
                           <Link to={`/gallery/${secondIdx + 1}`}>
                             <img
                               className="each-gallery"
