@@ -45,8 +45,8 @@ class Header extends Component {
         <div className="header-menus mr-3">
           &nbsp;
           {/* TODO: contribution 추가 필요 */}
-          {menuNames.map(menu => (
-            <a className="none" href={`#${menu}`}>
+          {menuNames.map((menu, idx) => (
+            <a key={idx} className="none" href={`#${menu}`}>
               <div className="font-new font-white">{menu}</div>
             </a>
           ))}
@@ -62,8 +62,8 @@ class Header extends Component {
             <div className="header-hamburger-open z-4">
               <div className="header-hamburger-limit z-4">
                 <div className="header-hamburger-menus z-4">
-                  {menuNames.map(menu => (
-                    <a className="none" href={`#${menu}`}>
+                  {menuNames.map((menu, idx) => (
+                    <a key={idx} className="none" href={`#${menu}`}>
                       <div
                         className="font-new font-white"
                         onClick={this.clickMenu}

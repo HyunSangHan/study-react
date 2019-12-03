@@ -31,7 +31,7 @@ class SkillSet extends Component {
             <Grid>
               <Row className="h100percent mt-9">
                 {skillSets.map((skill, idx) => (
-                  <Col xs={12} md={4}>
+                  <Col key={idx} xs={12} md={4}>
                     <div className="flex-center h-100">
                       <img alt={skill[0]} src={skill[1]} className={skill[2]} />
                     </div>

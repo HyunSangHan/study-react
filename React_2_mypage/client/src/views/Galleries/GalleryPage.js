@@ -47,7 +47,7 @@ class GalleryPage extends Component {
             <div className="top-thumbnail">
               <div className="flex-thumbnail">
                 {imgSrcs.map((img, idx) => (
-                  <div>
+                  <div key={idx}>
                     <Link to={`/gallery/${idx + 1}`}>
                       <img
                         className="each-gallery"
@@ -78,6 +78,7 @@ class GalleryPage extends Component {
                   path={`/gallery/${idx + 1}`}
                   render={() => (
                     <GalleryDetail
+                      key={idx}
                       idx={idx + 1}
                       imgSrc={img}
                       zoomCustom={mapInfos[idx][0]}
