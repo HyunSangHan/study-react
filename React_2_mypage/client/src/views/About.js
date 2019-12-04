@@ -37,9 +37,10 @@ class About extends Component {
                     <h3 className="mt-3 mb-5">Developer</h3>
                     <h4>
                       I always try to move forward with new learning. I work as
-                      a service planner, but I take my own personal time to
-                      develop toy projects. If you have a good idea for a new
-                      try, feel free to contact me anytime.
+                      a product manager, but I take my own personal time to
+                      develop toy projects and to contribute to open source
+                      projects. If you have a good idea for a new try, feel free
+                      to contact me anytime.
                     </h4>
                     <div className="bottom">
                       <a
