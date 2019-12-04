@@ -1,7 +1,7 @@
 import React from "react"
 import "../App.css"
 import "../css/Main.css"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { Grid, Row, Col } from "react-bootstrap"
 import ScrollableAnchor from "react-scrollable-anchor"
 import {
@@ -13,7 +13,7 @@ import {
 } from "reactstrap"
 
 const ListGroupItemCustomTitle = styled(ListGroupItem)`
-  border: 2px solid #fafafa !important;
+  border: 1px solid #fafafa !important;
   background-color: #1e1e1e !important;
   color: #fff !important;
   padding: 1.5rem 1.25rem 1.25rem !important;
@@ -23,9 +23,9 @@ const ListGroupItemCustomTitle = styled(ListGroupItem)`
 `
 
 const ListGroupItemCustomContent = styled(ListGroupItem)`
-  border: 2px solid #fafafa !important;
+  border: 1px solid #fafafa !important;
   background-color: #fff !important;
-  padding: 1.5rem 1.25rem !important;
+  padding: 2rem 1.25rem !important;
   h5 {
     font-size: 1.5rem !important;
   }
@@ -79,23 +79,51 @@ const data = [
         releaseStatus: ""
       },
       {
+        title: "Fix docs.watch for the API docs(#4060)",
+        uri: "https://github.com/mochajs/mocha/pull/4061",
+        prStatus: "Open",
+        reviewStatus: "Approved",
+        releaseStatus: ""
+      },
+      {
         title: "Change sh to bash for code block in docs/index.md",
         uri: "https://github.com/mochajs/mocha/pull/4066",
         prStatus: "Merged",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
+        title: "Add script to check unit test coverage",
+        uri: "https://github.com/mochajs/mocha/pull/4076",
+        prStatus: "Open",
+        reviewStatus: "Approved",
+        releaseStatus: ""
+      },
+      {
+        title: "Use light color scheme on Mocha API document",
+        uri: "https://github.com/mochajs/mocha-docdash/pull/3",
+        prStatus: "Open",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
+        title: "Adjust white space for view on mobile",
+        uri: "https://github.com/mochajs/mocha-docdash/pull/4",
+        prStatus: "Open",
         reviewStatus: "",
         releaseStatus: ""
       }
     ]
   },
   {
-    repositoryName: "Reactjs / ko.reactjs.org",
+    repositoryName: "ReactJs / ko.reactjs.org",
     contributionSets: [
       {
         title: "Change sentence on hook-intro",
         uri: "https://github.com/reactjs/ko.reactjs.org/pull/188",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: ""
+        releaseStatus: "Released"
       }
     ]
   }
@@ -128,7 +156,6 @@ const ContentWrapper = ({ repositoryName, contributionSets }) => {
 
 const ContributionContent = props => {
   const { title, uri, reviewStatus, prStatus, releaseStatus } = props
-  console.log(prStatus)
   return (
     <ListGroupItemCustomContent>
       <ListGroupItemHeading>
@@ -139,8 +166,7 @@ const ContributionContent = props => {
         {releaseStatus && (
           <BadgeCustom className={releaseStatus}>{releaseStatus}</BadgeCustom>
         )}
-        <br />
-        {title}
+        <br /> {title}
       </ListGroupItemHeading>
       <ListGroupItemText>
         <a href={uri} target="_blank" rel="noopener noreferrer">
@@ -158,8 +184,8 @@ const Contribution = props => {
         <div className="bg-grey">
           <div className="title-out pt-4 pb-4">
             <div className="title-except">
-              <ScrollableAnchor id={"contribution"}>
-                <h1 className="font-5 font-new">contribution</h1>
+              <ScrollableAnchor id={"contributions"}>
+                <h1 className="font-5 font-new">contributions</h1>
               </ScrollableAnchor>
             </div>
           </div>
