@@ -11,6 +11,7 @@ const menuNames = [
   "timeline",
   "skill-set",
   "products",
+  "contributions",
   "contact"
 ]
 
