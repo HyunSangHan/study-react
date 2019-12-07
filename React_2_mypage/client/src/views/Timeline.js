@@ -58,7 +58,7 @@ class Timeline extends Component {
                         Shopping Search (APR 2018 - PRESENT)
                       </h3>
                       <h4 className="h4 mb-5">
-                        Service & strategy planning for{" "}
+                        Service & strategy planning for&nbsp;
                         <a
                           href="https://shopping.naver.com/"
                           target="_blank"
@@ -134,8 +134,8 @@ class Timeline extends Component {
                           rel="noopener noreferrer"
                         >
                           LIKELION
-                        </a>{" "}
-                        (* after graduation)
+                        </a>
+                        &nbsp; (* after graduation)
                       </h3>
                       <h4 className="h4">Programming Team Play</h4>
                     </div>

@@ -76,28 +76,6 @@ class Contact extends Component {
                         <h1 className="font-5 font-new">contact</h1>
                       </ScrollableAnchor>
                     </div>
-                    {/*<div className="font-2 mt-6">*/}
-                    {/*<div className="mt-3">*/}
-                    {/*<MaterialIcon icon="place" color="black"/>*/}
-                    {/*<a href = "https://goo.gl/maps/AVxk24wM6P92" target = "_blank">*/}
-                    {/*<div className="ml-3">*/}
-                    {/*NAVER Green Factory*/}
-                    {/*</div>*/}
-                    {/*</a>*/}
-                    {/*</div>*/}
-                    {/*<div className="mt-3">*/}
-                    {/*<MaterialIcon icon="phone_iphone" color="black"/>*/}
-                    {/*<div className="ml-3">*/}
-                    {/*+82)10-4377-6423*/}
-                    {/*</div>*/}
-                    {/*</div>*/}
-                    {/*<div className="mt-3">*/}
-                    {/*<MaterialIcon icon="email" color="black"/>*/}
-                    {/*<div className="ml-3">*/}
-                    {/*gustkd3@gmail.com*/}
-                    {/*</div>*/}
-                    {/*</div>*/}
-                    {/*</div>*/}
                   </div>
                 </div>
               </Col>
@@ -179,7 +157,8 @@ class Contact extends Component {
                 </ModalHeader>
                 <ModalBody className="h4">
                   In fact, this message is not sent to my main mail account. For
-                  a quick response, please email me at the address below: <br />{" "}
+                  a quick response, please email me at the address below: &nbsp;
+                  <br />
                   gustkd3@gmail.com
                 </ModalBody>
                 <ModalFooter>

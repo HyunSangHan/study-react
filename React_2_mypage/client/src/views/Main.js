@@ -60,21 +60,20 @@ class Main extends Component {
                   {/*<Typing.Backspace count={10} />*/}
                   {/*with ease.*/}
                   {/*</Typing>*/}
-                  You can access{" "}
+                  You can access&nbsp;
                   <i>
                     this.state(.about, .gallery, .timeline, .skill-set,
-                    .products){" "}
+                    .products, .contributions)&nbsp;
                   </i>
-                  of
+                  of&nbsp;
                   <font color="#59d1fb">
-                    {" "}
                     <b>H</b>
                   </font>
                   YUN
                   <font color="#59d1fb">
                     <b>S</b>
                   </font>
-                  ANG through this site. I will update my status through{" "}
+                  ANG through this site. I will update my status through&nbsp;
                   <i>this.setState </i>
                   whenever there is some change.
                 </div>
