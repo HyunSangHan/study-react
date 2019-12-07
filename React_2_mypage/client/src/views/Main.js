@@ -24,29 +24,53 @@ import icArrowDown from "../images/arrow-down.png"
 configureAnchors({ offset: -140, scrollDuration: 1000 })
 
 class Main extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      devicetype: null,
+      backgroundSrc: null
+    }
+  }
+
+  makeResponsiveBackground = () => {
+    if (window.innerWidth <= 767) {
+      this.setState({
+        devicetype: "mobile",
+        backgroundSrc: photoBackgroundSmall
+      })
+    } else if (window.innerWidth <= 991) {
+      this.setState({
+        devicetype: "tablet",
+        backgroundSrc: photoBackgroundMedium
+      })
+    } else {
+      this.setState({
+        devicetype: "desktop",
+        backgroundSrc: photoBackgroundLarge
+      })
+    }
+  }
+
+  componentDidMount() {
+    this.makeResponsiveBackground()
+    window.addEventListener("resize", () => {
+      this.makeResponsiveBackground()
+    })
+  }
+
   render() {
+    const { devicetype, backgroundSrc } = this.state
     return (
       <>
         <Header />
         <div className="body-common z-0">
           <div className="body-under center">
             <img
-              className="fix bg-large"
-              src={photoBackgroundLarge}
+              className="fix"
+              src={backgroundSrc}
               alt="my_photo"
               width="100%"
-            />
-            <img
-              className="fix bg-medium"
-              src={photoBackgroundMedium}
-              alt="my_photo"
-              width="100%"
-            />
-            <img
-              className="fix bg-small"
-              src={photoBackgroundSmall}
-              alt="my_photo"
-              width="100%"
+              devicetype={devicetype}
             />
             <div className="body-under-black fix" />
           </div>

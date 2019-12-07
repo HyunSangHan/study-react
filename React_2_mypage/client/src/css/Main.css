@@ -206,14 +206,6 @@
     font-weight: 400;
   }
 
-  .bg-medium {
-    display: none;
-  }
-
-  .bg-large {
-    display: none;
-  }
-
   .gate-img {
     position: relative;
     max-width: 100%;
@@ -371,14 +363,6 @@
     line-height: 1.7;
   }
 
-  /*.bg-large {*/
-  /*display: none;*/
-  /*}*/
-
-  .bg-small {
-    display: none;
-  }
-
   .arrow {
     position: absolute;
     width: 100vw;
@@ -402,15 +386,6 @@
 }
 
 @media (min-width: 992px) {
-  /*desktop*/
-  .bg-small {
-    display: none;
-  }
-
-  .bg-medium {
-    display: none;
-  }
-
   .font-sub {
     font-family: "Apple SD Gothic Neo";
     font-size: 2.1rem;
