@@ -55,12 +55,12 @@ class About extends Component {
                       {outLinks.map((outLink, idx) => {
                         return (
                           <a
+                            key={idx}
                             href={outLink[2]}
                             rel="noopener noreferrer"
                             target="_blank"
                           >
                             <img
-                              key={idx}
                               className="link-icon"
                               src={outLink[1]}
                               alt={outLink[0]}
