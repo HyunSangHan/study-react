@@ -94,6 +94,11 @@ class Contact extends Component {
                         id="name"
                         bsSize="lg"
                         placeholder="Your Name"
+                        style={
+                          this.props.bgColorGrey
+                            ? null
+                            : { backgroundColor: "#fafafa" }
+                        }
                         onChange={this.handleChange}
                       />
                     </FormGroup>
@@ -106,6 +111,11 @@ class Contact extends Component {
                         id="email"
                         bsSize="lg"
                         placeholder="Your Email Address"
+                        style={
+                          this.props.bgColorGrey
+                            ? null
+                            : { backgroundColor: "#fafafa" }
+                        }
                         onChange={this.handleChange}
                       />
                     </FormGroup>
@@ -118,6 +128,11 @@ class Contact extends Component {
                         id="phone"
                         bsSize="lg"
                         placeholder="Your Phone Number"
+                        style={
+                          this.props.bgColorGrey
+                            ? null
+                            : { backgroundColor: "#fafafa" }
+                        }
                         onChange={this.handleChange}
                       />
                     </FormGroup>
@@ -130,6 +145,11 @@ class Contact extends Component {
                         id="message"
                         bsSize="lg"
                         placeholder="Your Message"
+                        style={
+                          this.props.bgColorGrey
+                            ? null
+                            : { backgroundColor: "#fafafa" }
+                        }
                         onChange={this.handleChange}
                       />
                     </FormGroup>
