@@ -8,9 +8,9 @@ import logoDjango from "../images/Django.png"
 import logoSinatra from "../images/Sinatra.png"
 
 const skillSets = [
-  ["React", logoReact, "skill-react"],
-  ["Django", logoDjango, "skill-django"],
-  ["Ruby for Sinatra", logoSinatra, "skill-sinatra"]
+  { name: "React", logo: logoReact, className: "skill-react" },
+  { name: "Django", logo: logoDjango, className: "skill-django" },
+  { name: "Ruby for Sinatra", logo: logoSinatra, className: "skill-sinatra" }
 ]
 
 class SkillSet extends Component {
@@ -33,7 +33,11 @@ class SkillSet extends Component {
                 {skillSets.map((skill, idx) => (
                   <Col key={idx} xs={12} md={4}>
                     <div className="flex-center h-100">
-                      <img alt={skill[0]} src={skill[1]} className={skill[2]} />
+                      <img
+                        alt={skill.name}
+                        src={skill.logo}
+                        className={skill.className}
+                      />
                     </div>
                   </Col>
                 ))}
