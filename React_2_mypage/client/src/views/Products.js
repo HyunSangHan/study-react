@@ -22,15 +22,79 @@ import thumbnail4 from "../images/fish.png"
 import thumbnail5 from "../images/finedust.png"
 import thumbnail6 from "../images/blackjack.png"
 
+const thumbnails = [
+  thumbnail1,
+  thumbnail2,
+  thumbnail3,
+  thumbnail4,
+  thumbnail5,
+  thumbnail6
+]
+const productInfos = [
+  {
+    name: "this.state.",
+    period: "JAN - FEB 2019",
+    skill: "ReactJS",
+    description:
+      "My own profile page for introducing myself especially related to web development. designed and developed by myself.",
+    alt: "mypage",
+    outlinks: [{ type: "Link", uri: "/" }]
+  },
+  {
+    name: "Web Calculator",
+    period: "JAN 2019",
+    skill: "ReactJS",
+    description:
+      "Web based calculator for studying React and HTML+CSS. Optimized for mobile.",
+    alt: "calculator",
+    outlinks: [{ type: "Link", uri: "http://calculator.dothome.co.kr/" }]
+  },
+  {
+    name: "Meeting Time",
+    period: "DEC 2018 - PRESENT",
+    skill: "Ruby for Sinatra",
+    description:
+      "Meeting matching service on a first-come-first-served basis only for workers.",
+    alt: "meeting-time",
+    outlinks: [
+      { type: "Github", uri: "https://github.com/HyunSangHan/BRGG_Meeting-App" }
+    ]
+  },
+  {
+    name: "GoGo Fish",
+    period: "SEP 2018 - PRESENT",
+    skill: "Ruby for Sinatra / Fuse",
+    description: "Kid's habits formation helper service.",
+    alt: "gogo-fish",
+    outlinks: [
+      { type: "Link", uri: "https://bomin.myportfolio.com/invalid" },
+      { type: "Github", uri: "https://github.com/zzokokeic/barogagi1gibateam" }
+    ]
+  },
+  {
+    name: "Fine dust Bot ",
+    period: "AUG 2018",
+    skill: "Ruby for Sinatra / Kakao Chatbot / API of KMA",
+    description:
+      "Chatbot about fine dust in Kakaotalk using openAPI of Korea Meteorological Administration.",
+    alt: "dustbot",
+    outlinks: []
+  },
+  {
+    name: "BlackJack",
+    period: "NOV - DEC 2011",
+    skill: "Java",
+    description: "Card game for an assignment when I was in the university.",
+    alt: "blackjack",
+    outlinks: [
+      { type: "Github", uri: "https://github.com/HyunSangHan/BlackJack" }
+    ]
+  }
+]
+
 class Products extends Component {
   constructor(props) {
     super(props)
-    this.toggle1 = this.toggle1.bind(this)
-    this.toggle2 = this.toggle2.bind(this)
-    this.toggle3 = this.toggle3.bind(this)
-    this.toggle4 = this.toggle4.bind(this)
-    this.toggle5 = this.toggle5.bind(this)
-    this.toggle6 = this.toggle6.bind(this)
     this.state = {
       collapse1: false,
       collapse2: false,
@@ -41,27 +105,27 @@ class Products extends Component {
     }
   }
 
-  toggle1() {
-    this.setState({ collapse1: !this.state.collapse1 })
+  toggle1 = () => {
+    this.setState({ collapse: !this.state.collapse1 })
   }
 
-  toggle2() {
+  toggle2 = () => {
     this.setState({ collapse2: !this.state.collapse2 })
   }
 
-  toggle3() {
+  toggle3 = () => {
     this.setState({ collapse3: !this.state.collapse3 })
   }
 
-  toggle4() {
+  toggle4 = () => {
     this.setState({ collapse4: !this.state.collapse4 })
   }
 
-  toggle5() {
+  toggle5 = () => {
     this.setState({ collapse5: !this.state.collapse5 })
   }
 
-  toggle6() {
+  toggle6 = () => {
     this.setState({ collapse6: !this.state.collapse6 })
   }
 
@@ -81,262 +145,57 @@ class Products extends Component {
             </div>
             <Grid>
               <Row className="h100percent mt-9">
-                <Col xs={12} md={6} lg={4} xl={3}>
-                  <div className="mb-5">
-                    <Card>
-                      <CardBody>
-                        <CardTitle>
-                          <h2 className="h2">this.state.</h2>
-                        </CardTitle>
-                        <CardSubtitle>
-                          <h3 className="h3">JAN - FEB 2019</h3>
-                          <h4 className="h4">ReactJS</h4>
-                        </CardSubtitle>
-                      </CardBody>
-                      <img width="100%" src={thumbnail1} alt="mypage" />
-                      <Button
-                        className="toggle"
-                        color="secondary"
-                        onClick={this.toggle1}
-                        style={{ marginBottom: "1rem" }}
-                      >
-                        More info
-                      </Button>
-                      <Collapse isOpen={this.state.collapse1}>
-                        <CardBody>
-                          <h4 className="h4">
-                            <CardText>
-                              My own profile page for introducing myself
-                              especially related to web development. designed
-                              and developed by myself.
-                            </CardText>
-                          </h4>
-                          <CardLink className="font-3" href="/" target="_blank">
-                            Link
-                          </CardLink>
-                        </CardBody>
-                      </Collapse>
-                    </Card>
-                  </div>
-                </Col>
-
-                <Col xs={12} md={6} lg={4} xl={3}>
-                  <div className="mb-5">
-                    <Card>
-                      <CardBody>
-                        <CardTitle>
-                          <h2 className="h2">Web Calculator</h2>
-                        </CardTitle>
-                        <CardSubtitle>
-                          <h3 className="h3">JAN 2019</h3>
-                          <h4 className="h4">ReactJS</h4>
-                        </CardSubtitle>
-                      </CardBody>
-                      {/*<div className={"body-on"}>*/}
-                      {/*<div className={"z-3"}>*/}
-                      <img width="100%" src={thumbnail2} alt="calculator" />
-                      {/*</div>*/}
-                      {/*<div className={"calculator z-5"}>*/}
-                      {/*<Calculator/>*/}
-                      {/*</div>*/}
-                      {/*</div>*/}
-                      <Button
-                        className="toggle"
-                        color="secondary"
-                        onClick={this.toggle2}
-                        style={{ marginBottom: "1rem" }}
-                      >
-                        More info
-                      </Button>
-                      <Collapse isOpen={this.state.collapse2}>
-                        <CardBody>
-                          <h4 className="h4">
-                            <CardText>
-                              Web based calculator for studying React and
-                              HTML+CSS. Optimized for mobile.
-                            </CardText>
-                          </h4>
-                          <CardLink
-                            className="font-3"
-                            href="http://calculator.dothome.co.kr/"
-                            target="_blank"
+                {productInfos.map((product, idx) => {
+                  return (
+                    <Col xs={12} md={6} lg={4} xl={3} key={idx}>
+                      <div className="mb-5">
+                        <Card>
+                          <CardBody>
+                            <CardTitle>
+                              <h2 className="h2">{product.name}</h2>
+                            </CardTitle>
+                            <CardSubtitle>
+                              <h3 className="h3">{product.period}</h3>
+                              <h4 className="h4">{product.skill}</h4>
+                            </CardSubtitle>
+                          </CardBody>
+                          <img
+                            width="100%"
+                            src={thumbnails[idx]}
+                            alt={product.alt}
+                          />
+                          <Button
+                            className="toggle"
+                            color="secondary"
+                            onClick={this.toggle1}
+                            style={{ marginBottom: "1rem" }}
                           >
-                            Link
-                          </CardLink>
-                        </CardBody>
-                      </Collapse>
-                    </Card>
-                  </div>
-                </Col>
-
-                <Col xs={12} md={6} lg={4} xl={3}>
-                  <div className="mb-5">
-                    <Card>
-                      <CardBody>
-                        <CardTitle>
-                          <h2 className="h2">Meeting Time</h2>
-                        </CardTitle>
-                        <CardSubtitle>
-                          <h3 className="h3">DEC 2018 - PRESENT</h3>
-                          <h4 className="h4">Ruby for Sinatra</h4>
-                        </CardSubtitle>
-                      </CardBody>
-                      <img width="100%" src={thumbnail3} alt="meeting" />
-                      <Button
-                        className="toggle"
-                        color="secondary"
-                        onClick={this.toggle3}
-                        style={{ marginBottom: "1rem" }}
-                      >
-                        More info
-                      </Button>
-                      <Collapse isOpen={this.state.collapse3}>
-                        <CardBody>
-                          <h4 className="h4">
-                            <CardText>
-                              Meeting matching service on a
-                              first-come-first-served basis only for workers.
-                            </CardText>
-                          </h4>
-                          <CardLink
-                            className="font-3"
-                            href="https://github.com/HyunSangHan/BRGG_Meeting-App"
-                            target="_blank"
-                          >
-                            Github
-                          </CardLink>
-                        </CardBody>
-                      </Collapse>
-                    </Card>
-                  </div>
-                </Col>
-
-                <Col xs={12} md={6} lg={4} xl={3}>
-                  <div className="mb-5">
-                    <Card>
-                      <CardBody>
-                        <CardTitle>
-                          <h2 className="h2">GoGo Fish</h2>
-                        </CardTitle>
-                        <CardSubtitle>
-                          <h3 className="h3">SEP 2018 - PRESENT</h3>
-                          <h4 className="h4">Ruby for Sinatra / Fuse</h4>
-                        </CardSubtitle>
-                      </CardBody>
-                      <img width="100%" src={thumbnail4} alt="fish" />
-                      <Button
-                        className="toggle"
-                        color="secondary"
-                        onClick={this.toggle4}
-                        style={{ marginBottom: "1rem" }}
-                      >
-                        More info
-                      </Button>
-                      <Collapse isOpen={this.state.collapse4}>
-                        <CardBody>
-                          <h4 className="h4">
-                            <CardText>
-                              Kid's habits formation helper service.
-                            </CardText>
-                          </h4>
-                          <CardLink
-                            className="font-3"
-                            href="https://bomin.myportfolio.com/invalid"
-                            target="_blank"
-                          >
-                            Link
-                          </CardLink>
-                          <CardLink
-                            className="font-3"
-                            href="https://github.com/zzokokeic/barogagi1gibateam"
-                            target="_blank"
-                          >
-                            Github
-                          </CardLink>
-                        </CardBody>
-                      </Collapse>
-                    </Card>
-                  </div>
-                </Col>
-
-                <Col xs={12} md={6} lg={4} xl={3}>
-                  <div className="mb-5">
-                    <Card>
-                      <CardBody>
-                        <CardTitle>
-                          <h2 className="h2">Fine dust Bot</h2>
-                        </CardTitle>
-                        <CardSubtitle>
-                          <h3 className="h3">AUG 2018</h3>
-                          <h4 className="h4">
-                            Ruby for Sinatra / Kakao Chatbot / API of KMA
-                          </h4>
-                        </CardSubtitle>
-                      </CardBody>
-                      <img width="100%" src={thumbnail5} alt="dustbot" />
-                      <Button
-                        className="toggle"
-                        color="secondary"
-                        onClick={this.toggle5}
-                        style={{ marginBottom: "1rem" }}
-                      >
-                        More info
-                      </Button>
-                      <Collapse isOpen={this.state.collapse5}>
-                        <CardBody>
-                          <h4 className="h4">
-                            <CardText>
-                              Chatbot about fine dust in Kakaotalk using openAPI
-                              of Korea Meteorological Administration.
-                            </CardText>
-                          </h4>
-                        </CardBody>
-                      </Collapse>
-                    </Card>
-                  </div>
-                </Col>
-
-                <Col xs={12} md={6} lg={4} xl={3}>
-                  <div className="mb-5">
-                    <Card>
-                      <CardBody>
-                        <CardTitle>
-                          <h2 className="h2">BlackJack</h2>
-                        </CardTitle>
-                        <CardSubtitle>
-                          <h3 className="h3">NOV - DEC 2011</h3>
-                          <h4 className="h4">Java</h4>
-                        </CardSubtitle>
-                      </CardBody>
-                      <img width="100%" src={thumbnail6} alt="blackjack" />
-                      <Button
-                        className="toggle"
-                        color="secondary"
-                        onClick={this.toggle6}
-                        style={{ marginBottom: "1rem" }}
-                      >
-                        More info
-                      </Button>
-                      <Collapse isOpen={this.state.collapse6}>
-                        <CardBody>
-                          <h4 className="h4">
-                            <CardText>
-                              Card game for an assignment when I was in the
-                              university.
-                            </CardText>
-                          </h4>
-                          <CardLink
-                            className="font-3"
-                            href="https://github.com/HyunSangHan/BlackJack"
-                            target="_blank"
-                          >
-                            Github
-                          </CardLink>
-                        </CardBody>
-                      </Collapse>
-                    </Card>
-                  </div>
-                </Col>
+                            More info
+                          </Button>
+                          <Collapse isOpen={this.state.collapse1}>
+                            <CardBody>
+                              <h4 className="h4">
+                                <CardText>{product.description}</CardText>
+                              </h4>
+                              {product.outlinks.map((link, idx) => {
+                                return (
+                                  <CardLink
+                                    key={idx}
+                                    className="font-3"
+                                    href={link.uri}
+                                    target="_blank"
+                                  >
+                                    {link.type}
+                                  </CardLink>
+                                )
+                              })}
+                            </CardBody>
+                          </Collapse>
+                        </Card>
+                      </div>
+                    </Col>
+                  )
+                })}
               </Row>
             </Grid>
           </div>
