@@ -11,6 +11,7 @@ import {
   ListGroupItemText,
   Badge
 } from "reactstrap"
+import { contributionInfos } from "../content"
 
 const ListGroupItemCustomTitle = styled(ListGroupItem)`
   border: 1px solid #fafafa !important;
@@ -65,69 +66,6 @@ const BadgeCustom = styled(Badge)`
     border: 1px solid #cb2431 !important;
   }
 `
-
-const data = [
-  {
-    repositoryName: "MochaJS",
-    contributionSets: [
-      {
-        title:
-          "Add a description for installing GraphicsMagick or ImageMagick in docs/README.md",
-        uri: "https://github.com/mochajs/mocha/pull/4045",
-        prStatus: "Merged",
-        reviewStatus: "",
-        releaseStatus: ""
-      },
-      {
-        title: "Fix docs.watch for the API docs(#4060)",
-        uri: "https://github.com/mochajs/mocha/pull/4061",
-        prStatus: "Open",
-        reviewStatus: "Approved",
-        releaseStatus: ""
-      },
-      {
-        title: "Change sh to bash for code block in docs/index.md",
-        uri: "https://github.com/mochajs/mocha/pull/4066",
-        prStatus: "Merged",
-        reviewStatus: "",
-        releaseStatus: ""
-      },
-      {
-        title: "Add script to check unit test coverage",
-        uri: "https://github.com/mochajs/mocha/pull/4076",
-        prStatus: "Open",
-        reviewStatus: "Approved",
-        releaseStatus: ""
-      },
-      {
-        title: "Use light color scheme on Mocha API document",
-        uri: "https://github.com/mochajs/mocha-docdash/pull/3",
-        prStatus: "Open",
-        reviewStatus: "",
-        releaseStatus: ""
-      },
-      {
-        title: "Adjust white space for view on mobile",
-        uri: "https://github.com/mochajs/mocha-docdash/pull/4",
-        prStatus: "Open",
-        reviewStatus: "",
-        releaseStatus: ""
-      }
-    ]
-  },
-  {
-    repositoryName: "ReactJs / ko.reactjs.org",
-    contributionSets: [
-      {
-        title: "Change sentence on hook-intro",
-        uri: "https://github.com/reactjs/ko.reactjs.org/pull/188",
-        prStatus: "Merged",
-        reviewStatus: "",
-        releaseStatus: "Released"
-      }
-    ]
-  }
-]
 
 const ContentWrapper = ({ repositoryName, contributionSets }) => {
   return (
@@ -191,7 +129,7 @@ const Contribution = props => {
           </div>
           <Grid>
             <Row className="h100percent mt-9">
-              {data.map((datum, idx) => (
+              {contributionInfos.map((datum, idx) => (
                 <ContentWrapper
                   key={idx}
                   repositoryName={datum.repositoryName}

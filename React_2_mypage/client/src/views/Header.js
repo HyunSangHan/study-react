@@ -4,16 +4,7 @@ import "../css/Header.css"
 import "../css/Main.css"
 import MaterialIcon from "material-icons-react"
 import photoHome from "../images/hea.png"
-
-const menuNames = [
-  "about",
-  "gallery",
-  "timeline",
-  "skill-set",
-  "products",
-  "contributions",
-  "contact"
-]
+import { menuNames } from "../content"
 
 class Header extends Component {
   constructor(props) {

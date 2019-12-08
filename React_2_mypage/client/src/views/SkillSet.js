@@ -3,15 +3,7 @@ import "../App.css"
 import "../css/Main.css"
 import { Grid, Row, Col } from "react-bootstrap"
 import ScrollableAnchor from "react-scrollable-anchor"
-import logoReact from "../images/React.png"
-import logoDjango from "../images/Django.png"
-import logoSinatra from "../images/Sinatra.png"
-
-const skillSets = [
-  { name: "React", logo: logoReact, className: "skill-react" },
-  { name: "Django", logo: logoDjango, className: "skill-django" },
-  { name: "Ruby for Sinatra", logo: logoSinatra, className: "skill-sinatra" }
-]
+import { skillSets } from "../content"
 
 class SkillSet extends Component {
   render() {
