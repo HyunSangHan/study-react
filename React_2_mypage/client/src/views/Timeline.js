@@ -5,6 +5,93 @@ import "../css/Timeline.css"
 import { Grid, Row, Col } from "react-bootstrap"
 import ScrollableAnchor from "react-scrollable-anchor"
 
+const historyInfos = [
+  {
+    from: "MAR 2016",
+    to: "PRESENT",
+    link: "https://www.navercorp.com/en",
+    title: "NAVER Corp.",
+    details: [
+      {
+        subTitle: "Shopping Search (APR 2018 - PRESENT)",
+        description: "Service & strategy planning for Naver Shopping"
+      },
+      {
+        subTitle: "Service Support (MAR 2016 - MAR 2018)",
+        description:
+          "HR(compensation, recruiting) of Service Committee \n CEO support for Naver services"
+      }
+    ]
+  },
+  {
+    from: "MAR 2014",
+    to: "FEB 2016",
+    link: "http://www.rokmc.mil.kr/index.do",
+    title: "R.O.K. Marine Corps",
+    details: [
+      {
+        subTitle: "2nd Infantry Division",
+        description: "Platoon leader and Operation officer (First Lieutenant)"
+      }
+    ]
+  },
+  {
+    from: "MAR 2010",
+    to: "FEB 2014",
+    link: null,
+    title: "Seoul National Univ.",
+    details: [
+      {
+        subTitle: "Rural System Engineering",
+        description: "Bachelor of Engineering"
+      },
+      {
+        subTitle: "SNU American Football Team, Green Terrors",
+        description: "Tight end, Defensive end"
+      },
+      {
+        subTitle: "101 ROTC",
+        description: "Military cadet"
+      },
+      {
+        subTitle: "LIKELION (* after graduation)",
+        description: "Web programming"
+      }
+    ]
+  },
+  {
+    from: "MAR 1998",
+    to: "FEB 2010",
+    link: null,
+    title: "Public education",
+    details: [
+      {
+        subTitle: "Pungmu High School (MAR 2007 - FEB 2010)",
+        description: "Student body president"
+      },
+      {
+        subTitle: "Pungmu Middle School (MAR 2004 - FEB 2007)",
+        description: null
+      },
+      {
+        subTitle: "Pungmu Elementary School (DEC 2002 - FEB 2004)",
+        description: null
+      },
+      {
+        subTitle: "Geonji Elementary School (MAR 1998 - DEC 2002)",
+        description: null
+      }
+    ]
+  },
+  {
+    from: "SEP 1991",
+    to: null,
+    link: null,
+    title: "Born in Incheon",
+    details: []
+  }
+]
+
 class Timeline extends Component {
   render() {
     return (
