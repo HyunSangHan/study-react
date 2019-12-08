@@ -14,7 +14,8 @@ const historyInfos = [
     details: [
       {
         subTitle: "Shopping Search (APR 2018 - PRESENT)",
-        description: "Service & strategy planning for Naver Shopping"
+        description: "Service & strategy planning for @Naver Shopping@",
+        refUri: "https://shopping.naver.com"
       },
       {
         subTitle: "Service Support (MAR 2016 - MAR 2018)",
@@ -54,8 +55,9 @@ const historyInfos = [
         description: "Military cadet"
       },
       {
-        subTitle: "LIKELION (* after graduation)",
-        description: "Web programming"
+        subTitle: "@LIKELION@ (* after graduation)",
+        description: "Web programming",
+        refUri: "https://likelion.net/"
       }
     ]
   },
@@ -103,7 +105,34 @@ const MakeChangeLine = ({ txt }) => {
       </>
     )
   }
-  return <>{txt}</>
+  return txt
+}
+
+const MakeLink = ({ txt, uri }) => {
+  const [normalLeft, linkTarget, normalRight] = txt.split("@")
+  console.log(normalLeft, linkTarget, normalRight)
+  if (linkTarget) {
+    return (
+      <>
+        {normalLeft}
+        <a href={uri} target="_blank" rel="noopener noreferrer">
+          {linkTarget}
+        </a>
+        {normalRight}
+      </>
+    )
+  }
+  return txt
+}
+
+const ArrangedText = ({ txt, uri }) => {
+  let component = txt
+  if (uri) {
+    component = <MakeLink txt={txt} uri={uri} />
+  } else {
+    component = <MakeChangeLine txt={txt} />
+  }
+  return component
 }
 
 class Timeline extends Component {
@@ -170,12 +199,18 @@ class Timeline extends Component {
                             return (
                               <div key={idx}>
                                 <h3 className="h3 mt-4">
-                                  {detailHistory.subTitle}
+                                  {detailHistory.subTitle && (
+                                    <ArrangedText
+                                      txt={detailHistory.subTitle}
+                                      uri={detailHistory.refUri}
+                                    />
+                                  )}
                                 </h3>
                                 <h4 className="h4 mb-5">
                                   {detailHistory.description && (
-                                    <MakeChangeLine
+                                    <ArrangedText
                                       txt={detailHistory.description}
+                                      uri={detailHistory.refUri}
                                     />
                                   )}
                                 </h4>
