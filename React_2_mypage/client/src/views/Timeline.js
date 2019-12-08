@@ -19,7 +19,7 @@ const historyInfos = [
       {
         subTitle: "Service Support (MAR 2016 - MAR 2018)",
         description:
-          "HR(compensation, recruiting) of Service Committee \n CEO support for Naver services"
+          "HR(compensation, recruiting) of Service Committee\nCEO support for Naver services"
       }
     ]
   },
@@ -92,6 +92,20 @@ const historyInfos = [
   }
 ]
 
+const MakeChangeLine = ({ txt }) => {
+  const [upper, under] = txt.split("\n")
+  if (under) {
+    return (
+      <>
+        {upper}
+        <br />
+        {under}
+      </>
+    )
+  }
+  return <>{txt}</>
+}
+
 class Timeline extends Component {
   render() {
     return (
@@ -159,7 +173,11 @@ class Timeline extends Component {
                                   {detailHistory.subTitle}
                                 </h3>
                                 <h4 className="h4 mb-5">
-                                  {detailHistory.description}
+                                  {detailHistory.description && (
+                                    <MakeChangeLine
+                                      txt={detailHistory.description}
+                                    />
+                                  )}
                                 </h4>
                               </div>
                             )
