@@ -8,7 +8,7 @@
 }
 
 .vertical-line {
-  height: 100%;
+  height: calc(100% - 90px);
   width: 1.5px;
   background-color: lightgrey;
   margin-left: auto;
