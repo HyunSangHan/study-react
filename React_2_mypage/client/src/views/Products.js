@@ -22,16 +22,9 @@ import thumbnail4 from "../images/fish.png"
 import thumbnail5 from "../images/finedust.png"
 import thumbnail6 from "../images/blackjack.png"
 
-const thumbnails = [
-  thumbnail1,
-  thumbnail2,
-  thumbnail3,
-  thumbnail4,
-  thumbnail5,
-  thumbnail6
-]
 const productInfos = [
   {
+    thumbnail: thumbnail1,
     name: "this.state.",
     period: "JAN - FEB 2019",
     skill: "ReactJS",
@@ -41,6 +34,7 @@ const productInfos = [
     outlinks: [{ type: "Link", uri: "/" }]
   },
   {
+    thumbnail: thumbnail2,
     name: "Web Calculator",
     period: "JAN 2019",
     skill: "ReactJS",
@@ -50,6 +44,7 @@ const productInfos = [
     outlinks: [{ type: "Link", uri: "http://calculator.dothome.co.kr/" }]
   },
   {
+    thumbnail: thumbnail3,
     name: "Meeting Time",
     period: "DEC 2018 - PRESENT",
     skill: "Ruby for Sinatra",
@@ -61,6 +56,7 @@ const productInfos = [
     ]
   },
   {
+    thumbnail: thumbnail4,
     name: "GoGo Fish",
     period: "SEP 2018 - PRESENT",
     skill: "Ruby for Sinatra / Fuse",
@@ -72,6 +68,7 @@ const productInfos = [
     ]
   },
   {
+    thumbnail: thumbnail5,
     name: "Fine dust Bot ",
     period: "AUG 2018",
     skill: "Ruby for Sinatra / Kakao Chatbot / API of KMA",
@@ -81,6 +78,7 @@ const productInfos = [
     outlinks: []
   },
   {
+    thumbnail: thumbnail6,
     name: "BlackJack",
     period: "NOV - DEC 2011",
     skill: "Java",
@@ -96,37 +94,17 @@ class Products extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      collapse1: false,
-      collapse2: false,
-      collapse3: false,
-      collapse4: false,
-      collapse5: false,
-      collapse6: false
+      collapse: 0
     }
   }
 
-  toggle1 = () => {
-    this.setState({ collapse: !this.state.collapse1 })
-  }
-
-  toggle2 = () => {
-    this.setState({ collapse2: !this.state.collapse2 })
-  }
-
-  toggle3 = () => {
-    this.setState({ collapse3: !this.state.collapse3 })
-  }
-
-  toggle4 = () => {
-    this.setState({ collapse4: !this.state.collapse4 })
-  }
-
-  toggle5 = () => {
-    this.setState({ collapse5: !this.state.collapse5 })
-  }
-
-  toggle6 = () => {
-    this.setState({ collapse6: !this.state.collapse6 })
+  toggle = idx => () => {
+    const prevCollapse = this.state.collapse
+    if (prevCollapse & Math.pow(2, idx)) {
+      this.setState({ collapse: prevCollapse - Math.pow(2, idx) })
+    } else {
+      this.setState({ collapse: prevCollapse + Math.pow(2, idx) })
+    }
   }
 
   render() {
@@ -161,22 +139,26 @@ class Products extends Component {
                           </CardBody>
                           <img
                             width="100%"
-                            src={thumbnails[idx]}
+                            src={product.thumbnail}
                             alt={product.alt}
                           />
                           <Button
                             className="toggle"
                             color="secondary"
-                            onClick={this.toggle1}
+                            onClick={this.toggle(idx)}
                             style={{ marginBottom: "1rem" }}
                           >
                             More info
                           </Button>
-                          <Collapse isOpen={this.state.collapse1}>
+                          <Collapse
+                            isOpen={Boolean(
+                              this.state.collapse & Math.pow(2, idx)
+                            )}
+                          >
                             <CardBody>
-                              <h4 className="h4">
-                                <CardText>{product.description}</CardText>
-                              </h4>
+                              <CardText className="h4">
+                                {product.description}
+                              </CardText>
                               {product.outlinks.map((link, idx) => {
                                 return (
                                   <CardLink
@@ -185,7 +167,7 @@ class Products extends Component {
                                     href={link.uri}
                                     target="_blank"
                                   >
-                                    {link.type}
+                                    <strong>{link.type}</strong>
                                   </CardLink>
                                 )
                               })}
