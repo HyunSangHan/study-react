@@ -76,9 +76,9 @@ class GalleryPage extends Component {
                 <Route
                   exact
                   path={`/gallery/${idx + 1}`}
+                  key={idx}
                   render={() => (
                     <GalleryDetail
-                      key={idx}
                       idx={idx + 1}
                       imgSrc={img}
                       zoomCustom={mapInfos[idx][0]}
