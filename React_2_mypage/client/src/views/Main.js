@@ -19,8 +19,6 @@ import photoBackgroundSmall from "../images/sea2.jpg"
 import photoGate from "../images/hsforgate.png"
 import icArrowDown from "../images/arrow-down.png"
 
-//import Typing from 'react-typing-animation';
-
 configureAnchors({ offset: -140, scrollDuration: 1000 })
 
 class Main extends Component {
@@ -79,11 +77,6 @@ class Main extends Component {
               <Grid>
                 <img className="gate-img" src={photoGate} alt="explain" />
                 <div className="gate-txt font-sub font-white">
-                  {/*<Typing loop>*/}
-                  {/*<span className={"left"}>This span will get typed, then erased.</span>*/}
-                  {/*<Typing.Backspace count={10} />*/}
-                  {/*with ease.*/}
-                  {/*</Typing>*/}
                   You can access&nbsp;
                   <i>
                     this.state(.about, .gallery, .timeline, .skill-set,
