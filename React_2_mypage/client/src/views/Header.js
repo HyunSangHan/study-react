@@ -36,7 +36,6 @@ class Header extends Component {
         </div>
         <div className="header-menus mr-3">
           &nbsp;
-          {/* TODO: contribution 추가 필요 */}
           {menuNames.map((menu, idx) => (
             <a key={idx} className="none" href={`#${menu}`}>
               <div className="font-new font-white">{menu}</div>
