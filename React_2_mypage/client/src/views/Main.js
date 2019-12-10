@@ -47,6 +47,10 @@ class Main extends Component {
     })
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.scrollPosition !== nextState.scrollPosition
+  }
+
   onScroll = e => {
     const documentMarginTop = 60
     const elementsTop = {
@@ -82,15 +86,14 @@ class Main extends Component {
     } else if (elementsTop.skillSetTop > 0) {
       this.setState({ scrollPosition: "timeline" })
     } else if (elementsTop.productsTop > 0) {
-      this.setState({ scrollPosition: "skillset" })
+      this.setState({ scrollPosition: "skill-set" })
     } else if (elementsTop.contributionTop > 0) {
       this.setState({ scrollPosition: "products" })
     } else if (elementsTop.contactTop > 100) {
-      this.setState({ scrollPosition: "contribution" })
+      this.setState({ scrollPosition: "contributions" })
     } else {
       this.setState({ scrollPosition: "contact" })
     }
-    console.log(this.state.scrollPosition)
   }
 
   makeResponsiveBackground = () => {
@@ -113,10 +116,11 @@ class Main extends Component {
   }
 
   render() {
-    const { devicetype, backgroundSrc } = this.state
+    console.log(this.state.scrollPosition)
+    const { devicetype, backgroundSrc, scrollPosition } = this.state
     return (
       <>
-        <Header />
+        <Header scrollPosition={scrollPosition} />
         <div className="body-common z-0">
           <div className="body-under center">
             <img

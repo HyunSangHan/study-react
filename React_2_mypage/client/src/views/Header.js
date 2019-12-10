@@ -38,7 +38,15 @@ class Header extends Component {
           &nbsp;
           {menuNames.map((menu, idx) => (
             <a key={idx} className="none" href={`#${menu}`}>
-              <div className="font-new font-white">{menu}</div>
+              <div
+                className={
+                  this.props.scrollPosition === menu
+                    ? "font-new font-blue font-underline"
+                    : "font-new font-white"
+                }
+              >
+                {menu}
+              </div>
             </a>
           ))}
         </div>
