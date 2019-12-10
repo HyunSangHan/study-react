@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import ReactDOM from "react-dom"
 import Header from "./Header.js"
 import About from "./About"
 import Gallery from "./Gallery"
@@ -26,8 +27,70 @@ class Main extends Component {
     super(props)
     this.state = {
       devicetype: null,
-      backgroundSrc: null
+      backgroundSrc: null,
+      scrollPosition: null
     }
+  }
+
+  componentDidMount() {
+    this.makeResponsiveBackground()
+    window.addEventListener("scroll", this.onScroll)
+    window.addEventListener("resize", () => {
+      this.makeResponsiveBackground()
+    })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll)
+    window.removeEventListener("resize", () => {
+      this.makeResponsiveBackground()
+    })
+  }
+
+  onScroll = e => {
+    const documentMarginTop = 60
+    const elementsTop = {
+      aboutTop:
+        ReactDOM.findDOMNode(this.refs.about).getBoundingClientRect().top -
+        documentMarginTop,
+      galleryTop:
+        ReactDOM.findDOMNode(this.refs.gallery).getBoundingClientRect().top -
+        documentMarginTop,
+      timelineTop:
+        ReactDOM.findDOMNode(this.refs.timeline).getBoundingClientRect().top -
+        documentMarginTop,
+      skillSetTop:
+        ReactDOM.findDOMNode(this.refs.skillset).getBoundingClientRect().top -
+        documentMarginTop,
+      productsTop:
+        ReactDOM.findDOMNode(this.refs.products).getBoundingClientRect().top -
+        documentMarginTop,
+      contributionTop:
+        ReactDOM.findDOMNode(this.refs.contribution).getBoundingClientRect()
+          .top - documentMarginTop,
+      contactTop:
+        ReactDOM.findDOMNode(this.refs.contact).getBoundingClientRect().top -
+        documentMarginTop
+    }
+
+    if (elementsTop.aboutTop > 0) {
+      this.setState({ scrollPosition: null })
+    } else if (elementsTop.galleryTop > 0) {
+      this.setState({ scrollPosition: "about" })
+    } else if (elementsTop.timelineTop > 0) {
+      this.setState({ scrollPosition: "gallery" })
+    } else if (elementsTop.skillSetTop > 0) {
+      this.setState({ scrollPosition: "timeline" })
+    } else if (elementsTop.productsTop > 0) {
+      this.setState({ scrollPosition: "skillset" })
+    } else if (elementsTop.contributionTop > 0) {
+      this.setState({ scrollPosition: "products" })
+    } else if (elementsTop.contactTop > 100) {
+      this.setState({ scrollPosition: "contribution" })
+    } else {
+      this.setState({ scrollPosition: "contact" })
+    }
+    console.log(this.state.scrollPosition)
   }
 
   makeResponsiveBackground = () => {
@@ -47,13 +110,6 @@ class Main extends Component {
         backgroundSrc: photoBackgroundLarge
       })
     }
-  }
-
-  componentDidMount() {
-    this.makeResponsiveBackground()
-    window.addEventListener("resize", () => {
-      this.makeResponsiveBackground()
-    })
   }
 
   render() {
@@ -103,12 +159,19 @@ class Main extends Component {
             </div>
           </a>
           <div className="body-on z-2">
+            <div ref={"about"}></div>
             <About bgColorGrey={false} />
+            <div ref={"gallery"}></div>
             <Gallery bgColorGrey={true} />
+            <div ref={"timeline"}></div>
             <Timeline bgColorGrey={false} />
+            <div ref={"skillset"}></div>
             <SkillSet bgColorGrey={true} />
+            <div ref={"products"}></div>
             <Products bgColorGrey={false} />
+            <div ref={"contribution"}></div>
             <Contribution bgColorGrey={true} />
+            <div ref={"contact"}></div>
             <Contact bgColorGrey={false} />
           </div>
         </div>
