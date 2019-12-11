@@ -122,6 +122,10 @@
     margin-bottom: 64px;
   }
 
+  .bg-black {
+    background-color: #1e1e1e;
+  }
+
   .bg-white {
     background-color: white;
     padding-top: 30px;

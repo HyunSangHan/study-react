@@ -8,7 +8,7 @@ import icArrowBack from "../../images/arrowback.png"
 class GalleryHeader extends Component {
   render() {
     return (
-      <div className="header-common z-4">
+      <div className="header-common bg-black z-4">
         <div className="header-logo ml-3 z-4">
           <Link to="/">
             <img

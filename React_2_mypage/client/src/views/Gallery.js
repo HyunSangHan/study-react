@@ -36,7 +36,7 @@ class Gallery extends Component {
                     >
                       {infoList.srcs.map((img, secondIdx) => (
                         <div key={secondIdx}>
-                          <Link to={`/gallery/${secondIdx + 1}`}>
+                          <Link to={`/gallery/${firstIdx * 3 + secondIdx + 1}`}>
                             <img
                               className="each-gallery"
                               src={img}
