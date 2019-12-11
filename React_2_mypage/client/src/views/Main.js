@@ -119,11 +119,10 @@ class Main extends Component {
   }
 
   render() {
-    console.log(this.state.scrollPosition)
     const { devicetype, backgroundSrc, scrollPosition } = this.state
     return (
       <>
-        <Header scrollPosition={scrollPosition} />
+        <Header scrollPosition={scrollPosition} devicetype={devicetype} />
         <div className="body-common z-0">
           <div className="body-under center">
             <img

@@ -28,7 +28,15 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="header-common font-3 z-4">
+      <div
+        className="header-common font-3 z-4"
+        style={
+          this.props.scrollPosition && {
+            backgroundColor: "#1e1e1e",
+            transition: "0.3s linear"
+          }
+        }
+      >
         <div className="header-logo ml-4 mb-1 z-4">
           <a href="/" target="_self">
             <img src={photoHome} alt="home" height={"14px;"} />
