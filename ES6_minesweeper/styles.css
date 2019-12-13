@@ -5,7 +5,7 @@
     width: 20px;
 }
 
-.cell:hover {
+.cell.close:hover {
     cursor: pointer;
 }
 
