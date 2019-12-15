@@ -249,7 +249,7 @@ export const contributionInfos = [
       {
         title: "Fix docs.watch for the API docs(#4060)",
         uri: "https://github.com/mochajs/mocha/pull/4061",
-        prStatus: "Open",
+        prStatus: "Closed",
         reviewStatus: "Approved",
         releaseStatus: ""
       },
