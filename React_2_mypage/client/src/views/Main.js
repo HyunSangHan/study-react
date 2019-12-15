@@ -50,7 +50,8 @@ class Main extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     return (
       !this.state.backgroundSrc ||
-      this.state.scrollPosition !== nextState.scrollPosition
+      this.state.scrollPosition !== nextState.scrollPosition ||
+      this.state.backgroundSrc !== nextState.backgroundSrc
     )
   }
 
@@ -129,7 +130,7 @@ class Main extends Component {
               className="fix"
               src={backgroundSrc}
               alt="my_photo"
-              width="100%"
+              style={{ width: "100%", minWidth: "100%", minHeight: "100%" }}
               devicetype={devicetype}
             />
             <div className="body-under-black fix" />
