@@ -27,15 +27,47 @@ const imgSrcs = [
   imgSrc9
 ]
 const mapInfos = [
-  [14, { lat: 43.722984, lng: 10.396603 }],
-  [14, { lat: 40.62753, lng: 14.48815 }],
-  [8, { lat: 49.716251, lng: 14.094804 }],
-  [10, { lat: 35.660067, lng: 139.701524 }],
-  [16, { lat: 37.573391, lng: 126.98975 }],
-  [14, { lat: 37.501183, lng: 127.025603 }],
-  [14, { lat: 41.234305, lng: 1.808081 }],
-  [17, { lat: 37.508696, lng: 127.061004 }],
-  [null, null]
+  {
+    place: "pisa",
+    zoomCustom: 14,
+    initialCenter: { lat: 43.722984, lng: 10.396603 }
+  },
+  {
+    place: "positano",
+    zoomCustom: 14,
+    initialCenter: { lat: 40.62753, lng: 14.48815 }
+  },
+  {
+    place: "pargue",
+    zoomCustom: 8,
+    initialCenter: { lat: 49.716251, lng: 14.094804 }
+  },
+  {
+    place: "tokyo",
+    zoomCustom: 10,
+    initialCenter: { lat: 35.660067, lng: 139.701524 }
+  },
+  {
+    place: "jongro",
+    zoomCustom: 16,
+    initialCenter: { lat: 37.573391, lng: 126.98975 }
+  },
+  {
+    place: "gangnam",
+    zoomCustom: 14,
+    initialCenter: { lat: 37.501183, lng: 127.025603 }
+  },
+  {
+    place: "barcelona",
+    zoomCustom: 14,
+    initialCenter: { lat: 41.234305, lng: 1.808081 }
+  },
+  {
+    place: "coex",
+    zoomCustom: 17,
+    initialCenter: { lat: 37.508696, lng: 127.061004 }
+  },
+  { place: "studio", zoomCustom: null, initialCenter: null }
 ]
 class GalleryPage extends Component {
   render() {
@@ -67,8 +99,8 @@ class GalleryPage extends Component {
                   <GalleryDetail
                     idx={1}
                     imgSrc={imgSrc1}
-                    zoomCustom={mapInfos[0][0]}
-                    initialCenter={mapInfos[0][1]}
+                    zoomCustom={mapInfos[0].zoomCustom}
+                    initialCenter={mapInfos[0].initialCenter}
                   />
                 )}
               />
@@ -81,8 +113,8 @@ class GalleryPage extends Component {
                     <GalleryDetail
                       idx={idx + 1}
                       imgSrc={img}
-                      zoomCustom={mapInfos[idx][0]}
-                      initialCenter={mapInfos[idx][1]}
+                      zoomCustom={mapInfos[idx].zoomCustom}
+                      initialCenter={mapInfos[idx].initialCenter}
                     />
                   )}
                 />
