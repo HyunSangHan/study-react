@@ -11,7 +11,8 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Route exact path="/" component={Main} />
-          <Route path="/gallery" component={GalleryPage} />
+          <Route exact path="/gallery" component={GalleryPage} />
+          <Route path="/gallery/:galleryId" component={GalleryPage} />
           <Route path="/calculator" component={Calculator} />
         </div>
       </BrowserRouter>
