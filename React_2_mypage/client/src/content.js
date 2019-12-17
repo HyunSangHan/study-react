@@ -71,6 +71,63 @@ export const galleryInfos = [
   }
 ]
 
+export const mapInfos = [
+  {
+    place: "pisa",
+    imgSrc: galleryImgSrc1,
+    zoomCustom: 14,
+    initialCenter: { lat: 43.722984, lng: 10.396603 }
+  },
+  {
+    place: "positano",
+    imgSrc: galleryImgSrc2,
+    zoomCustom: 14,
+    initialCenter: { lat: 40.62753, lng: 14.48815 }
+  },
+  {
+    place: "pargue",
+    imgSrc: galleryImgSrc3,
+    zoomCustom: 8,
+    initialCenter: { lat: 49.716251, lng: 14.094804 }
+  },
+  {
+    place: "tokyo",
+    imgSrc: galleryImgSrc4,
+    zoomCustom: 10,
+    initialCenter: { lat: 35.660067, lng: 139.701524 }
+  },
+  {
+    place: "jongro",
+    imgSrc: galleryImgSrc5,
+    zoomCustom: 16,
+    initialCenter: { lat: 37.573391, lng: 126.98975 }
+  },
+  {
+    place: "gangnam",
+    imgSrc: galleryImgSrc6,
+    zoomCustom: 14,
+    initialCenter: { lat: 37.501183, lng: 127.025603 }
+  },
+  {
+    place: "barcelona",
+    imgSrc: galleryImgSrc7,
+    zoomCustom: 14,
+    initialCenter: { lat: 41.234305, lng: 1.808081 }
+  },
+  {
+    place: "coex",
+    imgSrc: galleryImgSrc8,
+    zoomCustom: 17,
+    initialCenter: { lat: 37.508696, lng: 127.061004 }
+  },
+  {
+    place: "studio",
+    imgSrc: galleryImgSrc9,
+    zoomCustom: null,
+    initialCenter: null
+  }
+]
+
 export const historyInfos = [
   {
     from: "MAR 2016",
