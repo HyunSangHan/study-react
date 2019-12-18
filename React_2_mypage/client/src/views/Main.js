@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, Fragment } from "react"
 import ReactDOM from "react-dom"
 import Header from "./Header.js"
 import About from "./About"
@@ -21,6 +21,16 @@ import photoGate from "../images/hsforgate.png"
 import icArrowDown from "../images/arrow-down.png"
 
 configureAnchors({ offset: -140, scrollDuration: 1000 })
+
+const renders = [
+  { refName: "about", component: About },
+  { refName: "gallery", component: Gallery },
+  { refName: "timeline", component: Timeline },
+  { refName: "skillset", component: SkillSet },
+  { refName: "products", component: Products },
+  { refName: "contribution", component: Contribution },
+  { refName: "contact", component: Contact }
+]
 
 class Main extends Component {
   constructor(props) {
@@ -166,23 +176,18 @@ class Main extends Component {
             </div>
           </a>
           <div className="body-on z-2">
-            <div ref={"about"}></div>
-            <About bgColorGrey={false} />
-            <div ref={"gallery"}></div>
-            <Gallery bgColorGrey={true} />
-            <div ref={"timeline"}></div>
-            <Timeline bgColorGrey={false} />
-            <div ref={"skillset"}></div>
-            <SkillSet bgColorGrey={true} />
-            <div ref={"products"}></div>
-            <Products bgColorGrey={false} />
-            <div ref={"contribution"}></div>
-            <Contribution bgColorGrey={true} />
-            <div ref={"contact"}></div>
-            <Contact bgColorGrey={false} />
+            {renders.map((render, idx) => {
+              const Component = render.component
+              return (
+                <Fragment key={idx}>
+                  <div ref={render.refName}></div>
+                  <Component bgColorGrey={idx % 2 !== 0} />
+                </Fragment>
+              )
+            })}
           </div>
         </div>
-        <Footer bgColorGrey={true} />
+        <Footer bgColorGrey={renders.length % 2 !== 0} />
       </>
     )
   }
