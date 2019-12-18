@@ -155,8 +155,12 @@ class Contact extends Component {
                     </FormGroup>
                     <Button
                       onClick={this.toggle}
-                      className="font-2"
-                      color="primary"
+                      className="font-2 font-bold"
+                      style={{
+                        backgroundColor: "#40c5ef",
+                        borderColor: "#40c5ef",
+                        fontWeight: "700"
+                      }}
                       size="lg"
                     >
                       Send
