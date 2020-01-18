@@ -15,11 +15,11 @@
 }
 
 .cell.flag { /* 임시 이미지임 */
-    background: url("./flag_icon.jpg") center / cover; 
+    background: url("./../images/flag_icon.jpg") center / cover; 
 }
 
 .cell.mine {
-    background: url("./mine.png") center / cover; 
+    background: url("./../images/mine.png") center / cover; 
 }
 
 .cell.mine.open {
