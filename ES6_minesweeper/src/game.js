@@ -158,7 +158,6 @@ function makeMine() {
     // 지뢰 다 깔 때까지 반복
     const x = parseInt(uniqueNumbers[0] / maxY);
     const y = uniqueNumbers[0] % maxY;
-    console.log(uniqueNumbers[0], cells[y][x]);
     uniqueNumbers.shift();
     cells[y][x].setAttribute("isMine", true);
   }
