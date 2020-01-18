@@ -1,43 +1,44 @@
 .cell {
-    border: 1px #ccc solid;
-    background-color: #eee;
-    height: 20px;
-    width: 20px;
+  border: 1px #ccc solid;
+  background-color: #eee;
+  height: 20px;
+  width: 20px;
 }
 
 .cell.close:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .cell.open {
-    background-color: #fff;
-    text-align: center;
+  background-color: #fff;
+  text-align: center;
 }
 
-.cell.flag { /* 임시 이미지임 */
-    background: url("./../images/flag_icon.jpg") center / cover; 
+.cell.flag {
+  /* 임시 이미지임 */
+  background: url("./../images/flag_icon.jpg") center / cover;
 }
 
 .cell.mine {
-    background: url("./../images/mine.png") center / cover; 
+  background: url("./../images/mine.png") center / cover;
 }
 
 .cell.mine.open {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
 .cell-parent {
-    display: flex;
+  display: flex;
 }
 
 #status {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 #status.win {
-    color: blue;
+  color: blue;
 }
 
 #status.lose {
-    color: red;
+  color: red;
 }
