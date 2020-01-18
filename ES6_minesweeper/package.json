@@ -31,5 +31,13 @@
   },
   "dependencies": {
     "core-js": "2"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
