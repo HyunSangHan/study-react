@@ -6,10 +6,9 @@ let mineNumTotal = null;
 let isOver = false;
 let cellsLeft = null;
 
-// 칸 셋팅
-
 document.getElementById("buttonReset").addEventListener("click", reset); // 리셋버튼
 
+// 칸 셋팅
 document.getElementById("play").addEventListener("click", function() {
   resetGame();
   // 정수화하기
@@ -19,14 +18,24 @@ document.getElementById("play").addEventListener("click", function() {
   document.getElementById("col").value = maxX;
   document.getElementById("row").value = maxY;
   document.getElementById("mine").value = mineNumTotal;
-  if (maxX < 1 || maxY < 1 || mineNumTotal < 1) {
+  if (
+    maxX < 1 ||
+    maxY < 1 ||
+    mineNumTotal < 1 ||
+    isNaN(maxX) ||
+    isNaN(maxY) ||
+    isNaN(mineNumTotal)
+  ) {
     //입력값이 올바르지 않을 때
     alert("입력값이 올바르지 않습니다.");
+    reset();
   } else if (maxX * maxY <= mineNumTotal) {
     //지뢰가 칸 개수보다 많거나 같을 때
     alert("지뢰가 너무 많아서 게임이 불가능해요. 지뢰 개수를 줄여주세요.");
+    reset();
   } else if (maxX * maxY > 900) {
     alert("언제 다 하시려고... 30 X 30 미만으로 줄여주세요.");
+    reset();
   } else {
     //일반적인 경우(게임 가능)
     document.getElementById("cellsLeft").innerText = maxX * maxY;
