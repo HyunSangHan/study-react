@@ -28,7 +28,8 @@
 secrets.json
 **/secrets.json
 
-.idea/
+.idea
+**/.idea
 
 npm-debug.log*
 yarn-debug.log*
