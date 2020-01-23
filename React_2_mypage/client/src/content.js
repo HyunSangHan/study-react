@@ -28,7 +28,8 @@ export const menuNames = [
   "skill-set",
   "products",
   "contributions",
-  "contact"
+  "contact",
+  "blog"
 ]
 
 export const baseInfo = {

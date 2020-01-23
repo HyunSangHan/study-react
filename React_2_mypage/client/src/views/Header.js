@@ -45,7 +45,13 @@ class Header extends Component {
         <div className="header-menus mr-3">
           &nbsp;
           {menuNames.map((menu, idx) => (
-            <a key={idx} className="none" href={`#${menu}`}>
+            <a
+              key={idx}
+              className="none"
+              href={
+                menu !== "blog" ? `#${menu}` : `https://tillog.netlify.com/`
+              }
+            >
               <div
                 className={
                   this.props.scrollPosition === menu
@@ -70,7 +76,15 @@ class Header extends Component {
               <div className="header-hamburger-limit z-4">
                 <div className="header-hamburger-menus z-4">
                   {menuNames.map((menu, idx) => (
-                    <a key={idx} className="none" href={`#${menu}`}>
+                    <a
+                      key={idx}
+                      className="none"
+                      href={
+                        menu !== "blog"
+                          ? `#${menu}`
+                          : `https://tillog.netlify.com/`
+                      }
+                    >
                       <div
                         className={
                           this.props.scrollPosition === menu
