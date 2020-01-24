@@ -22,7 +22,7 @@
 ### React_2_mypage
 - **[토이프로젝트] 자기소개 웹사이트 구현**
 - ReactJS + Axios, Google Maps API / 반응형
-- README 준비중
+- [README에서 설명 더보기 >](https://github.com/HyunSangHan/study-react/tree/master/React_2_mypage)
 - http://phenomenon.kr/
 
 ### React_3_eat
