@@ -1,68 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 성남시 맛집 랭킹 서비스
 
-## Available Scripts
+Visit Korea의 Open API를 활용해 만든 성남시 맛집 랭킹 서비스입니다. 랭킹순으로 20위까지의 맛집이 리스팅되며, 페이지당 10개씩 페이지네이션으로 구현되어있습니다.
 
-In the project directory, you can run:
+## QUICK START
 
-### `npm start`
+터미널에 아래의 명령어를 입력하세요.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+git clone https://github.com/HyunSangHan/study-react.git && cd study-react/React_1_calculator && yarn && yarn start
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## UI
 
-### `npm test`
+<img src = 'https://user-images.githubusercontent.com/44132406/73052870-8c373b80-3ec9-11ea-96eb-e8e4f806fdb7.png'>
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## DESCRIPTIONS
 
-### `npm run build`
+Visit Korea의 TourAPI를 사용하여 아래와 같이 Request 후 Response를 받습니다.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Request
+```js
+axios.get('http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList',
+  {
+    params : {
+      ServiceKey: decodeURIComponent(process.env.REACT_APP_KEY),
+      pageNo: page,
+      numOfRows: 10,
+      MobileApp: 'study for axios',
+      MobileOS: 'ETC',
+      arrange: 'P',
+      cat1 : 'A05',
+      contentTypeID: 39,
+      areaCode: 31,
+      sigunguCode: 12,
+      cat2 : 'A0502',
+      cat3 : 'A05020100',
+      listYN: 'Y',
+      _type: 'json'
+      rlangtype: 'KOR'
+    }
+  }
+)
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Response
+```js
+body: {
+  items: {
+    item: [
+      {
+        0: {
+          addr1: "경기도 성남시 분당구 불정로 6",
+          areacode: 31,
+          cat1: "A05",
+          cat2: "A0502",
+          cat3: "A05020100",
+          ...
+          },
+        ...
+      }
+    ]
+  },
+  numOfRows: 10,
+  pageNo: 1,
+  totalCount: 21
+}
+```
