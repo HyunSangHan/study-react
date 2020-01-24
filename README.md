@@ -28,7 +28,7 @@
 ### React_3_eat
 - **[토이프로젝트] 성남시 맛집 랭킹 서비스 구현**
 - ReactJS + Reactstrap, Axios, Redux, 공공데이터포털 API / 반응형
-- README 준비중
+- [README에서 설명 더보기 >](https://github.com/HyunSangHan/study-react/tree/master/React_3_eat)
 
 ### React_4_wordcount
 - **[토이프로젝트] TOEFL Writing 모의테스트 환경 구현**
