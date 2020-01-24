@@ -1,72 +1,134 @@
+# 웹 계산기: Web Calculator
+
+React로 Frontend 개발에 입문한 지 2주차에 만든 결과물이자, 제 손으로 만든 첫 결과물입니다. 웹브라우저 환경에서 계산기 기능을 제공합니다.
+
+## QUICK START
+
+최종 결과물은 http://calculator.dothome.co.kr/ 에서 확인할 수 있습니다.
+
+만일 로컬 환경에서 확인하고자 하는 경우, 터미널에 아래의 명령어를 입력하시면 빠릅니다.
+
+```
+git clone https://github.com/HyunSangHan/study-react.git && cd study-react/React_1_calculator && yarn && yarn start
+```
+
+## UI
+
 <img src = 'https://user-images.githubusercontent.com/44132406/51442424-c94d7880-1d1f-11e9-8681-ac7273367316.png'>
 
+## DESCRIPTIONS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Main Issue: 숫자 입력 및 임시저장을 어떻게 할 것인가
+클릭 이벤트를 통해 숫자 입력을 받기 때문에, 단순히 input 태그를 통해 키보드로 숫자 입력을 받는 것에 비해 어려움이 있었습니다. 입력이 즉각적이며 불연속적이기 때문입니다. 42.195라는 숫자를 입력하는 예시를 통해, 클릭 이벤트가 발생하는 단계별 설명을 해보면 이렇습니다.
 
-## Available Scripts
+```js
+4      // (1단계)
+42     // (2단계)
+42.    // (3단계)
+42.1   // (4단계)
+42.19  // (5단계)
+42.195 // (6단계)
+```
 
-In the project directory, you can run:
+`4`를 입력한 (1단계)에서는 아무 문제가 없습니다. 하지만 `2`를 추가로 입력한 (2단계)로 가면, 기존에 입력했던 숫자인 `4`는 더이상 4이면 안되며 이젠 `40`으로서의 역할을 해야 합니다. 이렇듯, 숫자를 입력할 때마다 아래와 같이 자릿수 밀어내기가 필요하다는 뜻입니다.
 
-### `npm start`
+```js
+displayedNumber = displayedNumber * 10 + num;
+// (화면에 보여줘야할 숫자) = (그동안 입력한 숫자) * 10 + (새로 입력한 숫자)
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+여기까지는 재귀적인 컨셉의 로직이라, 단순 점화식으로도 표현이 가능해보입니다.  
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+(3단계)로 가면 `.`이라는 기호가 나옵니다. 따라서 이는 숫자형일 수 없어, `num`이라는 변수에 저장하지 못하고 `operator`라는 별도의 변수에 저장해야 했습니다.  
 
-### `npm test`
+(4단계)에서는 드디어 소수점 입력으로 넘어갑니다. `.` 이후에 입력받는 숫자가 `1`이지만, 처음부터 `0.1`로서의 역할을 해야합니다. (5단계)에서는 `9`를 입력받았는데, 이는 `0.09`로서의 의미를 가져야 합니다. 마찬가지로 (6단계)에서는, 입력한 `5`가 `0.005`가 되어 기존 숫자에 붙어야 합니다. 즉 정수부의 로직과는 달리 소수부에서는 기존 숫자엔 영향을 주지 않고, 오히려 새로 입력한 숫자에 대해 자릿수 밀어내기가 필요하다는 뜻입니다.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```js
+displayedNum = displayedNum + num * Math.pow(0.1, powNum);
+// (화면에 보여줘야할 숫자) = (그동안 입력한 숫자) + {(새로 입력한 숫자) * 0.1^(소수점 자리 개수)}
+```
 
-### `npm run build`
+### Main Issue에 대한 Solution
+아래와 같이 총 8가지로 케이스를 나누어 숫자를 가공했습니다. (중복된 로직의 케이스도 있으나 개념적 분리 및 설명상 편의를 위해 케이스를 잘게 쪼갰음)  
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> 42.195 + 12.34 라는 계산을 하는 상황을 예시로 어떤 숫자 입력을 할 때의 상황인지 표시하겠습니다.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+#### 소수점 위
+[CASE 1] 임시저장된 연산자가 있는가: No && 첫번째 숫자 타이핑인가: Yes
+* `4`2.195 + 12.34
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+displayedNum = num; // 입력하는 숫자 그대로 디스플레이함
+isFirstNum = false; // 다음 입력하는 숫자는 더 이상 첫 숫자가 아니게 됨을 미리 설정
+```
 
-### `npm run eject`
+[CASE 2] 임시저장된 연산자가 있는가: No && 첫번째 숫자 타이핑인가: No
+* 4`2`.195 + 12.34
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```js
+displayedNum = displayedNum * 10 + num; // 기존 숫자 자릿수 밀어내기 후 새로 입력한 숫자를 더해 디스플레이함
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[CASE 3] 임시저장된 연산자가 있는가: Yes && 첫번째 숫자 타이핑인가: Yes
+* 42.195 + `1`2.34
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```js
+savedNum = displayedNum; // 기존에 있던 숫자(42.195)는 savedNum에 잠시 넣어두고
+displayedNum = num; // 새로 입력한 숫자를 디스플레이함
+isFirstNum = false; // 다음 입력하는 숫자는 더 이상 첫 숫자가 아니게 됨을 미리 설정
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[CASE 4] 임시저장된 연산자가 있는가: Yes && 첫번째 숫자 타이핑인가: No
+* 42.195 + 1`2`.34
 
-## Learn More
+```js
+displayedNum = displayedNum * 10 + num; // 기존 숫자 자릿수 밀어내기 후 새로 입력한 숫자를 더해 디스플레이함
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 소수점 아래
+'소수점 위'는 재귀적인 로직이었으므로 자릿수는 크게 고려 대상이 아니었지만, 소수점 아래의 경우에는 자릿수가 연산에 영향을 주게 되었습니다. 따라서 소수부 연산을 위해 `powNum`이라는 변수를 새로 도입하여 소수점 몇 번째 자리인지 기록했습니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```js
+powNum += 1; // 몇 번째 소수점인지에 대한 숫자
+exp = Math.pow(0.1, powNum); // 소수점 밀어내기용 
+```
 
-### Code Splitting
+[CASE 5] 임시저장된 연산자가 있는가: No && 소수점 아래 첫 타이핑인가: Yes
+* 42.`1`95 + 12.34
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```js
+underPointNum = num * exp; // 입력한 숫자를 자릿수 보정하여
+displayedNum = displayedNum + underPointNum; // 기존 숫자에 붙여 디스플레이함
+isFirstUnderNum = false; // 다음 입력하는 숫자는 더 이상 첫 숫자가 아니게 됨을 미리 설정
+```
 
-### Analyzing the Bundle Size
+[CASE 6] 임시저장된 연산자가 있는가: No && 소수점 아래 첫 타이핑인가: No
+* 42.1`95` + 12.34
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```js
+underPointNum = num * exp; // 입력한 숫자를 자릿수 보정하여
+displayedNum = displayedNum + underPointNum; // 기존 숫자에 붙여 디스플레이함
+```
 
-### Making a Progressive Web App
+[CASE 7] 임시저장된 연산자가 있는가: Yes && 소수점 아래 첫 타이핑인가: Yes
+* 42.195 + 12.`3`4
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```js
+underPointNum = num * exp; // 입력한 숫자를 자릿수 보정하여
+displayedNum = displayedNum + underPointNum; // 기존 숫자에 붙여 디스플레이함
+isFirstUnderNum = false; // 다음 입력하는 숫자는 더 이상 첫 숫자가 아니게 됨을 미리 설정
+```
 
-### Advanced Configuration
+[CASE 8] 임시저장된 연산자가 있는가: Yes && 소수점 아래 첫 타이핑인가: No
+* 42.195 + 12.3`4`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```js
+underPointNum = num * exp; // 입력한 숫자를 자릿수 보정하여
+displayedNum = displayedNum + underPointNum; // 기존 숫자에 붙여 디스플레이함
+```
 
-### Deployment
+이로써 모든 케이스에 입력 및 임시저장 대응이 가능해졌습니다. 각 숫자/연산자를 이와 같이 입력 받아 `savedNum`, `operator`, `displayedNum`을 계속 저장하고 있다가 `=`라는 연산자에서 클릭 이벤트가 발생하면 그 때 이 셋을 조합하여 결과를 보여주게 됩니다.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# study-react
+### 기타
+- 무한대(Infinity)일 때 "무한대"라는 문자로 치환하여 대응
+- 부호를 이미 클릭한 상황에서 중간에 다른 부호를 다시 클릭한 경우(ex: `30 *- 2`), 소수점을 두번 이상 입력한 경우(ex: `42.19.5`) 등 발생 가능한 코너 케이스들에 대응

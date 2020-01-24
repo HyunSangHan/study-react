@@ -16,7 +16,7 @@
 ### React_1_calculator
 - **[토이프로젝트] 계산기 구현**
 - ReactJS / 모바일최적화
-- README 준비중
+- [README에서 설명 더보기 >](https://github.com/HyunSangHan/study-react/tree/master/React_1_calculator)
 - http://calculator.dothome.co.kr/
 
 ### React_2_mypage
