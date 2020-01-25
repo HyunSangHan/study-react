@@ -120,6 +120,10 @@ h4 {
   margin-bottom: 72px;
 }
 
+.mb--5 {
+  margin-bottom: -40px;
+}
+
 .ml-1 {
   margin-left: 8px;
 }

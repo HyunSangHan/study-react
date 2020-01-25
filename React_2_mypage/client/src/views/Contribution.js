@@ -70,7 +70,7 @@ const BadgeCustom = styled(Badge)`
 const ContentWrapper = ({ repositoryName, contributionSets }) => {
   return (
     <Col xs={12} md={12} lg={6} xl={6}>
-      <ListGroup className="mt-3">
+      <ListGroup className="mt-6">
         <ListGroupItemCustomTitle>
           <ListGroupItemHeading>{repositoryName}</ListGroupItemHeading>
         </ListGroupItemCustomTitle>
@@ -108,7 +108,7 @@ const ContributionContent = props => {
       </ListGroupItemHeading>
       <ListGroupItemText>
         <a href={uri} target="_blank" rel="noopener noreferrer">
-          view it on github
+          View it on github
         </a>
       </ListGroupItemText>
     </ListGroupItemCustomContent>
@@ -120,7 +120,7 @@ const Contribution = ({ bgColorGrey }) => {
     <>
       <div className={bgColorGrey ? "bg-grey pb-9" : "bg-white pb-9"}>
         <div className={bgColorGrey ? "bg-grey" : "bg-white"}>
-          <div className="title-out pt-4 pb-4">
+          <div className="title-out pt-4 mb--5">
             <div className="title-except">
               <ScrollableAnchor id={"contributions"}>
                 <h1 className="font-5 font-new">contributions</h1>
@@ -129,13 +129,15 @@ const Contribution = ({ bgColorGrey }) => {
           </div>
           <Grid>
             <Row className="h100percent mt-9">
-              {contributionInfos.map((datum, idx) => (
-                <ContentWrapper
-                  key={idx}
-                  repositoryName={datum.repositoryName}
-                  contributionSets={datum.contributionSets}
-                />
-              ))}
+              <div>
+                {contributionInfos.map((datum, idx) => (
+                  <ContentWrapper
+                    key={idx}
+                    repositoryName={datum.repositoryName}
+                    contributionSets={datum.contributionSets}
+                  />
+                ))}
+              </div>
             </Row>
           </Grid>
         </div>

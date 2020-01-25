@@ -227,13 +227,15 @@ export const skillSets = [
 export const productInfos = [
   {
     thumbnail: prodThumbnail1,
-    name: "this.state.",
+    name: "this.state",
     period: "JAN - FEB 2019",
     skill: "ReactJS",
     description:
       "My own profile page for introducing myself especially related to web development. designed and developed by myself.",
     alt: "mypage",
-    outlinks: [{ type: "Link", uri: "/" }]
+    outlinks: [{ type: "Link", uri: "/" },
+    { type: "Github", uri: "https://github.com/HyunSangHan/study-react/tree/master/React_2_mypage" }
+  ]
   },
   {
     thumbnail: prodThumbnail2,
@@ -241,9 +243,10 @@ export const productInfos = [
     period: "JAN 2019",
     skill: "ReactJS",
     description:
-      "Web based calculator for studying React and HTML+CSS. Optimized for mobile.",
+      "Web based calculator for studying React and CSS. Optimized for mobile.",
     alt: "calculator",
-    outlinks: [{ type: "Link", uri: "http://calculator.dothome.co.kr/" }]
+    outlinks: [{ type: "Link", uri: "http://calculator.dothome.co.kr/" },
+    { type: "Github", uri: "https://github.com/HyunSangHan/study-react/tree/master/React_1_calculator" }]
   },
   {
     thumbnail: prodThumbnail3,
@@ -265,13 +268,12 @@ export const productInfos = [
     description: "Kid's habits formation helper service.",
     alt: "gogo-fish",
     outlinks: [
-      { type: "Link", uri: "https://bomin.myportfolio.com/invalid" },
       { type: "Github", uri: "https://github.com/zzokokeic/barogagi1gibateam" }
     ]
   },
   {
     thumbnail: prodThumbnail5,
-    name: "Fine dust Bot ",
+    name: "Fine dust Bot",
     period: "AUG 2018",
     skill: "Ruby for Sinatra / Kakao Chatbot / API of KMA",
     description:
@@ -298,21 +300,21 @@ export const contributionInfos = [
     contributionSets: [
       {
         title:
-          "Add a description for installing GraphicsMagick or ImageMagick in docs/README.md",
+          "Add a description for installing GraphicsMagick or ImageMagick in README",
         uri: "https://github.com/mochajs/mocha/pull/4045",
         prStatus: "Merged",
         reviewStatus: "",
         releaseStatus: ""
       },
       {
-        title: "Fix docs.watch for the API docs(#4060)",
+        title: "Fix docs.watch for the API docs",
         uri: "https://github.com/mochajs/mocha/pull/4061",
         prStatus: "Closed",
         reviewStatus: "Approved",
         releaseStatus: ""
       },
       {
-        title: "Change sh to bash for code block in docs/index.md",
+        title: "Change sh to bash for code block",
         uri: "https://github.com/mochajs/mocha/pull/4066",
         prStatus: "Merged",
         reviewStatus: "",
@@ -342,15 +344,34 @@ export const contributionInfos = [
     ]
   },
   {
-    repositoryName: "ReactJs / ko.reactjs.org",
+    repositoryName: "ReactJS(KOR)",
     contributionSets: [
       {
-        title: "Change sentence on hook-intro",
+        title: "Change incorrect sentence on hook-intro",
         uri: "https://github.com/reactjs/ko.reactjs.org/pull/188",
         prStatus: "Merged",
         reviewStatus: "",
         releaseStatus: "Released"
       }
+    ]
+  },
+  {
+    repositoryName: "Javascript-tutorial(KOR)",
+    contributionSets: [
+      {
+        title: "Translate assignment about 'Method and this'",
+        uri: "https://github.com/javascript-tutorial/ko.javascript.info/pull/464",
+        prStatus: "Merged",
+        reviewStatus: "",
+        releaseStatus: "Released"
+      },
+      {
+        title: "Fix awkward UI and sentence about 'Arrow function'",
+        uri: "https://github.com/javascript-tutorial/ko.javascript.info/pull/467",
+        prStatus: "Merged",
+        reviewStatus: "",
+        releaseStatus: "Released"
+      }      
     ]
   }
 ]
