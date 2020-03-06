@@ -32,6 +32,8 @@ const renders = [
   { refName: "contact", component: Contact }
 ]
 
+const agent = navigator.userAgent.toLowerCase()
+
 class Main extends Component {
   constructor(props) {
     super(props)
@@ -48,6 +50,15 @@ class Main extends Component {
     window.addEventListener("resize", () => {
       this.makeResponsiveBackground()
     })
+
+    if (
+      (navigator.appName === "Netscape" && agent.indexOf("trident") !== -1) ||
+      agent.indexOf("msie") !== -1
+    ) {
+      this.isExplorer = true
+    } else {
+      this.isExplorer = false
+    }
   }
 
   componentWillUnmount() {
@@ -133,61 +144,68 @@ class Main extends Component {
     const { devicetype, backgroundSrc, scrollPosition } = this.state
     return (
       <>
-        <Header scrollPosition={scrollPosition} devicetype={devicetype} />
-        <div className="body-common z-0">
-          <div className="body-under center">
-            <img
-              className="fix"
-              src={backgroundSrc}
-              alt="my_photo"
-              style={{ width: "100%", minWidth: "100%", minHeight: "100%" }}
-              devicetype={devicetype}
-            />
-            <div className="body-under-black fix" />
-          </div>
-          <div className="gate center">
-            <div>
-              <Grid>
-                <img className="gate-img" src={photoGate} alt="explain" />
-                <div className="gate-txt font-sub font-white">
-                  You can access&nbsp;
-                  <i>
-                    this.state(.about, .gallery, .timeline, .skill-set,
-                    .products, .contributions)&nbsp;
-                  </i>
-                  of&nbsp;
-                  <font color="#59d1fb">
-                    <b>H</b>
-                  </font>
-                  YUN
-                  <font color="#59d1fb">
-                    <b>S</b>
-                  </font>
-                  ANG through this site. I will update my status through&nbsp;
-                  <i>this.setState </i>
-                  whenever there is some change.
+        {this.isExplorer ? (
+          <div>Browser not supported!</div>
+        ) : (
+          <>
+            <Header scrollPosition={scrollPosition} devicetype={devicetype} />
+            <div className="body-common z-0">
+              <div className="body-under center">
+                <img
+                  className="fix"
+                  src={backgroundSrc}
+                  alt="my_photo"
+                  style={{ width: "100%", minWidth: "100%", minHeight: "100%" }}
+                  devicetype={devicetype}
+                />
+                <div className="body-under-black fix" />
+              </div>
+              <div className="gate center">
+                <div>
+                  <Grid>
+                    <img className="gate-img" src={photoGate} alt="explain" />
+                    <div className="gate-txt font-sub font-white">
+                      You can access&nbsp;
+                      <i>
+                        this.state(.about, .gallery, .timeline, .skill-set,
+                        .products, .contributions)&nbsp;
+                      </i>
+                      of&nbsp;
+                      <font color="#59d1fb">
+                        <b>H</b>
+                      </font>
+                      YUN
+                      <font color="#59d1fb">
+                        <b>S</b>
+                      </font>
+                      ANG through this site. I will update my status
+                      through&nbsp;
+                      <i>this.setState </i>
+                      whenever there is some change.
+                    </div>
+                  </Grid>
                 </div>
-              </Grid>
+              </div>
+              <a href="#about">
+                <div className="arrow center">
+                  <img src={icArrowDown} alt="arrow-down" />
+                </div>
+              </a>
+              <div className="body-on z-2">
+                {renders.map((render, idx) => {
+                  const Component = render.component
+                  return (
+                    <Fragment key={idx}>
+                      <div ref={render.refName}></div>
+                      <Component bgColorGrey={idx % 2 !== 0} />
+                    </Fragment>
+                  )
+                })}
+              </div>
             </div>
-          </div>
-          <a href="#about">
-            <div className="arrow center">
-              <img src={icArrowDown} alt="arrow-down" />
-            </div>
-          </a>
-          <div className="body-on z-2">
-            {renders.map((render, idx) => {
-              const Component = render.component
-              return (
-                <Fragment key={idx}>
-                  <div ref={render.refName}></div>
-                  <Component bgColorGrey={idx % 2 !== 0} />
-                </Fragment>
-              )
-            })}
-          </div>
-        </div>
-        <Footer bgColorGrey={renders.length % 2 !== 0} />
+            <Footer bgColorGrey={renders.length % 2 !== 0} />
+          </>
+        )}
       </>
     )
   }
