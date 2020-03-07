@@ -229,7 +229,7 @@ export const productInfos = [
     thumbnail: prodThumbnail1,
     name: "this.state",
     period: "JAN - FEB 2019",
-    skill: "ReactJS",
+    skill: "React / Google Maps API",
     description:
       "My own profile page for introducing myself especially related to web development. designed and developed by myself.",
     alt: "mypage",
@@ -246,7 +246,7 @@ export const productInfos = [
     thumbnail: prodThumbnail2,
     name: "Web Calculator",
     period: "JAN 2019",
-    skill: "ReactJS",
+    skill: "React",
     description:
       "Web based calculator for studying React and CSS. Optimized for mobile.",
     alt: "calculator",
@@ -263,12 +263,12 @@ export const productInfos = [
     thumbnail: prodThumbnail3,
     name: "Meeting Time",
     period: "DEC 2018 - PRESENT",
-    skill: "Ruby for Sinatra",
+    skill: "Django(DRF) / React / Redux / Redux-thunk",
     description:
       "Meeting matching service on a first-come-first-served basis only for workers.",
     alt: "meeting-time",
     outlinks: [
-      { type: "Github", uri: "https://github.com/HyunSangHan/BRGG_Meeting-App" }
+      { type: "Github", uri: "https://github.com/HyunSangHan/MeetingTime" }
     ]
   },
   {
@@ -286,7 +286,7 @@ export const productInfos = [
     thumbnail: prodThumbnail5,
     name: "Fine dust Bot",
     period: "AUG 2018",
-    skill: "Ruby for Sinatra / Kakao Chatbot / API of KMA",
+    skill: "Ruby for Sinatra / Kakao Chatbot / KMA API",
     description:
       "Chatbot about fine dust in Kakaotalk using openAPI of Korea Meteorological Administration.",
     alt: "dustbot",
