@@ -233,9 +233,14 @@ export const productInfos = [
     description:
       "My own profile page for introducing myself especially related to web development. designed and developed by myself.",
     alt: "mypage",
-    outlinks: [{ type: "Link", uri: "/" },
-    { type: "Github", uri: "https://github.com/HyunSangHan/study-react/tree/master/React_2_mypage" }
-  ]
+    outlinks: [
+      { type: "Link", uri: "/" },
+      {
+        type: "Github",
+        uri:
+          "https://github.com/HyunSangHan/study-react/tree/master/React_2_mypage"
+      }
+    ]
   },
   {
     thumbnail: prodThumbnail2,
@@ -245,8 +250,14 @@ export const productInfos = [
     description:
       "Web based calculator for studying React and CSS. Optimized for mobile.",
     alt: "calculator",
-    outlinks: [{ type: "Link", uri: "http://calculator.dothome.co.kr/" },
-    { type: "Github", uri: "https://github.com/HyunSangHan/study-react/tree/master/React_1_calculator" }]
+    outlinks: [
+      { type: "Link", uri: "http://calculator.dothome.co.kr/" },
+      {
+        type: "Github",
+        uri:
+          "https://github.com/HyunSangHan/study-react/tree/master/React_1_calculator"
+      }
+    ]
   },
   {
     thumbnail: prodThumbnail3,
@@ -307,14 +318,7 @@ export const contributionInfos = [
         releaseStatus: ""
       },
       {
-        title: "Fix docs.watch for the API docs",
-        uri: "https://github.com/mochajs/mocha/pull/4061",
-        prStatus: "Closed",
-        reviewStatus: "Approved",
-        releaseStatus: ""
-      },
-      {
-        title: "Change sh to bash for code block",
+        title: "Fix warning for running docs by Eleventy",
         uri: "https://github.com/mochajs/mocha/pull/4066",
         prStatus: "Merged",
         reviewStatus: "",
@@ -325,6 +329,27 @@ export const contributionInfos = [
         uri: "https://github.com/mochajs/mocha/pull/4076",
         prStatus: "Open",
         reviewStatus: "Approved",
+        releaseStatus: ""
+      },
+      {
+        title: "Fix docs.watch for the API docs",
+        uri: "https://github.com/mochajs/mocha/pull/4061",
+        prStatus: "Closed",
+        reviewStatus: "Approved",
+        releaseStatus: ""
+      },
+      {
+        title: "Reduce unnecessary condition determination",
+        uri: "https://github.com/mochajs/mocha/pull/4197",
+        prStatus: "Open",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
+        title: "Add async setup with --delay",
+        uri: "https://github.com/mochajs/mocha-examples/pull/27",
+        prStatus: "Open",
+        reviewStatus: "",
         releaseStatus: ""
       },
       {
@@ -360,18 +385,51 @@ export const contributionInfos = [
     contributionSets: [
       {
         title: "Translate assignment about 'Method and this'",
-        uri: "https://github.com/javascript-tutorial/ko.javascript.info/pull/464",
+        uri:
+          "https://github.com/javascript-tutorial/ko.javascript.info/pull/464",
         prStatus: "Merged",
         reviewStatus: "",
         releaseStatus: "Released"
       },
       {
         title: "Fix awkward UI and sentence about 'Arrow function'",
-        uri: "https://github.com/javascript-tutorial/ko.javascript.info/pull/467",
+        uri:
+          "https://github.com/javascript-tutorial/ko.javascript.info/pull/467",
         prStatus: "Merged",
         reviewStatus: "",
         releaseStatus: "Released"
-      }      
+      }
+    ]
+  },
+  {
+    repositoryName: "TypeScript-website",
+    contributionSets: [
+      {
+        title: "Suggest an alternative link for Starter Kits",
+        uri: "https://github.com/microsoft/TypeScript-Website/pull/226",
+        prStatus: "Merged",
+        reviewStatus: "",
+        releaseStatus: ""
+      }
+    ]
+  },
+  {
+    repositoryName: "MomentJS",
+    contributionSets: [
+      {
+        title: "Fix the duration test message",
+        uri: "https://github.com/moment/moment/pull/5400",
+        prStatus: "Open",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
+        title: "Support ss for locale/en-li",
+        uri: "https://github.com/moment/moment/pull/5399",
+        prStatus: "Open",
+        reviewStatus: "",
+        releaseStatus: ""
+      }
     ]
   }
 ]
