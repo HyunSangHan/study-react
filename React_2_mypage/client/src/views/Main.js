@@ -1,14 +1,15 @@
 import React, { Component, Fragment } from "react"
 import ReactDOM from "react-dom"
-import Header from "./Header.js"
+import Header from "./Header"
 import About from "./About"
 import Gallery from "./Gallery"
-import Timeline from "../views/Timeline.js"
+import Timeline from "../views/Timeline"
 import SkillSet from "./SkillSet"
-import Products from "./Products.js"
-import Contribution from "./Contribution.js"
-import Contact from "./Contact.js"
-import Footer from "./Footer.js"
+import Products from "./Products"
+import Contribution from "./Contribution"
+import Contact from "./Contact"
+import Footer from "./Footer"
+import VisitBlog from "./VisitBlog"
 import "../App.css"
 import "../css/Main.css"
 import "../css/Timeline.css"
@@ -40,7 +41,8 @@ class Main extends Component {
     this.state = {
       devicetype: null,
       backgroundSrc: null,
-      scrollPosition: null
+      scrollPosition: null,
+      isLastScroll: false
     }
   }
 
@@ -61,6 +63,12 @@ class Main extends Component {
     }
   }
 
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (this.state.isLastScroll !== prevState.isLastScroll) {
+  //     this.foo();
+  //   }
+  // }
+
   componentWillUnmount() {
     window.removeEventListener("scroll", this.onScroll)
     window.removeEventListener("resize", () => {
@@ -72,11 +80,20 @@ class Main extends Component {
     return (
       !this.state.backgroundSrc ||
       this.state.scrollPosition !== nextState.scrollPosition ||
-      this.state.backgroundSrc !== nextState.backgroundSrc
+      this.state.backgroundSrc !== nextState.backgroundSrc ||
+      this.state.isLastScroll !== nextState.isLastScroll
     )
   }
 
   onScroll = e => {
+    if (
+      document.documentElement.offsetHeight ===
+      window.pageYOffset + window.innerHeight
+    ) {
+      this.setState({
+        isLastScroll: true
+      })
+    }
     const documentMarginTop = 60
     const elementsTop = {
       aboutTop:
@@ -141,7 +158,12 @@ class Main extends Component {
   }
 
   render() {
-    const { devicetype, backgroundSrc, scrollPosition } = this.state
+    const {
+      devicetype,
+      backgroundSrc,
+      scrollPosition,
+      isLastScroll
+    } = this.state
     return (
       <>
         {this.isExplorer ? (
@@ -203,7 +225,11 @@ class Main extends Component {
                 })}
               </div>
             </div>
-            <Footer bgColorGrey={renders.length % 2 !== 0} />
+            <VisitBlog
+              id="visit-blog"
+              className={isLastScroll ? "ad-on" : "ad-off"}
+            />
+            <Footer ref="last" bgColorGrey={renders.length % 2 !== 0} />
           </>
         )}
       </>
