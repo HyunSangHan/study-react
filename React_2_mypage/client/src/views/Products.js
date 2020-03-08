@@ -67,7 +67,7 @@ class Products extends Component {
                           <img
                             width="100%"
                             src={product.thumbnail}
-                            alt={product.alt}
+                            alt={product.name}
                           />
                           <Button
                             className="toggle"

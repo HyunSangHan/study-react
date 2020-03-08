@@ -232,7 +232,6 @@ export const productInfos = [
     skill: "React / Google Maps API",
     description:
       "My own profile page for introducing myself especially related to web development. designed and developed by myself.",
-    alt: "mypage",
     outlinks: [
       { type: "Link", uri: "/" },
       {
@@ -244,18 +243,15 @@ export const productInfos = [
   },
   {
     thumbnail: prodThumbnail2,
-    name: "Web Calculator",
-    period: "JAN 2019",
-    skill: "React",
+    name: "A or B",
+    period: "APR - AUG 2019",
+    skill: "Django / jQuery / Javascript",
     description:
-      "Web based calculator for studying React and CSS. Optimized for mobile.",
-    alt: "calculator",
+      "User-generated content platform for alternative voting as 1-person side project with Django",
     outlinks: [
-      { type: "Link", uri: "http://calculator.dothome.co.kr/" },
       {
         type: "Github",
-        uri:
-          "https://github.com/HyunSangHan/study-react/tree/master/React_1_calculator"
+        uri: "https://github.com/HyunSangHan/a-or-b-ugc"
       }
     ]
   },
@@ -266,41 +262,40 @@ export const productInfos = [
     skill: "Django(DRF) / React / Redux / Redux-thunk",
     description:
       "Meeting matching service on a first-come-first-served basis only for workers.",
-    alt: "meeting-time",
     outlinks: [
+      { type: "Demo", uri: "http://testbyhs.dothome.co.kr" },
       { type: "Github", uri: "https://github.com/HyunSangHan/MeetingTime" }
     ]
   },
   {
     thumbnail: prodThumbnail4,
-    name: "GoGo Fish",
-    period: "SEP 2018 - PRESENT",
-    skill: "Ruby for Sinatra / Fuse",
-    description: "Kid's habits formation helper service.",
-    alt: "gogo-fish",
+    name: "Browser Sync",
+    period: "FEB 2020",
+    skill: "TypeScript / Browser API",
+    description: "Whale Browser Extension to view the UI of mobile and pc on one screen",
     outlinks: [
-      { type: "Github", uri: "https://github.com/zzokokeic/barogagi1gibateam" }
+      { type: "Store", uri: "https://store.whale.naver.com/detail/oebpjpinlkhmpegobkdfgojbngjhjgbg?hl=kos" },
+      { type: "Github", uri: "https://github.com/HyunSangHan/WhaleBrowserSync" }
     ]
   },
   {
     thumbnail: prodThumbnail5,
     name: "Fine dust Bot",
     period: "AUG 2018",
-    skill: "Ruby for Sinatra / Kakao Chatbot / KMA API",
+    skill: "Ruby for Sinatra / KMA API",
     description:
       "Chatbot about fine dust in Kakaotalk using openAPI of Korea Meteorological Administration.",
-    alt: "dustbot",
     outlinks: []
   },
   {
     thumbnail: prodThumbnail6,
-    name: "BlackJack",
-    period: "NOV - DEC 2011",
-    skill: "Java",
-    description: "Card game for an assignment when I was in the university.",
-    alt: "blackjack",
+    name: "MBC Corona Info",
+    period: "FEB 2020",
+    skill: "Django(DRF) / MySQL / jQuery / Javascript",
+    description: "Alerts for real-time information about Corona 19. Powered by MBC",
     outlinks: [
-      { type: "Github", uri: "https://github.com/HyunSangHan/BlackJack" }
+      { type: "Link", uri: "https://mbc-corona.com" },
+      { type: "Github", uri: "https://github.com/HyunSangHan/MBC-corona19-archive" }
     ]
   }
 ]
@@ -315,14 +310,14 @@ export const contributionInfos = [
         uri: "https://github.com/mochajs/mocha/pull/4045",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: ""
+        releaseStatus: "Released"
       },
       {
         title: "Fix warning for running docs by Eleventy",
         uri: "https://github.com/mochajs/mocha/pull/4066",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: ""
+        releaseStatus: "Released"
       },
       {
         title: "Add script to check unit test coverage",
