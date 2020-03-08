@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import "./App.css"
 import Main from "./views/Main.js"
 import GalleryPage from "./views/Galleries/GalleryPage.js"
-import Calculator from "./views/Projects/Calculator"
 import { BrowserRouter, Route } from "react-router-dom"
 
 class App extends Component {
@@ -13,7 +12,6 @@ class App extends Component {
           <Route exact path="/" component={Main} />
           <Route exact path="/gallery" component={GalleryPage} />
           <Route path="/gallery/:galleryId" component={GalleryPage} />
-          <Route path="/calculator" component={Calculator} />
         </div>
       </BrowserRouter>
     )
