@@ -14,11 +14,11 @@ import galleryImgSrc6 from "./images/1niko.jpg"
 import galleryImgSrc7 from "./images/spain.jpg"
 import galleryImgSrc8 from "./images/dq.jpg"
 import galleryImgSrc9 from "./images/5young.jpg"
-import prodThumbnail1 from "./images/fish.png"
-import prodThumbnail2 from "./images/blackjack.png"
-import prodThumbnail3 from "./images/calculator.png"
+import prodThumbnail1 from "./images/browser-sync.png"
+import prodThumbnail2 from "./images/corona.png"
+import prodThumbnail3 from "./images/aorb.png"
 import prodThumbnail4 from "./images/mypage.png"
-import prodThumbnail5 from "./images/meeting.png"
+import prodThumbnail5 from "./images/meeting-time.png"
 import prodThumbnail6 from "./images/finedust.png"
 
 export const menuNames = [
@@ -230,9 +230,14 @@ export const productInfos = [
     name: "Browser Sync",
     period: "FEB 2020",
     skill: "TypeScript / Browser API",
-    description: "Whale Browser Extension to view the UI of mobile and pc on one screen",
+    description:
+      "Whale Browser Extension to view the UI of mobile and pc on one screen",
     outlinks: [
-      { type: "Store", uri: "https://store.whale.naver.com/detail/oebpjpinlkhmpegobkdfgojbngjhjgbg?hl=kos" },
+      {
+        type: "Store",
+        uri:
+          "https://store.whale.naver.com/detail/oebpjpinlkhmpegobkdfgojbngjhjgbg?hl=kos"
+      },
       { type: "Github", uri: "https://github.com/HyunSangHan/WhaleBrowserSync" }
     ]
   },
@@ -244,7 +249,10 @@ export const productInfos = [
     description: "Alerts for real-time information about Corona 19. Powered by MBC",
     outlinks: [
       { type: "Link", uri: "https://mbc-corona.com" },
-      { type: "Github", uri: "https://github.com/HyunSangHan/MBC-corona19-archive" }
+      {
+        type: "Github",
+        uri: "https://github.com/HyunSangHan/MBC-corona19-archive"
+      }
     ]
   },
   {
