@@ -14,12 +14,12 @@ import galleryImgSrc6 from "./images/1niko.jpg"
 import galleryImgSrc7 from "./images/spain.jpg"
 import galleryImgSrc8 from "./images/dq.jpg"
 import galleryImgSrc9 from "./images/5young.jpg"
-import prodThumbnail1 from "./images/mypage.png"
-import prodThumbnail2 from "./images/calculator.png"
-import prodThumbnail3 from "./images/meeting.png"
-import prodThumbnail4 from "./images/fish.png"
-import prodThumbnail5 from "./images/finedust.png"
-import prodThumbnail6 from "./images/blackjack.png"
+import prodThumbnail1 from "./images/fish.png"
+import prodThumbnail2 from "./images/blackjack.png"
+import prodThumbnail3 from "./images/calculator.png"
+import prodThumbnail4 from "./images/mypage.png"
+import prodThumbnail5 from "./images/meeting.png"
+import prodThumbnail6 from "./images/finedust.png"
 
 export const menuNames = [
   "about",
@@ -227,6 +227,42 @@ export const skillSets = [
 export const productInfos = [
   {
     thumbnail: prodThumbnail1,
+    name: "Browser Sync",
+    period: "FEB 2020",
+    skill: "TypeScript / Browser API",
+    description: "Whale Browser Extension to view the UI of mobile and pc on one screen",
+    outlinks: [
+      { type: "Store", uri: "https://store.whale.naver.com/detail/oebpjpinlkhmpegobkdfgojbngjhjgbg?hl=kos" },
+      { type: "Github", uri: "https://github.com/HyunSangHan/WhaleBrowserSync" }
+    ]
+  },
+  {
+    thumbnail: prodThumbnail2,
+    name: "MBC Corona 19",
+    period: "FEB 2020",
+    skill: "Django(DRF) / MySQL / Javascript",
+    description: "Alerts for real-time information about Corona 19. Powered by MBC",
+    outlinks: [
+      { type: "Link", uri: "https://mbc-corona.com" },
+      { type: "Github", uri: "https://github.com/HyunSangHan/MBC-corona19-archive" }
+    ]
+  },
+  {
+    thumbnail: prodThumbnail3,
+    name: "A or B",
+    period: "APR - AUG 2019",
+    skill: "Django / jQuery / Javascript",
+    description:
+      "User-generated content platform for alternative voting as 1-person side project with Django",
+    outlinks: [
+      {
+        type: "Github",
+        uri: "https://github.com/HyunSangHan/a-or-b-ugc"
+      }
+    ]
+  },
+  {
+    thumbnail: prodThumbnail4,
     name: "this.state",
     period: "JAN - FEB 2019",
     skill: "React / Google Maps API",
@@ -242,24 +278,10 @@ export const productInfos = [
     ]
   },
   {
-    thumbnail: prodThumbnail2,
-    name: "A or B",
-    period: "APR - AUG 2019",
-    skill: "Django / jQuery / Javascript",
-    description:
-      "User-generated content platform for alternative voting as 1-person side project with Django",
-    outlinks: [
-      {
-        type: "Github",
-        uri: "https://github.com/HyunSangHan/a-or-b-ugc"
-      }
-    ]
-  },
-  {
-    thumbnail: prodThumbnail3,
+    thumbnail: prodThumbnail5,
     name: "Meeting Time",
     period: "DEC 2018 - PRESENT",
-    skill: "Django(DRF) / React / Redux / Redux-thunk",
+    skill: "React / Redux / Redux-thunk / Django(DRF)",
     description:
       "Meeting matching service on a first-come-first-served basis only for workers.",
     outlinks: [
@@ -268,35 +290,13 @@ export const productInfos = [
     ]
   },
   {
-    thumbnail: prodThumbnail4,
-    name: "Browser Sync",
-    period: "FEB 2020",
-    skill: "TypeScript / Browser API",
-    description: "Whale Browser Extension to view the UI of mobile and pc on one screen",
-    outlinks: [
-      { type: "Store", uri: "https://store.whale.naver.com/detail/oebpjpinlkhmpegobkdfgojbngjhjgbg?hl=kos" },
-      { type: "Github", uri: "https://github.com/HyunSangHan/WhaleBrowserSync" }
-    ]
-  },
-  {
-    thumbnail: prodThumbnail5,
+    thumbnail: prodThumbnail6,
     name: "Fine dust Bot",
     period: "AUG 2018",
     skill: "Ruby for Sinatra / KMA API",
     description:
       "Chatbot about fine dust in Kakaotalk using openAPI of Korea Meteorological Administration.",
     outlinks: []
-  },
-  {
-    thumbnail: prodThumbnail6,
-    name: "MBC Corona Info",
-    period: "FEB 2020",
-    skill: "Django(DRF) / MySQL / jQuery / Javascript",
-    description: "Alerts for real-time information about Corona 19. Powered by MBC",
-    outlinks: [
-      { type: "Link", uri: "https://mbc-corona.com" },
-      { type: "Github", uri: "https://github.com/HyunSangHan/MBC-corona19-archive" }
-    ]
   }
 ]
 
