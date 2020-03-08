@@ -111,29 +111,43 @@
 }
 
 #visit-blog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   width: 100%;
-  height: 90px;
-  color: rgb(64, 197, 239);
-  font-size: 2rem;
   z-index: 2;
-  background-color: #212529;
-  text-decoration: underline;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .ad-off {
-  opacity: 0;
   height: 0 !important;
+  opacity: 0;
   overflow: hidden;
 }
 
 .ad-on {
+  height: 300px;
   opacity: 1;
-  transition: height 0.3s ease;
+  transition: height 1.5s ease;
+  overflow: hidden;
+}
+
+.ad-frontground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background-color: #212529;
+}
+
+.ad-font {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: rgb(64, 197, 239);
+  font-size: 5rem;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 767px) {
