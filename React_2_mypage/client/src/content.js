@@ -246,7 +246,8 @@ export const productInfos = [
     name: "MBC Corona 19",
     period: "FEB 2020",
     skill: "Django(DRF) / MySQL / Javascript",
-    description: "Alerts for real-time information about Corona 19. Powered by MBC",
+    description:
+      "Alerts for real-time information about Corona 19. Powered by MBC",
     outlinks: [
       { type: "Link", uri: "https://mbc-corona.com" },
       {
@@ -328,6 +329,13 @@ export const contributionInfos = [
         releaseStatus: "Released"
       },
       {
+        title: "Add async setup with --delay",
+        uri: "https://github.com/mochajs/mocha-examples/pull/27",
+        prStatus: "Merged",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
         title: "Add script to check unit test coverage",
         uri: "https://github.com/mochajs/mocha/pull/4076",
         prStatus: "Open",
@@ -344,13 +352,6 @@ export const contributionInfos = [
       {
         title: "Reduce unnecessary condition determination",
         uri: "https://github.com/mochajs/mocha/pull/4197",
-        prStatus: "Open",
-        reviewStatus: "",
-        releaseStatus: ""
-      },
-      {
-        title: "Add async setup with --delay",
-        uri: "https://github.com/mochajs/mocha-examples/pull/27",
         prStatus: "Open",
         reviewStatus: "",
         releaseStatus: ""
