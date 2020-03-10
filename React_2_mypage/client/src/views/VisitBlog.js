@@ -20,7 +20,7 @@ const VisitBlog = ({ id, className }) => {
       <div id={id} className={className}>
         <div style={fitCoverImage(backgroudImg)} className="w-100 h-100">
           <div className="ad-frontground"></div>
-          <div className="ad-font">Why don’t you visit my blog?</div>
+          <div className="ad-font font-new">Why don’t you visit my blog?</div>
         </div>
       </div>
     </a>
