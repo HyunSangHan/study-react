@@ -1,6 +1,9 @@
 import logoReact from "./images/React.png"
 import logoDjango from "./images/Django.png"
 import logoSinatra from "./images/Sinatra.png"
+import logoNode from "./images/Node.png"
+import logoJQuery from "./images/JQuery.png"
+import logoMocha from "./images/Mocha.png"
 import logoGithub from "./images/github.png"
 import logoLinkedIn from "./images/linkedin.png"
 import logoFacebook from "./images/facebook.png"
@@ -221,7 +224,10 @@ export const historyInfos = [
 export const skillSets = [
   { name: "React", logo: logoReact, className: "skill-react" },
   { name: "Django", logo: logoDjango, className: "skill-django" },
-  { name: "Ruby for Sinatra", logo: logoSinatra, className: "skill-sinatra" }
+  { name: "Ruby for Sinatra", logo: logoSinatra, className: "skill-sinatra" },
+  { name: "Node", logo: logoNode, className: "skill-node" },
+  { name: "jQuery", logo: logoJQuery, className: "skill-jquery" },
+  { name: "Mocha", logo: logoMocha, className: "skill-mocha" }
 ]
 
 export const productInfos = [
