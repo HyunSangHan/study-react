@@ -19,7 +19,7 @@ import photoBackgroundLarge from "../images/sea.jpg"
 import photoBackgroundMedium from "../images/sea1.jpg"
 import photoBackgroundSmall from "../images/sea2.jpg"
 import photoGate from "../images/hsforgate.png"
-import icArrowDown from "../images/arrow-down.png"
+import icArrowDown from "../images/icons/arrow-down.png"
 
 configureAnchors({ offset: -140, scrollDuration: 1000 })
 

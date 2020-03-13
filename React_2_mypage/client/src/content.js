@@ -1,28 +1,28 @@
-import logoReact from "./images/React.png"
-import logoDjango from "./images/Django.png"
-import logoSinatra from "./images/Sinatra.png"
-import logoNode from "./images/Node.png"
-import logoJQuery from "./images/JQuery.png"
-import logoMocha from "./images/Mocha.png"
-import logoGithub from "./images/github.png"
-import logoLinkedIn from "./images/linkedin.png"
-import logoFacebook from "./images/facebook.png"
-import logoInsta from "./images/instagram.png"
-import galleryImgSrc1 from "./images/2hifive.jpg"
-import galleryImgSrc2 from "./images/3positano.jpg"
-import galleryImgSrc3 from "./images/6airplane.jpg"
-import galleryImgSrc4 from "./images/5soba.jpg"
-import galleryImgSrc5 from "./images/jongro.jpg"
-import galleryImgSrc6 from "./images/1niko.jpg"
-import galleryImgSrc7 from "./images/spain.jpg"
-import galleryImgSrc8 from "./images/dq.jpg"
-import galleryImgSrc9 from "./images/5young.jpg"
-import prodThumbnail1 from "./images/browser-sync.png"
-import prodThumbnail2 from "./images/corona.png"
-import prodThumbnail3 from "./images/aorb.png"
-import prodThumbnail4 from "./images/mypage.png"
-import prodThumbnail5 from "./images/meeting-time.png"
-import prodThumbnail6 from "./images/finedust.png"
+import logoReact from "./images/skillset/React.png"
+import logoDjango from "./images/skillset/Django.png"
+import logoSinatra from "./images/skillset/Sinatra.png"
+import logoNode from "./images/skillset/Node.png"
+import logoJQuery from "./images/skillset/JQuery.png"
+import logoMocha from "./images/skillset/Mocha.png"
+import iconGithub from "./images/icons/github.png"
+import iconLinkedIn from "./images/icons/linkedin.png"
+import iconFacebook from "./images/icons/facebook.png"
+import iconInsta from "./images/icons/instagram.png"
+import galleryImgSrc1 from "./images/gallery/2hifive.jpg"
+import galleryImgSrc2 from "./images/gallery/3positano.jpg"
+import galleryImgSrc3 from "./images/gallery/6airplane.jpg"
+import galleryImgSrc4 from "./images/gallery/5soba.jpg"
+import galleryImgSrc5 from "./images/gallery/jongro.jpg"
+import galleryImgSrc6 from "./images/gallery/1niko.jpg"
+import galleryImgSrc7 from "./images/gallery/spain.jpg"
+import galleryImgSrc8 from "./images/gallery/dq.jpg"
+import galleryImgSrc9 from "./images/gallery/5young.jpg"
+import prodThumbnail1 from "./images/products/browser-sync.png"
+import prodThumbnail2 from "./images/products/corona.png"
+import prodThumbnail3 from "./images/products/aorb.png"
+import prodThumbnail4 from "./images/products/mypage.png"
+import prodThumbnail5 from "./images/products/meeting-time.png"
+import prodThumbnail6 from "./images/products/finedust.png"
 
 export const menuNames = [
   "about",
@@ -41,20 +41,20 @@ export const baseInfo = {
   introduceMyself:
     "I always try to move forward with new learning. I work as a product manager, but I take my own personal time to develop toy projects and to contribute to open source projects. If you have a good idea for a new try, feel free to contact me anytime.",
   snsLinks: [
-    { name: "github", logo: logoGithub, uri: "https://github.com/HyunSangHan" },
+    { name: "github", logo: iconGithub, uri: "https://github.com/HyunSangHan" },
     {
       name: "linked-in",
-      logo: logoLinkedIn,
+      logo: iconLinkedIn,
       uri: "https://www.linkedin.com/in/%ED%98%84%EC%83%81-%ED%95%9C-971604178"
     },
     {
       name: "facebook",
-      logo: logoFacebook,
+      logo: iconFacebook,
       uri: "https://www.facebook.com/gustkd3"
     },
     {
       name: "instagram",
-      logo: logoInsta,
+      logo: iconInsta,
       uri: "https://www.instagram.com/phenom_0901"
     }
   ]

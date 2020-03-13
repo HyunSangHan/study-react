@@ -3,7 +3,7 @@ import "../../App.css"
 import "../../css/Header.css"
 import "../../css/Main.css"
 import { Link } from "react-router-dom"
-import icArrowBack from "../../images/arrowback.png"
+import icArrowBack from "../../images/icons/arrow-back.png"
 
 class GalleryHeader extends Component {
   render() {
