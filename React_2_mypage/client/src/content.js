@@ -356,6 +356,13 @@ export const contributionInfos = [
         releaseStatus: ""
       },
       {
+        title: "Replace vulnerable 'mkdirp' with 'fs.mkdir'",
+        uri: "https://github.com/mochajs/mocha/pull/4200",
+        prStatus: "Open",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
         title: "Reduce unnecessary condition determination",
         uri: "https://github.com/mochajs/mocha/pull/4197",
         prStatus: "Open",
@@ -419,7 +426,7 @@ export const contributionInfos = [
         uri: "https://github.com/microsoft/TypeScript-Website/pull/226",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: ""
+        releaseStatus: "Released"
       }
     ]
   },
