@@ -320,6 +320,13 @@ export const contributionInfos = [
     repositoryName: "MochaJS",
     contributionSets: [
       {
+        title: "Drop mkdirp and replace it with fs.mkdirSync",
+        uri: "https://github.com/mochajs/mocha/pull/4200",
+        prStatus: "Merged",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
         title:
           "Add a description for installing GraphicsMagick or ImageMagick in README",
         uri: "https://github.com/mochajs/mocha/pull/4045",
@@ -353,20 +360,6 @@ export const contributionInfos = [
         uri: "https://github.com/mochajs/mocha/pull/4061",
         prStatus: "Closed",
         reviewStatus: "Approved",
-        releaseStatus: ""
-      },
-      {
-        title: "Replace vulnerable 'mkdirp' with 'fs.mkdir'",
-        uri: "https://github.com/mochajs/mocha/pull/4200",
-        prStatus: "Open",
-        reviewStatus: "",
-        releaseStatus: ""
-      },
-      {
-        title: "Reduce unnecessary condition determination",
-        uri: "https://github.com/mochajs/mocha/pull/4197",
-        prStatus: "Open",
-        reviewStatus: "",
         releaseStatus: ""
       },
       {
@@ -433,13 +426,6 @@ export const contributionInfos = [
   {
     repositoryName: "MomentJS",
     contributionSets: [
-      {
-        title: "Fix the duration test message",
-        uri: "https://github.com/moment/moment/pull/5400",
-        prStatus: "Open",
-        reviewStatus: "",
-        releaseStatus: ""
-      },
       {
         title: "Support ss for locale/en-li",
         uri: "https://github.com/moment/moment/pull/5399",
