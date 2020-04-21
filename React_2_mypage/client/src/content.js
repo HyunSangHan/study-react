@@ -253,9 +253,8 @@ export const productInfos = [
     period: "FEB 2020",
     skill: "Django(DRF) / MySQL / Javascript",
     description:
-      "Alerts for real-time information about Corona 19. Powered by MBC",
+      "Alerts for real-time information about Corona 19. Powered by MBC. Service ends on April 20.",
     outlinks: [
-      { type: "Link", uri: "https://mbc-corona.com" },
       {
         type: "Github",
         uri: "https://github.com/HyunSangHan/MBC-corona19-archive"
