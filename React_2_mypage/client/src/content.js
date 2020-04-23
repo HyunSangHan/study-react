@@ -428,7 +428,14 @@ export const contributionInfos = [
       {
         title: "Support ss for locale/en-li",
         uri: "https://github.com/moment/moment/pull/5399",
-        prStatus: "Open",
+        prStatus: "Merged",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
+        title: "Fix the duration test message",
+        uri: "https://github.com/moment/moment/pull/5400",
+        prStatus: "Merged",
         reviewStatus: "",
         releaseStatus: ""
       }
