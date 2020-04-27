@@ -348,6 +348,20 @@ export const contributionInfos = [
         releaseStatus: ""
       },
       {
+        title: "Use light color scheme on Mocha API document",
+        uri: "https://github.com/mochajs/mocha-docdash/pull/3",
+        prStatus: "Merged",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
+        title: "Adjust white space for view on mobile",
+        uri: "https://github.com/mochajs/mocha-docdash/pull/4",
+        prStatus: "Merged",
+        reviewStatus: "",
+        releaseStatus: ""
+      },
+      {
         title: "Add script to check unit test coverage",
         uri: "https://github.com/mochajs/mocha/pull/4076",
         prStatus: "Open",
@@ -359,20 +373,6 @@ export const contributionInfos = [
         uri: "https://github.com/mochajs/mocha/pull/4061",
         prStatus: "Closed",
         reviewStatus: "Approved",
-        releaseStatus: ""
-      },
-      {
-        title: "Use light color scheme on Mocha API document",
-        uri: "https://github.com/mochajs/mocha-docdash/pull/3",
-        prStatus: "Open",
-        reviewStatus: "",
-        releaseStatus: ""
-      },
-      {
-        title: "Adjust white space for view on mobile",
-        uri: "https://github.com/mochajs/mocha-docdash/pull/4",
-        prStatus: "Open",
-        reviewStatus: "",
         releaseStatus: ""
       }
     ]
