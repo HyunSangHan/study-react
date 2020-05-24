@@ -269,6 +269,7 @@ export const productInfos = [
     description:
       "User-generated content platform for alternative voting as 1-person side project with Django",
     outlinks: [
+      { type: "Link", uri: "https://aorb.click" },
       {
         type: "Github",
         uri: "https://github.com/HyunSangHan/a-or-b-ugc"
@@ -294,7 +295,7 @@ export const productInfos = [
   {
     thumbnail: prodThumbnail5,
     name: "Meeting Time",
-    period: "DEC 2018 - PRESENT",
+    period: "JUN 2019 - PRESENT",
     skill: "React / Redux / Redux-thunk / Django(DRF)",
     description:
       "Meeting matching service on a first-come-first-served basis only for workers.",
