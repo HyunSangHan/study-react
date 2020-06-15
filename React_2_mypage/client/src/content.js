@@ -324,7 +324,7 @@ export const contributionInfos = [
         uri: "https://github.com/mochajs/mocha/pull/4200",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: ""
+        releaseStatus: "Released"
       },
       {
         title:
@@ -353,14 +353,14 @@ export const contributionInfos = [
         uri: "https://github.com/mochajs/mocha-docdash/pull/3",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: ""
+        releaseStatus: "Released"
       },
       {
         title: "Adjust white space for view on mobile",
         uri: "https://github.com/mochajs/mocha-docdash/pull/4",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: ""
+        releaseStatus: "Released"
       },
       {
         title: "Add script to check unit test coverage",
