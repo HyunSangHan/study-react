@@ -431,14 +431,14 @@ export const contributionInfos = [
         uri: "https://github.com/moment/moment/pull/5399",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: ""
+        releaseStatus: "Released"
       },
       {
         title: "Fix the duration test message",
         uri: "https://github.com/moment/moment/pull/5400",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: ""
+        releaseStatus: "Released"
       }
     ]
   }
