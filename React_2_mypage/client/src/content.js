@@ -39,7 +39,7 @@ export const baseInfo = {
   name: "hyunsang han",
   job: "Developer",
   introduceMyself:
-    "I always try to move forward with new learning. I work as a product manager, but I take my own personal time to develop toy projects and to contribute to open source projects. If you have a good idea for a new try, feel free to contact me anytime.",
+    "I always try to move forward with new learning. I worked as a product manager, but I took my own personal time to develop toy projects and to contribute to open source projects. After all, I am now working as a developer. If you have a good idea for a new try, feel free to contact me anytime.",
   snsLinks: [
     { name: "github", logo: iconGithub, uri: "https://github.com/HyunSangHan" },
     {
@@ -140,8 +140,13 @@ export const historyInfos = [
     title: "NAVER Corp.",
     details: [
       {
-        subTitle: "Shopping Search (APR 2018 - PRESENT)",
-        description: "Service & strategy planning for @Naver Shopping@",
+        subTitle: "Shopping Search Dev.(JUN 2020 - PRESENT)",
+        description: "Web development for @Naver Shopping@",
+        refUri: "https://shopping.naver.com"
+      },
+      {
+        subTitle: "Shopping Search Service(APR 2018 - JUN 2020)",
+        description: "Product management for @Naver Shopping@",
         refUri: "https://shopping.naver.com"
       },
       {
@@ -324,7 +329,8 @@ export const contributionInfos = [
         uri: "https://github.com/mochajs/mocha/pull/4200",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: "Released",
+        semver: "v8.0.0"
       },
       {
         title:
@@ -332,14 +338,16 @@ export const contributionInfos = [
         uri: "https://github.com/mochajs/mocha/pull/4045",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: "Released",
+        semver: "v7.0.0"
       },
       {
         title: "Fix warning for running docs by Eleventy",
         uri: "https://github.com/mochajs/mocha/pull/4066",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: "Released",
+        semver: "v7.0.0"
       },
       {
         title: "Add async setup with --delay",
@@ -353,14 +361,16 @@ export const contributionInfos = [
         uri: "https://github.com/mochajs/mocha-docdash/pull/3",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: "Released",
+        semver: "v2.1.3"
       },
       {
         title: "Adjust white space for view on mobile",
         uri: "https://github.com/mochajs/mocha-docdash/pull/4",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: "Released",
+        semver: "v2.1.3"
       },
       {
         title: "Add script to check unit test coverage",
@@ -386,7 +396,7 @@ export const contributionInfos = [
         uri: "https://github.com/reactjs/ko.reactjs.org/pull/188",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: ""
       }
     ]
   },
@@ -399,7 +409,7 @@ export const contributionInfos = [
           "https://github.com/javascript-tutorial/ko.javascript.info/pull/464",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: ""
       },
       {
         title: "Fix awkward UI and sentence about 'Arrow function'",
@@ -407,7 +417,7 @@ export const contributionInfos = [
           "https://github.com/javascript-tutorial/ko.javascript.info/pull/467",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: ""
       }
     ]
   },
@@ -419,7 +429,7 @@ export const contributionInfos = [
         uri: "https://github.com/microsoft/TypeScript-Website/pull/226",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: ""
       }
     ]
   },
@@ -431,14 +441,16 @@ export const contributionInfos = [
         uri: "https://github.com/moment/moment/pull/5399",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: "Released",
+        semver: "v2.25.0"
       },
       {
         title: "Fix the duration test message",
         uri: "https://github.com/moment/moment/pull/5400",
         prStatus: "Merged",
         reviewStatus: "",
-        releaseStatus: "Released"
+        releaseStatus: "Released",
+        semver: "v2.25.0"
       }
     ]
   }
