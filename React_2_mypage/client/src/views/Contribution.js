@@ -84,6 +84,7 @@ const ContentWrapper = ({ repositoryName, contributionSets }) => {
               prStatus={contribution.prStatus}
               reviewStatus={contribution.reviewStatus}
               releaseStatus={contribution.releaseStatus}
+              semver={contribution.semver}
             />
           )
         })}
@@ -93,7 +94,7 @@ const ContentWrapper = ({ repositoryName, contributionSets }) => {
 }
 
 const ContributionContent = props => {
-  const { title, uri, reviewStatus, prStatus, releaseStatus } = props
+  const { title, uri, reviewStatus, prStatus, releaseStatus, semver } = props
   return (
     <ListGroupItemCustomContent>
       <ListGroupItemHeading>
@@ -102,7 +103,9 @@ const ContributionContent = props => {
           <BadgeCustom className={reviewStatus}>{reviewStatus}</BadgeCustom>
         )}
         {releaseStatus && (
-          <BadgeCustom className={releaseStatus}>{releaseStatus}</BadgeCustom>
+          <BadgeCustom className={releaseStatus}>
+            {semver ? semver : releaseStatus}
+          </BadgeCustom>
         )}
         <br /> {title}
       </ListGroupItemHeading>
