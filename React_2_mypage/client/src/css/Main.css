@@ -170,34 +170,32 @@
 
   .skill-django {
     margin: auto;
-    padding-bottom: 10%;
+    padding-top: 6%;
     width: 45%;
   }
 
-  .skill-sinatra {
+  .skill-spring {
     margin: auto;
-    padding-top: 1%;
-    padding-bottom: 10%;
-    width: 65%;
+    padding-bottom: 11%;
+    width: 55%;
   }
 
   .skill-node {
     margin: auto;
-    padding-bottom: 10%;
+    padding-bottom: 7%;
     width: 52%;
   }
 
   .skill-jquery {
     margin: auto;
-    padding-top: 6%;
-    padding-bottom: 10%;
+    padding-bottom: 7%;
     width: 55%;
   }
 
-  .skill-mocha {
+  .skill-mongodb {
     margin: auto;
-    padding-top: 0;
-    width: 61%;
+    padding-bottom: 9%;
+    width: 73%;
   }
 
   .top-gallery {
@@ -338,27 +336,28 @@
 
   .skill-django {
     margin: auto;
-    margin-top: 10px !important;
+    margin-top: 50px !important;
     width: 70%;
   }
 
-  .skill-sinatra {
+  .skill-spring {
+    width: 85%;
     margin: auto;
-    width: 100%;
+    margin-top: 44px;
   }
 
   .skill-node {
-    margin: 50px 0 12px 30px !important;
-    width: 100%;
+    margin: -8px 0 12px 40px !important;
+    width: 93%;
   }
 
   .skill-jquery {
-    margin: 70px auto 10px auto !important;
-    width: 90%;
+    margin: 44px auto 0 auto !important;
+    width: 87%;
   }
 
-  .skill-mocha {
-    margin: 50px auto 0;
+  .skill-mongodb {
+    margin: -25px 0 0 0;
     width: 95%;
   }
 

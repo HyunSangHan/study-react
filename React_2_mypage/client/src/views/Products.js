@@ -90,8 +90,10 @@ class Products extends Component {
                                 return (
                                   <CardLink
                                     key={idx}
-                                    className="font-3"
-                                    href={link.uri}
+                                    className={
+                                      link.uri ? "font-3" : "font-3 font-grey"
+                                    }
+                                    href={link.uri ? link.uri : null}
                                     target="_blank"
                                   >
                                     <strong>{link.type}</strong>

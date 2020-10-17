@@ -286,6 +286,11 @@ h4 {
   /*font-weight: bolder !important;*/
 }
 
+.font-grey {
+  color: #bbb !important;
+  /*font-weight: bolder !important;*/
+}
+
 .font-blue {
   color: #40c5ef !important;
   font-weight: bolder !important;

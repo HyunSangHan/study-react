@@ -1,9 +1,9 @@
 import logoReact from "./images/skillset/React.png"
 import logoDjango from "./images/skillset/Django.png"
-import logoSinatra from "./images/skillset/Sinatra.png"
+import logoMongoDB from "./images/skillset/mongodb.png"
 import logoNode from "./images/skillset/Node.png"
 import logoJQuery from "./images/skillset/JQuery.png"
-import logoMocha from "./images/skillset/Mocha.png"
+import logoSpring from "./images/skillset/spring.png"
 import iconGithub from "./images/icons/github.png"
 import iconLinkedIn from "./images/icons/linkedin.png"
 import iconFacebook from "./images/icons/facebook.png"
@@ -228,11 +228,11 @@ export const historyInfos = [
 
 export const skillSets = [
   { name: "React", logo: logoReact, className: "skill-react" },
-  { name: "Django", logo: logoDjango, className: "skill-django" },
-  { name: "Ruby for Sinatra", logo: logoSinatra, className: "skill-sinatra" },
   { name: "Node", logo: logoNode, className: "skill-node" },
+  { name: "MongoDB", logo: logoMongoDB, className: "skill-mongodb" },
+  { name: "Spring Framework", logo: logoSpring, className: "skill-spring" },
   { name: "jQuery", logo: logoJQuery, className: "skill-jquery" },
-  { name: "Mocha", logo: logoMocha, className: "skill-mocha" }
+  { name: "Django", logo: logoDjango, className: "skill-django" }
 ]
 
 export const productInfos = [
@@ -260,6 +260,7 @@ export const productInfos = [
     description:
       "Alerts for real-time information about Corona 19. Powered by MBC. Service ends on April 20.",
     outlinks: [
+      { type: "Link", uri: null },
       {
         type: "Github",
         uri: "https://github.com/HyunSangHan/MBC-corona19-archive"
@@ -274,7 +275,7 @@ export const productInfos = [
     description:
       "User-generated content platform for alternative voting as 1-person side project with Django",
     outlinks: [
-      { type: "Link", uri: "https://aorb.click" },
+      { type: "Link", uri: null },
       {
         type: "Github",
         uri: "https://github.com/HyunSangHan/a-or-b-ugc"
@@ -300,7 +301,7 @@ export const productInfos = [
   {
     thumbnail: prodThumbnail5,
     name: "Meeting Time",
-    period: "JUN 2019 - PRESENT",
+    period: "JUN 2019 - JUN 2020",
     skill: "React / Redux / Redux-thunk / Django(DRF)",
     description:
       "Meeting matching service on a first-come-first-served basis only for workers.",
@@ -316,7 +317,7 @@ export const productInfos = [
     skill: "Ruby for Sinatra / KMA API",
     description:
       "Chatbot about fine dust in Kakaotalk using openAPI of Korea Meteorological Administration.",
-    outlinks: []
+    outlinks: [{ type: "Link", uri: null }]
   }
 ]
 
