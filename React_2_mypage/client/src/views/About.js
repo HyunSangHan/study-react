@@ -5,6 +5,7 @@ import { Grid, Row, Col } from "react-bootstrap"
 import ScrollableAnchor from "react-scrollable-anchor"
 import photoVietnam from "../images/vietnam.jpg"
 import { baseInfo } from "../content"
+import { breakLines } from "../utils"
 
 class About extends Component {
   render() {
@@ -32,7 +33,7 @@ class About extends Component {
                   <div className="align-left ml-5 mr-5 mb-more for-mobile">
                     <h2 className="upper">{baseInfo.name}</h2>
                     <h3 className="mt-3 mb-5">{baseInfo.job}</h3>
-                    <h4>{baseInfo.introduceMyself}</h4>
+                    <h4>{breakLines(baseInfo.introduceMyself)}</h4>
                     <div className="bottom">
                       {baseInfo.snsLinks.map((sns, idx) => {
                         return (

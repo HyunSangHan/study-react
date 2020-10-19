@@ -37,9 +37,9 @@ export const menuNames = [
 
 export const baseInfo = {
   name: "hyunsang han",
-  job: "Developer",
+  job: "Software Engineer",
   introduceMyself:
-    "I always try to move forward with new learning. I worked as a product manager, but I took my own personal time to develop toy projects and to contribute to open source projects. After all, I am now working as a developer. If you have a good idea for a new try, feel free to contact me anytime.",
+    "I am a software engineer, who\n• Likes new learning and has no fear of challenges.\n• Enjoys simplifying and organizing complex problems.\n• Can consider not only technology, but also business and user experience of the product.\n• Has multiple perspectives, so collaborates and communicates smoothly with managers, designers, and engineers.",
   snsLinks: [
     { name: "github", logo: iconGithub, uri: "https://github.com/HyunSangHan" },
     {
@@ -142,11 +142,24 @@ export const historyInfos = [
       {
         subTitle: "Shopping Search Dev.(JUN 2020 - PRESENT)",
         description: "Web development for @Naver Shopping@",
+        bullets: [
+          "Develop a web frontend using React.js and Node.js",
+          "Manage and serve data using MongoDB and Redis",
+          "Develop API using Spring MVC and Node.js",
+          "Build batch systems using Spring Batch and Jenkins",
+          "Create administration tools so that operators can directly control the service"
+        ],
         refUri: "https://shopping.naver.com"
       },
       {
         subTitle: "Shopping Search Service(APR 2018 - JUN 2020)",
         description: "Product management for @Naver Shopping@",
+        bullets: [
+          "Worked on brand shopping search project",
+          "Launched a new shopping search advertisement for big brands only.",
+          "The click rate has increased more than doubles compared to existing ads.",
+          "Established strategies and managed KPIs for Naver Shopping's search business."
+        ],
         refUri: "https://shopping.naver.com"
       },
       {
@@ -176,7 +189,7 @@ export const historyInfos = [
     details: [
       {
         subTitle: "Rural System Engineering",
-        description: "Bachelor of Engineering"
+        description: "Bachelor of Engineering\nCum laude (GPA: 3.61/4.3)"
       },
       {
         subTitle: "SNU American Football Team, Green Terrors",

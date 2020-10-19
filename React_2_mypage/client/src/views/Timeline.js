@@ -124,6 +124,10 @@ class Timeline extends Component {
                                       uri={detailHistory.refUri}
                                     />
                                   )}
+                                  {detailHistory.bullets &&
+                                    detailHistory.bullets.map((val, idx) => (
+                                      <div key={idx}>• {val}</div>
+                                    ))}
                                 </h4>
                               </div>
                             )
