@@ -187,23 +187,18 @@ class Main extends Component {
                   <Grid>
                     <img className="gate-img" src={photoGate} alt="explain" />
                     <div className="gate-txt font-sub font-white">
-                      You can access&nbsp;
-                      <i>
-                        this.state(.about, .gallery, .timeline, .skill-set,
-                        .products, .contributions)&nbsp;
-                      </i>
-                      of&nbsp;
+                      {`const { about, gallery, timeline, skill-set,
+                        products, contributions } = t`}
                       <font color="#59d1fb">
-                        <b>H</b>
+                        <b>h</b>
                       </font>
-                      YUN
+                      i
                       <font color="#59d1fb">
-                        <b>S</b>
+                        <b>s</b>
                       </font>
-                      ANG through this site. I will update my status
-                      through&nbsp;
-                      <i>this.setState </i>
-                      whenever there is some change.
+                      .state
+                      <br />
+                      <i>// TODO: Set state whenever there is some change.</i>
                     </div>
                   </Grid>
                 </div>
