@@ -15,8 +15,8 @@ class SkillSet extends Component {
           <div className={this.props.bgColorGrey ? "bg-grey" : "bg-white"}>
             <div className="title-out pt-4 pb-4">
               <div className="title-in">
-                <ScrollableAnchor id={"skill-set"}>
-                  <h1 className="font-5 font-new">skill-set</h1>
+                <ScrollableAnchor id={"skillSet"}>
+                  <h1 className="font-5 font-new">skillSet</h1>
                 </ScrollableAnchor>
               </div>
             </div>

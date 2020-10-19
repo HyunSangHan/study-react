@@ -187,8 +187,8 @@ class Main extends Component {
                   <Grid>
                     <img className="gate-img" src={photoGate} alt="explain" />
                     <div className="gate-txt font-sub font-white">
-                      {`const { about, gallery, timeline, skill-set,
-                        products, contributions } = t`}
+                      {`const { about, gallery, timeline, skillSet,
+                        toyProjects, contributions } = t`}
                       <font color="#59d1fb">
                         <b>h</b>
                       </font>

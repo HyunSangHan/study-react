@@ -28,8 +28,8 @@ export const menuNames = [
   "about",
   "gallery",
   "timeline",
-  "skill-set",
-  "products",
+  "skillSet",
+  "toyProjects",
   "contributions",
   "contact",
   "blog"

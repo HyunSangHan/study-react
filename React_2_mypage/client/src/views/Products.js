@@ -43,8 +43,8 @@ class Products extends Component {
           <div className={this.props.bgColorGrey ? "bg-grey" : "bg-white"}>
             <div className="title-out pt-4 pb-4">
               <div className="title-except">
-                <ScrollableAnchor id={"products"}>
-                  <h1 className="font-5 font-new">products</h1>
+                <ScrollableAnchor id={"toyProjects"}>
+                  <h1 className="font-5 font-new">toyProjects</h1>
                 </ScrollableAnchor>
               </div>
             </div>
